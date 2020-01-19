@@ -1,8 +1,9 @@
 {
   "name": "otf-show",
   "version": "1.0.0",
-  "description": "",
+  "description": "An interactive showcase of OpenType's typographic features",
   "main": "index.js",
+  "repository": "http://github.com/dvkndn/otf-show",
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -12,13 +13,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "next": "^9.1.4",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "next": "9.2.0",
+    "react": "16.12.0",
+    "react-dom": "16.12.0"
   },
   "devDependencies": {
-    "@types/node": "^12.12.14",
-    "@types/react": "^16.9.15",
-    "typescript": "^3.7.3"
+    "@types/node": "13.1.8",
+    "@types/react": "16.9.17",
+    "typescript": "3.7.5"
   }
 }
