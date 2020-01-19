@@ -1,14 +1,10 @@
 import { NextPage } from "next";
 
-type Props = { userAgent: string };
-
-const Home: NextPage<Props> = (props) => (
-  <h1>Hello world! - user agent: {props.userAgent}</h1>
+const Home: NextPage = () => (
+  <div className="text-gray-500">
+    <h1>Illustration</h1>
+    <h1 style={{ fontFeatureSettings: "'ss02'" }}>Illustration</h1>
+  </div>
 );
-
-Home.getInitialProps = async ({ req }) => {
-  const userAgent = req ? req.headers["user-agent"] || "" : navigator.userAgent;
-  return { userAgent };
-};
 
 export default Home;
