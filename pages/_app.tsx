@@ -1,5 +1,5 @@
 import React from "react";
-import "./_app.css";
+import "../styles/index.css";
 
 interface Props {
   Component: React.FC<any>,

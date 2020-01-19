@@ -1,0 +1,47 @@
+.text-transparent {
+  color: transparent
+}
+
+.text-black {
+  color: #000
+}
+
+.text-white {
+  color: #fff
+}
+
+.text-gray-100 {
+  color: #f7fafc
+}
+
+.text-gray-200 {
+  color: #edf2f7
+}
+
+.text-gray-300 {
+  color: #e2e8f0
+}
+
+.text-gray-400 {
+  color: #cbd5e0
+}
+
+.text-gray-500 {
+  color: #a0aec0
+}
+
+.text-gray-600 {
+  color: #718096
+}
+
+.text-gray-700 {
+  color: #4a5568
+}
+
+.text-gray-800 {
+  color: #2d3748
+}
+
+.text-gray-900 {
+  color: #1a202c
+}
