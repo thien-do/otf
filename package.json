@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "build-css": "cd src/styles && npx tailwind build utilities.src.css --config utilities.config.js --output utilities.css"
   },
   "keywords": [],
   "author": "",
