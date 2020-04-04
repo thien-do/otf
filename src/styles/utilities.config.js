@@ -25,21 +25,28 @@ module.exports = {
       theme.pick = (x, ks) => ks.reduce((o, k) => (o[k] = theme(x)[k], o), {});
       return {};
     },
-    backgroundColor: theme => theme.pick ("colors", ["FFF", "F7F"]),
-    textColor: theme => theme.pick ("colors", ["CBD", "A0A", "2D3"]),
-    borderColor: theme => theme.pick ("colors", ["E2E", "CBD"]),
-    width: theme => theme.pick ("sizes", ["100%", "320", "640"]),
-    maxWidth: theme => theme.pick ("sizes", ["800"]),
+    backgroundColor: theme => theme.pick("colors", ["FFF", "F7F"]),
+    textColor: theme => theme.pick("colors", ["CBD", "A0A", "2D3"]),
+    boxShadow: theme => ({
+      8: `0px 0px 8px ${theme("colors.E2E")}`,
+    }),
+    width: theme => theme.pick("sizes", ["full", "320", "640"]),
+    maxWidth: theme => theme.pick("sizes", ["800"]),
+    padding: theme => theme.pick("sizes", ["18", "36", "72"]),
+    borderColor: theme => theme.pick("colors", ["E2E", "CBD"]),
+    borderWidth: { 1: '1px' },
   },
   variants: {
-    textColor: [], backgroundColor: [], borderColor: [],
-    width: ["responsive"], maxWidth: ["responsive"],
-    flexWrap: [],
+    textColor: [], backgroundColor: [], boxShadow: [],
+    borderStyle: [], borderColor: [], borderWidth: [],
+    width: ["responsive"], maxWidth: ["responsive"], padding: [],
+    flex: ["responsive"], flexWrap: [], justifyContent: [], alignItems: [],
   },
   corePlugins: [
-    "textColor", "backgroundColor", "borderColor",
-    "width", "maxWidth",
-    "flexWrap",
+    "textColor", "backgroundColor", "boxShadow",
+    "borderStyle", "borderColor", "borderWidth",
+    "width", "maxWidth", "padding",
+    "flex", "flexWrap", "justifyContent", "alignItems"
   ],
   plugins: [],
 };
