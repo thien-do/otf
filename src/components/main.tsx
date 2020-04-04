@@ -15,10 +15,14 @@ const color = Tw()
   .$();
 
 const Main = () => (
-  <div className={`${layout} ${color}`}>
-    <Header />
+  <main className={`${layout} ${color}`}>
+    <Header links={[
+      { href: "/", text: "otf.show" },
+      { href: "/about", text: "about" },
+      { href: "https://github.com/dvkndn/otf.show", text: "github" },
+    ]} />
     <div>main</div>
-  </div>
+  </main>
 );
 
 export default Main;

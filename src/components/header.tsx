@@ -2,20 +2,18 @@ import React from "react";
 import { Tw } from "styles";
 import HeaderLink from "./header-link";
 
-const GITHUB_HREF = "https://github.com/dvkndn/otf.show";
+interface Link { href: string; text: string; }
 
-const Header: React.FC = () => (
+interface Props { links: Link[]; }
+
+const Header: React.FC<Props> = ({ links }) => (
   <header className={Tw().py36().borderB1().borderSolid().borderCbd().$()}>
     <ul className={Tw().flex().text18().leading24().fontSemibold().$()}>
-      <li className={Tw().mr36().$()}>
-        <HeaderLink href="/">otf.show</HeaderLink>
-      </li>
-      <li className={Tw().mr36().$()}>
-        <HeaderLink href="/about">about</HeaderLink>
-      </li>
-      <li>
-        <HeaderLink href={GITHUB_HREF}>github</HeaderLink>
-      </li>
+      {links.map((link, index) => (
+        <li key={link.text} className={index !== 0 ? Tw().ml36().$() : ""}>
+          <HeaderLink href={link.href}>{link.text}</HeaderLink>
+        </li>
+      ))}
     </ul>
   </header>
 );
