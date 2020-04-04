@@ -1,95 +1,105 @@
-.text-transparent {
-  color: transparent
+.text-CBD {
+  color: #CBD5E0
 }
 
-.text-black {
-  color: #000
+.text-A0A {
+  color: #A0AEC0
 }
 
-.text-white {
-  color: #fff
+.text-2D3 {
+  color: #2D3748
 }
 
-.text-gray-100 {
-  color: #f7fafc
+.bg-FFF {
+  background-color: #FFF
 }
 
-.text-gray-200 {
-  color: #edf2f7
+.bg-F7F {
+  background-color: #F7FAFC
 }
 
-.text-gray-300 {
-  color: #e2e8f0
+.border-E2E {
+  border-color: #E2E8F0
 }
 
-.text-gray-400 {
-  color: #cbd5e0
+.border-CBD {
+  border-color: #CBD5E0
 }
 
-.text-gray-500 {
-  color: #a0aec0
+.w-320 {
+  width: 320px
 }
 
-.text-gray-600 {
-  color: #718096
+.w-640 {
+  width: 640px
 }
 
-.text-gray-700 {
-  color: #4a5568
+.w-100\% {
 }
 
-.text-gray-800 {
-  color: #2d3748
+.max-w-800 {
+  max-width: 800px
 }
 
-.text-gray-900 {
-  color: #1a202c
+.flex-wrap {
+  flex-wrap: wrap
 }
 
-.bg-transparent {
-  background-color: transparent
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse
 }
 
-.bg-black {
-  background-color: #000
+.flex-no-wrap {
+  flex-wrap: nowrap
 }
 
-.bg-white {
-  background-color: #fff
+@media (max-width: 959px) {
+  .lt960___w-320 {
+    width: 320px
+  }
+
+  .lt960___w-640 {
+    width: 640px
+  }
+
+  .lt960___w-100\% {
+  }
+
+  .lt960___max-w-800 {
+    max-width: 800px
+  }
 }
 
-.bg-gray-100 {
-  background-color: #f7fafc
+@media (min-width: 960px) and (max-width: 1279px) {
+  .fr960to1280___w-320 {
+    width: 320px
+  }
+
+  .fr960to1280___w-640 {
+    width: 640px
+  }
+
+  .fr960to1280___w-100\% {
+  }
+
+  .fr960to1280___max-w-800 {
+    max-width: 800px
+  }
 }
 
-.bg-gray-200 {
-  background-color: #edf2f7
-}
+@media (min-width: 1280px) {
+  .gt1280___w-320 {
+    width: 320px
+  }
 
-.bg-gray-300 {
-  background-color: #e2e8f0
-}
+  .gt1280___w-640 {
+    width: 640px
+  }
 
-.bg-gray-400 {
-  background-color: #cbd5e0
-}
+  .gt1280___w-100\% {
+  }
 
-.bg-gray-500 {
-  background-color: #a0aec0
-}
-
-.bg-gray-600 {
-  background-color: #718096
-}
-
-.bg-gray-700 {
-  background-color: #4a5568
-}
-
-.bg-gray-800 {
-  background-color: #2d3748
-}
-
-.bg-gray-900 {
-  background-color: #1a202c
+  .gt1280___max-w-800 {
+    max-width: 800px
+  }
 }
