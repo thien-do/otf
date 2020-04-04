@@ -1,23 +1,12 @@
 import React from "react";
+import { NextPage } from "next";
+
 import "styles/index.css";
-import Head from "next/head";
 
-interface Props {
-  Component: React.FC<any>,
-  pageProps: object,
-};
+interface Props { Component: NextPage, pageProps: object };
 
-const TITLE = "OTF Show";
-const DESCRIPTION = "An interactive showcase of OpenType's typographic features";
-
-const MyApp: React.FC<Props> = ({ Component, pageProps }) => (
-  <>
-    <Head>
-      <title>{TITLE}</title>
-      <meta name="description" content={DESCRIPTION} />
-    </Head>
-    <Component {...pageProps} />
-  </>
+const CustomApp: React.FC<Props> = ({ Component, pageProps }) => (
+  <Component {...pageProps} />
 );
 
-export default MyApp;
+export default CustomApp;
