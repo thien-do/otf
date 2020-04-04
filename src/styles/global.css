@@ -7,7 +7,13 @@ html { font-family: 'Inter', sans-serif; }
 }
 
 *, *:after, *:before {
-  border: none;
-  margin: 0;
-  padding: 0;
+  border: none; margin: 0; padding: 0;
+  box-sizing: border-box;
 }
+
+.flex { display: flex; }
+.block { display: block; }
+/*
+block(): Tailwind { return this.add("block"); }
+flex(): Tailwind { return this.add("flex"); }
+*/

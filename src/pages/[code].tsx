@@ -4,6 +4,9 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 import features, { Feature } from "features";
+import { Tw } from "styles";
+import Main from "components/main";
+import Side from "components/side";
 
 interface CustomHeadProps { ft: Feature; }
 
@@ -25,7 +28,10 @@ const Page: NextPage = () => {
   return (
     <div>
       <CustomHead ft={ft} />
-      <p>home ahihi</p>
+      <div className={Tw().flex().flexWrap().$()}>
+        <Main />
+        <Side />
+      </div>
     </div>
   );
 };

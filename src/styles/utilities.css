@@ -18,12 +18,56 @@
   background-color: #F7FAFC
 }
 
+.shadow-8 {
+  box-shadow: 0px 0px 8px #E2E8F0
+}
+
+.border-solid {
+  border-style: solid
+}
+
+.border-dashed {
+  border-style: dashed
+}
+
+.border-dotted {
+  border-style: dotted
+}
+
+.border-double {
+  border-style: double
+}
+
+.border-none {
+  border-style: none
+}
+
 .border-E2E {
   border-color: #E2E8F0
 }
 
 .border-CBD {
   border-color: #CBD5E0
+}
+
+.border-1 {
+  border-width: 1px
+}
+
+.border-t-1 {
+  border-top-width: 1px
+}
+
+.border-r-1 {
+  border-right-width: 1px
+}
+
+.border-b-1 {
+  border-bottom-width: 1px
+}
+
+.border-l-1 {
+  border-left-width: 1px
 }
 
 .w-320 {
@@ -34,11 +78,122 @@
   width: 640px
 }
 
-.w-100\% {
+.w-full {
+  width: 100%
 }
 
 .max-w-800 {
   max-width: 800px
+}
+
+.p-18 {
+  padding: 18px
+}
+
+.p-36 {
+  padding: 36px
+}
+
+.p-72 {
+  padding: 72px
+}
+
+.py-18 {
+  padding-top: 18px;
+  padding-bottom: 18px
+}
+
+.px-18 {
+  padding-left: 18px;
+  padding-right: 18px
+}
+
+.py-36 {
+  padding-top: 36px;
+  padding-bottom: 36px
+}
+
+.px-36 {
+  padding-left: 36px;
+  padding-right: 36px
+}
+
+.py-72 {
+  padding-top: 72px;
+  padding-bottom: 72px
+}
+
+.px-72 {
+  padding-left: 72px;
+  padding-right: 72px
+}
+
+.pt-18 {
+  padding-top: 18px
+}
+
+.pr-18 {
+  padding-right: 18px
+}
+
+.pb-18 {
+  padding-bottom: 18px
+}
+
+.pl-18 {
+  padding-left: 18px
+}
+
+.pt-36 {
+  padding-top: 36px
+}
+
+.pr-36 {
+  padding-right: 36px
+}
+
+.pb-36 {
+  padding-bottom: 36px
+}
+
+.pl-36 {
+  padding-left: 36px
+}
+
+.pt-72 {
+  padding-top: 72px
+}
+
+.pr-72 {
+  padding-right: 72px
+}
+
+.pb-72 {
+  padding-bottom: 72px
+}
+
+.pl-72 {
+  padding-left: 72px
+}
+
+.flex-1 {
+  -webkit-box-flex: 1;
+          flex: 1 1 0%
+}
+
+.flex-auto {
+  -webkit-box-flex: 1;
+          flex: 1 1 auto
+}
+
+.flex-initial {
+  -webkit-box-flex: 0;
+          flex: 0 1 auto
+}
+
+.flex-none {
+  -webkit-box-flex: 0;
+          flex: none
 }
 
 .flex-wrap {
@@ -53,6 +208,60 @@
   flex-wrap: nowrap
 }
 
+.justify-start {
+  -webkit-box-pack: start;
+          justify-content: flex-start
+}
+
+.justify-end {
+  -webkit-box-pack: end;
+          justify-content: flex-end
+}
+
+.justify-center {
+  -webkit-box-pack: center;
+          justify-content: center
+}
+
+.justify-between {
+  -webkit-box-pack: justify;
+          justify-content: space-between
+}
+
+.justify-around {
+  justify-content: space-around
+}
+
+.justify-evenly {
+  -webkit-box-pack: space-evenly;
+          justify-content: space-evenly
+}
+
+.items-start {
+  -webkit-box-align: start;
+          align-items: flex-start
+}
+
+.items-end {
+  -webkit-box-align: end;
+          align-items: flex-end
+}
+
+.items-center {
+  -webkit-box-align: center;
+          align-items: center
+}
+
+.items-baseline {
+  -webkit-box-align: baseline;
+          align-items: baseline
+}
+
+.items-stretch {
+  -webkit-box-align: stretch;
+          align-items: stretch
+}
+
 @media (max-width: 959px) {
   .lt960___w-320 {
     width: 320px
@@ -62,11 +271,32 @@
     width: 640px
   }
 
-  .lt960___w-100\% {
+  .lt960___w-full {
+    width: 100%
   }
 
   .lt960___max-w-800 {
     max-width: 800px
+  }
+
+  .lt960___flex-1 {
+    -webkit-box-flex: 1;
+            flex: 1 1 0%
+  }
+
+  .lt960___flex-auto {
+    -webkit-box-flex: 1;
+            flex: 1 1 auto
+  }
+
+  .lt960___flex-initial {
+    -webkit-box-flex: 0;
+            flex: 0 1 auto
+  }
+
+  .lt960___flex-none {
+    -webkit-box-flex: 0;
+            flex: none
   }
 }
 
@@ -79,11 +309,32 @@
     width: 640px
   }
 
-  .fr960to1280___w-100\% {
+  .fr960to1280___w-full {
+    width: 100%
   }
 
   .fr960to1280___max-w-800 {
     max-width: 800px
+  }
+
+  .fr960to1280___flex-1 {
+    -webkit-box-flex: 1;
+            flex: 1 1 0%
+  }
+
+  .fr960to1280___flex-auto {
+    -webkit-box-flex: 1;
+            flex: 1 1 auto
+  }
+
+  .fr960to1280___flex-initial {
+    -webkit-box-flex: 0;
+            flex: 0 1 auto
+  }
+
+  .fr960to1280___flex-none {
+    -webkit-box-flex: 0;
+            flex: none
   }
 }
 
@@ -96,10 +347,31 @@
     width: 640px
   }
 
-  .gt1280___w-100\% {
+  .gt1280___w-full {
+    width: 100%
   }
 
   .gt1280___max-w-800 {
     max-width: 800px
+  }
+
+  .gt1280___flex-1 {
+    -webkit-box-flex: 1;
+            flex: 1 1 0%
+  }
+
+  .gt1280___flex-auto {
+    -webkit-box-flex: 1;
+            flex: 1 1 auto
+  }
+
+  .gt1280___flex-initial {
+    -webkit-box-flex: 0;
+            flex: 0 1 auto
+  }
+
+  .gt1280___flex-none {
+    -webkit-box-flex: 0;
+            flex: none
   }
 }
