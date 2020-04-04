@@ -1,11 +1,13 @@
 import { NextPage } from "next";
-import { Tw } from "styles";
+import Head from "next/head";
 
-const Home: NextPage = () => (
-  <div className={Tw().textGray500().$()}>
-    <h1>Illustration</h1>
-    <h1 style={{ fontFeatureSettings: "'ss02'" }}>Illustration</h1>
+const Index: NextPage = () => (
+  <div>
+    <Head>
+      <title>otf.show</title>
+    </Head>
+    <p>home</p>
   </div>
 );
 
-export default Home;
+export default Index;
