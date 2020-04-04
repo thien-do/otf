@@ -1,25 +1,22 @@
-import Document, {
-  Html, Head, Main, NextScript,
-  DocumentContext
-} from 'next/document';
-import { Tw } from 'styles';
+import React from "react";
+import Document, { Html, Head, Main, NextScript } from "next/document";
+
+const CustomHead: React.FC = () => (
+  <Head>
+    <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml" />
+  </Head>
+);
+
+const CustomBody: React.FC = () => (
+  <body>
+    <Main />
+    <NextScript />
+  </body>
+);
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
-    const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
-  }
-
   render() {
-    return (
-      <Html>
-        <Head />
-        <body className={Tw().bgGray100().textGray800().$()}>
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    );
+    return <Html><CustomHead /> <CustomBody /></Html>;
   }
 }
 
