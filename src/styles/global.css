@@ -1,3 +1,16 @@
+/* reset */
+
+*, *:after, *:before {
+  border: none; border-width: 0;
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+
+ul { list-style: none; }
+a { text-decoration: none; color: inherit; }
+
+/* global typography */
+
 @import url('https://rsms.me/inter/inter.css');
 
 html { font-family: 'Inter', sans-serif; }
@@ -6,14 +19,11 @@ html { font-family: 'Inter', sans-serif; }
   html { font-family: 'Inter var', sans-serif; }
 }
 
-*, *:after, *:before {
-  border: none; margin: 0; padding: 0;
-  box-sizing: border-box;
-}
+/* extra utilities */
 
 .flex { display: flex; }
 .block { display: block; }
 /*
-block(): Tailwind { return this.add("block"); }
-flex(): Tailwind { return this.add("flex"); }
+  block(): Tailwind { return this.add("block"); }
+  flex(): Tailwind { return this.add("flex"); }
 */

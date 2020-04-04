@@ -1,6 +1,8 @@
 import React from "react";
 import { Tw } from "styles";
 
+import Header from "./header";
+
 const layout = Tw()
   .px72()
   .lt960FlexNone().lt960WFull()
@@ -12,14 +14,11 @@ const color = Tw()
   .border1().borderSolid().borderE2E()
   .$();
 
-/*
-background: #FFFFFF;
-border: 1px solid #E2E8F0;
-box-shadow: 0px 0px 8px #E2E8F0;
-*/
-
 const Main = () => (
-  <div className={`${layout} ${color}`}>Main</div>
+  <div className={`${layout} ${color}`}>
+    <Header />
+    <div>main</div>
+  </div>
 );
 
 export default Main;
