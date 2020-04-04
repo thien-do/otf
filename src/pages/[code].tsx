@@ -20,7 +20,7 @@ const Page: NextPage = () => {
 
   const ft = features[code];
   // @TODO: add proper "not found/contributing" page
-  if (ft === undefined) { return null; }
+  if (ft === undefined) { return <p>not found</p>; }
 
   return (
     <div>
