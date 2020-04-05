@@ -1,5 +1,3 @@
-/* reset */
-
 *, *:after, *:before {
   border: none; border-width: 0;
   margin: 0; padding: 0;
@@ -11,15 +9,4 @@ a { text-decoration: none; color: inherit; }
 
 input { color: inherit; font: inherit; }
 
-/* global typography */
-
 html { font-family: 'Inter', sans-serif; }
-
-/* extra utilities */
-
-.flex { display: flex; }
-.block { display: block; }
-/*
-  block(): Tailwind { return this.add("block"); }
-  flex(): Tailwind { return this.add("flex"); }
-*/

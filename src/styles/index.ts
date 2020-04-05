@@ -19,6 +19,15 @@ class Tailwind {
   }
 
   // Styling methods
+  block(): Tailwind { return this.add("block"); }
+  inlineBlock(): Tailwind { return this.add("inline-block"); }
+  inline(): Tailwind { return this.add("inline"); }
+  flex(): Tailwind { return this.add("flex"); }
+  inlineFlex(): Tailwind { return this.add("inline-flex"); }
+  table(): Tailwind { return this.add("table"); }
+  tableRow(): Tailwind { return this.add("table-row"); }
+  tableCell(): Tailwind { return this.add("table-cell"); }
+  hidden(): Tailwind { return this.add("hidden"); }
   textCbd(): Tailwind { return this.add("text-CBD"); }
   textA0A(): Tailwind { return this.add("text-A0A"); }
   text2D3(): Tailwind { return this.add("text-2D3"); }
@@ -126,6 +135,9 @@ class Tailwind {
   whitespacePre(): Tailwind { return this.add("whitespace-pre"); }
   whitespacePreLine(): Tailwind { return this.add("whitespace-pre-line"); }
   whitespacePreWrap(): Tailwind { return this.add("whitespace-pre-wrap"); }
+  underline(): Tailwind { return this.add("underline"); }
+  lineThrough(): Tailwind { return this.add("line-through"); }
+  noUnderline(): Tailwind { return this.add("no-underline"); }
   lt960W320(): Tailwind { return this.add("lt960___w-320"); }
   lt960W640(): Tailwind { return this.add("lt960___w-640"); }
   lt960WFull(): Tailwind { return this.add("lt960___w-full"); }
@@ -150,7 +162,4 @@ class Tailwind {
   gt1280FlexAuto(): Tailwind { return this.add("gt1280___flex-auto"); }
   gt1280FlexInitial(): Tailwind { return this.add("gt1280___flex-initial"); }
   gt1280FlexNone(): Tailwind { return this.add("gt1280___flex-none"); }
-
-  block(): Tailwind { return this.add("block"); }
-  flex(): Tailwind { return this.add("flex"); }
 }

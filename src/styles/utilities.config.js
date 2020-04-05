@@ -54,19 +54,23 @@ module.exports = {
     */
   },
   variants: {
+    display: [],
     textColor: ["hover"], backgroundColor: [], boxShadow: [],
     borderStyle: [], borderColor: [], borderWidth: [],
     width: ["responsive"], maxWidth: ["responsive"], padding: [], margin: [],
     flex: ["responsive"], flexWrap: [], justifyContent: [], alignItems: [],
     fontSize: [], lineHeight: [], fontWeight: [], whitespace: [],
+    textDecoration: [],
     // transitionProperty: [],
   },
   corePlugins: [
+    "display",
     "textColor", "backgroundColor", "boxShadow",
     "borderStyle", "borderColor", "borderWidth",
     "width", "maxWidth", "padding", "margin",
     "flex", "flexWrap", "justifyContent", "alignItems",
-    "fontSize", "lineHeight", "fontWeight", "whitespace"
+    "fontSize", "lineHeight", "fontWeight", "whitespace",
+    "textDecoration"
     // https://github.com/dvkndn/typed.tw/issues/19
     // "transitionProperty",
   ],

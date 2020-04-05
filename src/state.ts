@@ -7,9 +7,15 @@ export interface State {
   font: string;
 }
 
+export interface Query {
+  [key: string]: string | string[] | undefined;
+  code?: string;
+}
+
 const setText = (router: NextRouter) => (text: string) => {
-  const url = { pathname: "/[code]", query: { text } };
-  const as = { pathname: `/${router.query.code}`, query: { text } };
+  const query: Query = { ...router.query, text }; delete query.code;
+  const url = { pathname: "/[code]", query };
+  const as = { pathname: `/${router.query.code}`, query };
   router.push(url, as, { shallow: true });
 };
 
