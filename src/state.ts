@@ -7,6 +7,24 @@ export interface State {
   font: string;
 }
 
+const setText = (router: NextRouter) => (text: string) => {
+  const url = { pathname: "/[code]", query: { text } };
+  const as = { pathname: `/${router.query.code}`, query: { text } };
+  router.push(url, as, { shallow: true });
+};
+
+export interface SetState {
+  feature: (code: string) => void;
+  text: (text: string) => void;
+  font: (name: string) => void;
+}
+
+export const getSetState = (router: NextRouter): SetState => ({
+  feature: () => {},
+  text: setText(router),
+  font: () => {},
+});
+
 export const getState = (router: NextRouter): State => {
   // feature
   const { code } = router.query;
