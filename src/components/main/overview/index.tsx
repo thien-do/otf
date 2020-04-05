@@ -4,18 +4,17 @@ import { State } from "state";
 import Code from "./code";
 import Font from "./font";
 
-const className = Tw()
-  .whitespacePre().text24().leading36()
-  .flex().flexWrap().$();
-
 interface Props { state: State; }
 
 const Overview: React.FC<Props> = ({ state }) => (
-  <div className={className}>
-    <span className={Tw().flexNone().$()}>This is how </span>
-    <Code state={state} />
-    <span className={Tw().flexNone().$()}>make a difference in </span>
-    <Font state={state} />
+  <div className={Tw()
+    .flex().flexWrap()
+    .whitespacePreWrap().text24().leading36().$()
+  }>
+    <span>This is how </span>
+    <span><Code state={state} /> </span>
+    <span>make a difference in </span>
+    <span><Font state={state} /> </span>
   </div>
 );
 

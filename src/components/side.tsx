@@ -4,7 +4,7 @@ import { Tw } from "styles";
 import Header from "./header";
 
 const layout = Tw()
-  .lt960WFull().fr960To1280W320().gt1280W640()
+  .w640().lt1280W320().lt960WFull()
   .flexNone().px36().$();
 
 const Side = () => (
