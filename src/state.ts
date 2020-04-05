@@ -50,5 +50,7 @@ export const getState = (router: NextRouter): State => {
   const text = queryText ?? feature.texts[0];
   if (text === undefined) { throw new Error("missing text from feature"); }
 
+  console.log("getState", text);
+
   return { feature, text, font };
 };

@@ -8,10 +8,8 @@ import Description from "./description";
 import { State, SetState } from "state";
 
 const layout = Tw()
-  .px72().pb72()
-  .lt960FlexNone().lt960WFull()
-  .fr960To1280Flex1().fr960To1280MaxW800()
-  .gt1280Flex1().gt1280MaxW800().$();
+  .px72().flex1().maxW800().pb72()
+  .lt960Px36().lt960FlexNone().lt960WFull().lt960MaxWNone().$()
 
 const color = Tw()
   .bgFff().shadow8()

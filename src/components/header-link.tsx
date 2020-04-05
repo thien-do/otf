@@ -30,7 +30,7 @@ const HeaderLink: React.FC<Props> = ({ href, children }) => {
     ? Tw().text2D3().$() : Tw().textA0A().hoverText2D3().$();
   props.className += ` ${color}`;
 
-  props.children = isExternal ? `${children} →` : children;
+  props.children = isExternal ? `${children}\u00a0→` : children;
 
   if (isExternal) {
     props.href = href;

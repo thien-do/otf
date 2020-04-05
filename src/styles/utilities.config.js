@@ -3,14 +3,13 @@ module.exports = {
   separator: "___",
   theme: {
     sizes: {
-      "full": "100%",
+      "full": "100%", "none": "none",
       "18": "18px", "24": "24px", "36": "36px", "48": "48px", "72": "72px",
       "320": "320px", "640": "640px", "800": "800px",
     },
     screens: {
+      "lt1280": { "max": "1279px" },
       "lt960": { "max": "959px" },
-      "fr960to1280": { "min": "960px", "max": "1279px" },
-      "gt1280": { "min": "1280px" },
     },
     colors: {
       transparent: "transparent",
@@ -33,7 +32,7 @@ module.exports = {
     }),
     // layout
     width: theme => theme.pick("sizes", ["full", "320", "640"]),
-    maxWidth: theme => theme.pick("sizes", ["800"]),
+    maxWidth: theme => theme.pick("sizes", ["none", "800"]),
     padding: theme => theme.pick("sizes", ["18", "36", "72"]),
     margin: theme => theme.pick("sizes", ["18", "24", "36", "48"]),
     // border
@@ -54,20 +53,19 @@ module.exports = {
     */
   },
   variants: {
-    display: [],
     textColor: ["hover"], backgroundColor: [], boxShadow: [],
     borderStyle: [], borderColor: [], borderWidth: [],
-    width: ["responsive"], maxWidth: ["responsive"], padding: [], margin: [],
+    display: [], width: ["responsive"], maxWidth: ["responsive"],
+    padding: ["responsive"], margin: [],
     flex: ["responsive"], flexWrap: [], justifyContent: [], alignItems: [],
     fontSize: [], lineHeight: [], fontWeight: [], whitespace: [],
     textDecoration: [],
     // transitionProperty: [],
   },
   corePlugins: [
-    "display",
     "textColor", "backgroundColor", "boxShadow",
     "borderStyle", "borderColor", "borderWidth",
-    "width", "maxWidth", "padding", "margin",
+    "display", "width", "maxWidth", "padding", "margin",
     "flex", "flexWrap", "justifyContent", "alignItems",
     "fontSize", "lineHeight", "fontWeight", "whitespace",
     "textDecoration"
