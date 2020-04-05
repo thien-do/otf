@@ -17,8 +17,11 @@ const Link: React.FC<Props> = ({ type, value, label }) => {
 
   const href = { pathname: "/[code]", query };
   const as = { pathname: `/${router.query.code}`, query };
-  const link = <a className={Tw().underline().$()}>{label}</a>;
-  return <NextLink href={href} as={as} shallow>{link}</NextLink>;
+  return (
+    <NextLink href={href} as={as} scroll={false} shallow>
+      <a className={Tw().underline().$()}>{label}</a>;
+    </NextLink>
+  );
 };
 
 export default Link;

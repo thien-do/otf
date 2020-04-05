@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Inter";
   font-style:  normal; font-weight: 400; font-display: swap;
-  src: url("http://localhost:3000/fonts/Inter-Regular.woff2?v=3.12") format("woff2");
+  src: url("/fonts/Inter-Regular.woff2?v=3.12") format("woff2");
 }
 
 @font-face {
