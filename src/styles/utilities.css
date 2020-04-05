@@ -193,7 +193,7 @@
 }
 
 .m-24 {
-  margin: undefined
+  margin: 24px
 }
 
 .m-36 {
@@ -201,7 +201,7 @@
 }
 
 .m-48 {
-  margin: undefined
+  margin: 48px
 }
 
 .my-18 {
@@ -215,13 +215,13 @@
 }
 
 .my-24 {
-  margin-top: undefined;
-  margin-bottom: undefined
+  margin-top: 24px;
+  margin-bottom: 24px
 }
 
 .mx-24 {
-  margin-left: undefined;
-  margin-right: undefined
+  margin-left: 24px;
+  margin-right: 24px
 }
 
 .my-36 {
@@ -235,13 +235,13 @@
 }
 
 .my-48 {
-  margin-top: undefined;
-  margin-bottom: undefined
+  margin-top: 48px;
+  margin-bottom: 48px
 }
 
 .mx-48 {
-  margin-left: undefined;
-  margin-right: undefined
+  margin-left: 48px;
+  margin-right: 48px
 }
 
 .mt-18 {
@@ -261,19 +261,19 @@
 }
 
 .mt-24 {
-  margin-top: undefined
+  margin-top: 24px
 }
 
 .mr-24 {
-  margin-right: undefined
+  margin-right: 24px
 }
 
 .mb-24 {
-  margin-bottom: undefined
+  margin-bottom: 24px
 }
 
 .ml-24 {
-  margin-left: undefined
+  margin-left: 24px
 }
 
 .mt-36 {
@@ -293,19 +293,19 @@
 }
 
 .mt-48 {
-  margin-top: undefined
+  margin-top: 48px
 }
 
 .mr-48 {
-  margin-right: undefined
+  margin-right: 48px
 }
 
 .mb-48 {
-  margin-bottom: undefined
+  margin-bottom: 48px
 }
 
 .ml-48 {
-  margin-left: undefined
+  margin-left: 48px
 }
 
 .flex-1 {
@@ -432,6 +432,26 @@
 
 .font-normal {
   font-weight: 400
+}
+
+.whitespace-normal {
+  white-space: normal
+}
+
+.whitespace-no-wrap {
+  white-space: nowrap
+}
+
+.whitespace-pre {
+  white-space: pre
+}
+
+.whitespace-pre-line {
+  white-space: pre-line
+}
+
+.whitespace-pre-wrap {
+  white-space: pre-wrap
 }
 
 @media (max-width: 959px) {
