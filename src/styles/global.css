@@ -9,6 +9,8 @@
 ul { list-style: none; }
 a { text-decoration: none; color: inherit; }
 
+input { color: inherit; font: inherit; }
+
 /* global typography */
 
 @import url('https://rsms.me/inter/inter.css');

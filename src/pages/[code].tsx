@@ -3,33 +3,35 @@ import { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-import features, { Feature } from "features";
+import { Feature } from "features";
 import { Tw } from "styles";
 import Main from "components/main";
 import Side from "components/side";
+import { getState } from "state";
 
 interface CustomHeadProps { ft: Feature; }
 
-const CustomHead: React.FC<CustomHeadProps> = ({ ft }) => (
-  <Head>
-    <title>{ft.name} ({ft.code}) - otf.show</title>
-    <meta name="description" content={`$()$()$(info.description)`} />
-  </Head>
-);
+const CustomHead: React.FC<CustomHeadProps> = ({ ft }) => {
+  const fullName = `${ft.name} (${ft.code})`;
+  return (
+    <Head>
+      <title>{fullName} - otf.show</title>
+      <meta name="description" content={`${fullName} ${ft.description} - otf.show`} />
+    </Head>
+  );
+};
 
 const Page: NextPage = () => {
-  const { code } = useRouter().query;
-  if (typeof code != "string") { return null; }
-
-  const ft = features[code];
-  // @TODO: add proper "not found/contributing" page
-  if (ft === undefined) { return <p>not found</p>; }
-
+  const router = useRouter();
+  if (typeof router.query.code != "string") {
+    return <span>Invalid code</span>;
+  }
+  const state = getState(router);
   return (
     <div>
-      <CustomHead ft={ft} />
+      <CustomHead ft={state.feature} />
       <div className={Tw().flex().flexWrap().$()}>
-        <Main />
+        <Main state={state} />
         <Side />
       </div>
     </div>

@@ -120,6 +120,11 @@ class Tailwind {
   leadingNone(): Tailwind { return this.add("leading-none"); }
   fontSemibold(): Tailwind { return this.add("font-semibold"); }
   fontNormal(): Tailwind { return this.add("font-normal"); }
+  whitespaceNormal(): Tailwind { return this.add("whitespace-normal"); }
+  whitespaceNoWrap(): Tailwind { return this.add("whitespace-no-wrap"); }
+  whitespacePre(): Tailwind { return this.add("whitespace-pre"); }
+  whitespacePreLine(): Tailwind { return this.add("whitespace-pre-line"); }
+  whitespacePreWrap(): Tailwind { return this.add("whitespace-pre-wrap"); }
   lt960W320(): Tailwind { return this.add("lt960___w-320"); }
   lt960W640(): Tailwind { return this.add("lt960___w-640"); }
   lt960WFull(): Tailwind { return this.add("lt960___w-full"); }

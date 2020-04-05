@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     sizes: {
       "full": "100%",
-      "18": "18px", "36": "36px", "72": "72px",
+      "18": "18px", "24": "24px", "36": "36px", "48": "48px", "72": "72px",
       "320": "320px", "640": "640px", "800": "800px",
     },
     screens: {
@@ -55,7 +55,7 @@ module.exports = {
     borderStyle: [], borderColor: [], borderWidth: [],
     width: ["responsive"], maxWidth: ["responsive"], padding: [], margin: [],
     flex: ["responsive"], flexWrap: [], justifyContent: [], alignItems: [],
-    fontSize: [], lineHeight: [], fontWeight: [],
+    fontSize: [], lineHeight: [], fontWeight: [], whitespace: [],
     // transitionProperty: [],
   },
   corePlugins: [
@@ -63,7 +63,7 @@ module.exports = {
     "borderStyle", "borderColor", "borderWidth",
     "width", "maxWidth", "padding", "margin",
     "flex", "flexWrap", "justifyContent", "alignItems",
-    "fontSize", "lineHeight", "fontWeight",
+    "fontSize", "lineHeight", "fontWeight", "whitespace"
     // https://github.com/dvkndn/typed.tw/issues/19
     // "transitionProperty",
   ],
