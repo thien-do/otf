@@ -7,7 +7,7 @@ import { Feature } from "features";
 import { Tw } from "styles";
 import Main from "components/main";
 import Side from "components/side";
-import { getState } from "state";
+import { getState, getSetState } from "state";
 
 interface CustomHeadProps { ft: Feature; }
 
@@ -27,11 +27,12 @@ const Page: NextPage = () => {
     return <span>Invalid code</span>;
   }
   const state = getState(router);
+  const setState = getSetState(router);
   return (
     <div>
       <CustomHead ft={state.feature} />
       <div className={Tw().flex().flexWrap().$()}>
-        <Main state={state} />
+        <Main state={state} setState={setState} />
         <Side />
       </div>
     </div>

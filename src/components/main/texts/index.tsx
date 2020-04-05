@@ -1,10 +1,10 @@
 import React from "react";
 import { Tw } from "styles";
-import { State } from "state";
+import { State, SetState } from "state";
 
-interface Props { state: State; }
+interface Props { state: State; setState: SetState; }
 
-const Texts: React.FC<Props> = ({ state }) => (
+const Texts: React.FC<Props> = ({ state, setState }) => (
   <div
     className={Tw().text72().leading96().fontSemibold().$()}
     style={{ fontFamily: state.font }}
@@ -12,7 +12,7 @@ const Texts: React.FC<Props> = ({ state }) => (
     <div className={Tw().textCbd().$()}>
       <input
         type="text" className={Tw().wFull().$()}
-        defaultValue={state.text}
+        value={state.text} onChange={e => setState.text(e.target.value)}
       />
     </div>
     <div
@@ -21,7 +21,7 @@ const Texts: React.FC<Props> = ({ state }) => (
     >
       <input
         type="text" className={Tw().wFull().$()}
-        defaultValue={state.text}
+        value={state.text} onChange={e => setState.text(e.target.value)}
       />
     </div>
   </div>
