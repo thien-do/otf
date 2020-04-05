@@ -28,10 +28,10 @@ const links = [
 
 const Main: React.FC<Props> = ({ state }) => (
   <main className={`${layout} ${color}`}>
-    <div> <Header links={links} /> </div>
-    <div className={Tw().mt36().$()}> <Overview state={state} /> </div>
-    <div className={Tw().mt36().$()}> <Texts state={state} /> </div>
-    <div className={Tw().mt48().$()}> <Description state={state} /> </div>
+    <div><Header links={links} /></div>
+    <div className={Tw().mt36().$()}><Overview state={state} /></div>
+    <div className={Tw().mt24().$()}><Texts state={state} /></div>
+    <div className={Tw().mt36().$()}><Description state={state} /></div>
   </main>
 );
 

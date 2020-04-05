@@ -5,7 +5,10 @@ import { State } from "state";
 interface Props { state: State; }
 
 const Texts: React.FC<Props> = ({ state }) => (
-  <div className={Tw().text72().fontSemibold().leadingNone().$()}>
+  <div
+    className={Tw().text72().leading96().fontSemibold().$()}
+    style={{ fontFamily: state.font }}
+  >
     <div className={Tw().textCbd().$()}>
       <input
         type="text" className={Tw().wFull().$()}
@@ -13,7 +16,7 @@ const Texts: React.FC<Props> = ({ state }) => (
       />
     </div>
     <div
-      className={Tw().mt24().text2D3().$()}
+      className={Tw().text2D3().$()}
       style={{ fontFeatureSettings: `'${state.feature.code}'` }}
     >
       <input

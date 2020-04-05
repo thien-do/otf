@@ -41,7 +41,10 @@ module.exports = {
     borderWidth: { 1: "1px" },
     // typography
     fontSize: { 18: "18px", 24: "24px", 72: "72px" },
-    lineHeight: { none: 1, 18: "18px", 24: "24px", 30: "30px", 36: "36px" },
+    lineHeight: {
+      18: "18px", 24: "24px", 30: "30px", 36: "36px", 96: "96px",
+      none: 1,
+    },
     fontWeight: { semibold: 600, normal: 400 },
     // transition
     /*
