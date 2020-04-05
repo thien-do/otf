@@ -12,8 +12,13 @@ export interface Query {
   code?: string;
 }
 
-const setText = (router: NextRouter) => (text: string) => {
-  const query: Query = { ...router.query, text }; delete query.code;
+const setFeature = (router: NextRouter) => (value: string) => {
+  router.push("/[code]", `/${value}`, { shallow: true });
+};
+
+const setQuery = (router: NextRouter, key: string) => (value: string) => {
+  const query: Query = { ...router.query, [key]: value };
+  delete query.code;
   const url = { pathname: "/[code]", query };
   const as = { pathname: `/${router.query.code}`, query };
   router.push(url, as, { shallow: true });
@@ -26,9 +31,9 @@ export interface SetState {
 }
 
 export const getSetState = (router: NextRouter): SetState => ({
-  feature: () => {},
-  text: setText(router),
-  font: () => {},
+  feature: setFeature(router),
+  text: setQuery(router, "text"),
+  font: setQuery(router, "font"),
 });
 
 export const getState = (router: NextRouter): State => {
@@ -49,8 +54,6 @@ export const getState = (router: NextRouter): State => {
   if (Array.isArray(queryText)) { throw new Error("invalid text from query (array)"); }
   const text = queryText ?? feature.texts[0];
   if (text === undefined) { throw new Error("missing text from feature"); }
-
-  console.log("getState", text);
 
   return { feature, text, font };
 };

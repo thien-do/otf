@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     sizes: {
       "full": "100%", "none": "none",
-      "18": "18px", "24": "24px", "36": "36px", "48": "48px", "72": "72px",
+      "9": "9px", "18": "18px", "24": "24px",
+      "36": "36px", "48": "48px", "72": "72px",
       "320": "320px", "640": "640px", "800": "800px",
     },
     screens: {
@@ -25,15 +26,16 @@ module.exports = {
       return {};
     },
     // color
-    backgroundColor: theme => theme.pick("colors", ["FFF", "F7F"]),
-    textColor: theme => theme.pick("colors", ["CBD", "A0A", "2D3"]),
+    backgroundColor: theme => theme.pick("colors", ["FFF", "F7F", "718", "4A5", "2D3"]),
+    textColor: theme => theme.pick("colors", ["CBD", "A0A", "2D3", "FFF"]),
     boxShadow: theme => ({
-      8: `0px 0px 8px ${theme("colors.E2E")}`,
+      "E2E": `0px 0px 8px ${theme("colors.E2E")}`,
+      "A0A": `0px 2px 8px ${theme("colors.A0A")}`, // sorry
     }),
     // layout
     width: theme => theme.pick("sizes", ["full", "320", "640"]),
     maxWidth: theme => theme.pick("sizes", ["none", "800"]),
-    padding: theme => theme.pick("sizes", ["18", "36", "72"]),
+    padding: theme => theme.pick("sizes", ["9", "18", "36", "72"]),
     margin: theme => theme.pick("sizes", ["18", "24", "36", "48"]),
     // border
     borderColor: theme => theme.pick("colors", ["E2E", "CBD"]),
@@ -45,6 +47,9 @@ module.exports = {
       none: 1,
     },
     fontWeight: { semibold: 600, normal: 400 },
+    // position
+    inset: { 0: "0px" },
+    zIndex: { "-1": "-1", "0": "0", "1": "1" },
     // transition
     /*
     transitionProperty: {
@@ -60,6 +65,7 @@ module.exports = {
     flex: ["responsive"], flexWrap: [], justifyContent: [], alignItems: [],
     fontSize: [], lineHeight: [], fontWeight: [], whitespace: [],
     textDecoration: [],
+    position: [], inset: [], zIndex: [],
     // transitionProperty: [],
   },
   corePlugins: [
@@ -67,8 +73,8 @@ module.exports = {
     "borderStyle", "borderColor", "borderWidth",
     "display", "width", "maxWidth", "padding", "margin",
     "flex", "flexWrap", "justifyContent", "alignItems",
-    "fontSize", "lineHeight", "fontWeight", "whitespace",
-    "textDecoration"
+    "fontSize", "lineHeight", "fontWeight", "whitespace", "textDecoration",
+    "position", "inset", "zIndex",
     // https://github.com/dvkndn/typed.tw/issues/19
     // "transitionProperty",
   ],

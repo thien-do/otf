@@ -7,6 +7,10 @@
 ul { list-style: none; }
 a { text-decoration: none; color: inherit; }
 
-input { color: inherit; font: inherit; }
+input, button {
+  appearance: none; font: inherit;
+  background: none; color: inherit;
+  text-align: left;
+}
 
 html { font-family: 'Inter', sans-serif; }

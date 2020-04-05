@@ -1,7 +1,7 @@
 import React from "react";
 import features from "features";
-import Dropdown from "./dropdown";
-import { State } from "state";
+import Dropdown from "components/dropdown";
+import { State, SetState } from "state";
 
 const options = Object.keys(features).map(key => {
   const ft = features[key];
@@ -9,12 +9,12 @@ const options = Object.keys(features).map(key => {
   return { value: ft.code, label: `${ft.name} (${ft.code})` };
 });
 
-interface Props { state: State; }
+interface Props { state: State; setState: SetState; }
 
-const Code: React.FC<Props> = ({ state }) => (
+const Code: React.FC<Props> = ({ state, setState }) => (
   <Dropdown
     value={state.feature.code}
-    setValue={() => { }}
+    setValue={setState.feature}
     options={options}
   />
 );

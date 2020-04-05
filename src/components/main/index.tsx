@@ -12,7 +12,7 @@ const layout = Tw()
   .lt960Px36().lt960FlexNone().lt960WFull().lt960MaxWNone().$()
 
 const color = Tw()
-  .bgFff().shadow8()
+  .bgFff().shadowE2E()
   .border1().borderSolid().borderE2E()
   .$();
 
@@ -28,7 +28,7 @@ const Main: React.FC<Props> = ({ state, setState }) => (
   <main className={`${layout} ${color}`}>
     <div><Header links={links} /></div>
     <div className={Tw().mt36().$()}>
-      <Overview state={state} />
+      <Overview state={state} setState={setState} />
     </div>
     <div className={Tw().mt24().$()}>
       <Texts state={state} setState={setState} />

@@ -22,12 +22,18 @@ class Tailwind {
   textCbd(): Tailwind { return this.add("text-CBD"); }
   textA0A(): Tailwind { return this.add("text-A0A"); }
   text2D3(): Tailwind { return this.add("text-2D3"); }
+  textFff(): Tailwind { return this.add("text-FFF"); }
   hoverTextCbd(): Tailwind { return this.add("hover___text-CBD"); }
   hoverTextA0A(): Tailwind { return this.add("hover___text-A0A"); }
   hoverText2D3(): Tailwind { return this.add("hover___text-2D3"); }
+  hoverTextFff(): Tailwind { return this.add("hover___text-FFF"); }
+  bg718(): Tailwind { return this.add("bg-718"); }
   bgFff(): Tailwind { return this.add("bg-FFF"); }
   bgF7F(): Tailwind { return this.add("bg-F7F"); }
-  shadow8(): Tailwind { return this.add("shadow-8"); }
+  bg4A5(): Tailwind { return this.add("bg-4A5"); }
+  bg2D3(): Tailwind { return this.add("bg-2D3"); }
+  shadowE2E(): Tailwind { return this.add("shadow-E2E"); }
+  shadowA0A(): Tailwind { return this.add("shadow-A0A"); }
   borderSolid(): Tailwind { return this.add("border-solid"); }
   borderDashed(): Tailwind { return this.add("border-dashed"); }
   borderDotted(): Tailwind { return this.add("border-dotted"); }
@@ -54,15 +60,22 @@ class Tailwind {
   wFull(): Tailwind { return this.add("w-full"); }
   maxW800(): Tailwind { return this.add("max-w-800"); }
   maxWNone(): Tailwind { return this.add("max-w-none"); }
+  p9(): Tailwind { return this.add("p-9"); }
   p18(): Tailwind { return this.add("p-18"); }
   p36(): Tailwind { return this.add("p-36"); }
   p72(): Tailwind { return this.add("p-72"); }
+  py9(): Tailwind { return this.add("py-9"); }
+  px9(): Tailwind { return this.add("px-9"); }
   py18(): Tailwind { return this.add("py-18"); }
   px18(): Tailwind { return this.add("px-18"); }
   py36(): Tailwind { return this.add("py-36"); }
   px36(): Tailwind { return this.add("px-36"); }
   py72(): Tailwind { return this.add("py-72"); }
   px72(): Tailwind { return this.add("px-72"); }
+  pt9(): Tailwind { return this.add("pt-9"); }
+  pr9(): Tailwind { return this.add("pr-9"); }
+  pb9(): Tailwind { return this.add("pb-9"); }
+  pl9(): Tailwind { return this.add("pl-9"); }
   pt18(): Tailwind { return this.add("pt-18"); }
   pr18(): Tailwind { return this.add("pr-18"); }
   pb18(): Tailwind { return this.add("pb-18"); }
@@ -139,20 +152,42 @@ class Tailwind {
   underline(): Tailwind { return this.add("underline"); }
   lineThrough(): Tailwind { return this.add("line-through"); }
   noUnderline(): Tailwind { return this.add("no-underline"); }
+  static(): Tailwind { return this.add("static"); }
+  fixed(): Tailwind { return this.add("fixed"); }
+  absolute(): Tailwind { return this.add("absolute"); }
+  relative(): Tailwind { return this.add("relative"); }
+  sticky(): Tailwind { return this.add("sticky"); }
+  inset0(): Tailwind { return this.add("inset-0"); }
+  insetY0(): Tailwind { return this.add("inset-y-0"); }
+  insetX0(): Tailwind { return this.add("inset-x-0"); }
+  top0(): Tailwind { return this.add("top-0"); }
+  right0(): Tailwind { return this.add("right-0"); }
+  bottom0(): Tailwind { return this.add("bottom-0"); }
+  left0(): Tailwind { return this.add("left-0"); }
+  z0(): Tailwind { return this.add("z-0"); }
+  z1(): Tailwind { return this.add("z-1"); }
+  negZ1(): Tailwind { return this.add("-z-1"); }
   lt1280W320(): Tailwind { return this.add("lt1280___w-320"); }
   lt1280W640(): Tailwind { return this.add("lt1280___w-640"); }
   lt1280WFull(): Tailwind { return this.add("lt1280___w-full"); }
   lt1280MaxW800(): Tailwind { return this.add("lt1280___max-w-800"); }
   lt1280MaxWNone(): Tailwind { return this.add("lt1280___max-w-none"); }
+  lt1280P9(): Tailwind { return this.add("lt1280___p-9"); }
   lt1280P18(): Tailwind { return this.add("lt1280___p-18"); }
   lt1280P36(): Tailwind { return this.add("lt1280___p-36"); }
   lt1280P72(): Tailwind { return this.add("lt1280___p-72"); }
+  lt1280Py9(): Tailwind { return this.add("lt1280___py-9"); }
+  lt1280Px9(): Tailwind { return this.add("lt1280___px-9"); }
   lt1280Py18(): Tailwind { return this.add("lt1280___py-18"); }
   lt1280Px18(): Tailwind { return this.add("lt1280___px-18"); }
   lt1280Py36(): Tailwind { return this.add("lt1280___py-36"); }
   lt1280Px36(): Tailwind { return this.add("lt1280___px-36"); }
   lt1280Py72(): Tailwind { return this.add("lt1280___py-72"); }
   lt1280Px72(): Tailwind { return this.add("lt1280___px-72"); }
+  lt1280Pt9(): Tailwind { return this.add("lt1280___pt-9"); }
+  lt1280Pr9(): Tailwind { return this.add("lt1280___pr-9"); }
+  lt1280Pb9(): Tailwind { return this.add("lt1280___pb-9"); }
+  lt1280Pl9(): Tailwind { return this.add("lt1280___pl-9"); }
   lt1280Pt18(): Tailwind { return this.add("lt1280___pt-18"); }
   lt1280Pr18(): Tailwind { return this.add("lt1280___pr-18"); }
   lt1280Pb18(): Tailwind { return this.add("lt1280___pb-18"); }
@@ -174,15 +209,22 @@ class Tailwind {
   lt960WFull(): Tailwind { return this.add("lt960___w-full"); }
   lt960MaxW800(): Tailwind { return this.add("lt960___max-w-800"); }
   lt960MaxWNone(): Tailwind { return this.add("lt960___max-w-none"); }
+  lt960P9(): Tailwind { return this.add("lt960___p-9"); }
   lt960P18(): Tailwind { return this.add("lt960___p-18"); }
   lt960P36(): Tailwind { return this.add("lt960___p-36"); }
   lt960P72(): Tailwind { return this.add("lt960___p-72"); }
+  lt960Py9(): Tailwind { return this.add("lt960___py-9"); }
+  lt960Px9(): Tailwind { return this.add("lt960___px-9"); }
   lt960Py18(): Tailwind { return this.add("lt960___py-18"); }
   lt960Px18(): Tailwind { return this.add("lt960___px-18"); }
   lt960Py36(): Tailwind { return this.add("lt960___py-36"); }
   lt960Px36(): Tailwind { return this.add("lt960___px-36"); }
   lt960Py72(): Tailwind { return this.add("lt960___py-72"); }
   lt960Px72(): Tailwind { return this.add("lt960___px-72"); }
+  lt960Pt9(): Tailwind { return this.add("lt960___pt-9"); }
+  lt960Pr9(): Tailwind { return this.add("lt960___pr-9"); }
+  lt960Pb9(): Tailwind { return this.add("lt960___pb-9"); }
+  lt960Pl9(): Tailwind { return this.add("lt960___pl-9"); }
   lt960Pt18(): Tailwind { return this.add("lt960___pt-18"); }
   lt960Pr18(): Tailwind { return this.add("lt960___pr-18"); }
   lt960Pb18(): Tailwind { return this.add("lt960___pb-18"); }
