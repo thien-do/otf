@@ -19,7 +19,7 @@ const Link: React.FC<Props> = ({ type, value, label }) => {
   const as = { pathname: `/${router.query.code}`, query };
   return (
     <NextLink href={href} as={as} scroll={false} shallow>
-      <a className={Tw().underline().$()}>{label}</a>;
+      <a className={Tw().underline().$()}>{label}</a>
     </NextLink>
   );
 };
