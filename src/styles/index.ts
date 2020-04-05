@@ -117,6 +117,7 @@ class Tailwind {
   leading24(): Tailwind { return this.add("leading-24"); }
   leading30(): Tailwind { return this.add("leading-30"); }
   leading36(): Tailwind { return this.add("leading-36"); }
+  leading96(): Tailwind { return this.add("leading-96"); }
   leadingNone(): Tailwind { return this.add("leading-none"); }
   fontSemibold(): Tailwind { return this.add("font-semibold"); }
   fontNormal(): Tailwind { return this.add("font-normal"); }

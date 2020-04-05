@@ -422,6 +422,10 @@
   line-height: 36px
 }
 
+.leading-96 {
+  line-height: 96px
+}
+
 .leading-none {
   line-height: 1
 }

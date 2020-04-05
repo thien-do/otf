@@ -1,6 +1,7 @@
 const fonts = [
   "Inter",
-  "Open Sans"
+  "Open Sans",
+  "Source Sans Pro"
 ];
 
 export default fonts;
