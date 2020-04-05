@@ -1,20 +1,20 @@
 import React from "react";
 import { Tw } from "styles";
-import { State } from "state";
+import { State, SetState } from "state";
 import Code from "./code";
 import Font from "./font";
 
-interface Props { state: State; }
+interface Props { state: State; setState: SetState; }
 
-const Overview: React.FC<Props> = ({ state }) => (
+const Overview: React.FC<Props> = ({ state, setState }) => (
   <div className={Tw()
     .flex().flexWrap()
     .whitespacePreWrap().text24().leading36().$()
   }>
     <span>This is how </span>
-    <span><Code state={state} /> </span>
+    <span><Code state={state} setState={setState} /> </span>
     <span>make a difference in </span>
-    <span><Font state={state} /> </span>
+    <span><Font state={state} setState={setState} /> </span>
   </div>
 );
 

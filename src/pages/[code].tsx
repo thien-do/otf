@@ -28,6 +28,7 @@ const Page: NextPage = () => {
   }
   const state = getState(router);
   const setState = getSetState(router);
+
   return (
     <div>
       <CustomHead ft={state.feature} />
