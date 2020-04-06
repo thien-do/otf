@@ -27,7 +27,7 @@ module.exports = {
     },
     // color
     backgroundColor: theme => theme.pick("colors", ["FFF", "F7F", "718", "4A5", "2D3"]),
-    textColor: theme => theme.pick("colors", ["CBD", "A0A", "2D3", "FFF"]),
+    textColor: theme => theme.pick("colors", ["CBD", "A0A", "2D3", "718", "FFF"]),
     boxShadow: theme => ({
       "E2E": `0px 0px 8px ${theme("colors.E2E")}`,
       "A0A": `0px 2px 8px ${theme("colors.A0A")}`, // sorry
@@ -58,7 +58,7 @@ module.exports = {
     */
   },
   variants: {
-    textColor: ["hover"], backgroundColor: [], boxShadow: [],
+    textColor: [], backgroundColor: [], boxShadow: [],
     borderStyle: [], borderColor: [], borderWidth: [],
     display: [], width: ["responsive"], maxWidth: ["responsive"],
     padding: ["responsive"], margin: [],

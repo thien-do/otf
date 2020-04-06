@@ -1,3 +1,7 @@
+.text-718 {
+  color: #718096
+}
+
 .text-CBD {
   color: #CBD5E0
 }
@@ -11,22 +15,6 @@
 }
 
 .text-FFF {
-  color: #FFF
-}
-
-.hover___text-CBD:hover {
-  color: #CBD5E0
-}
-
-.hover___text-A0A:hover {
-  color: #A0AEC0
-}
-
-.hover___text-2D3:hover {
-  color: #2D3748
-}
-
-.hover___text-FFF:hover {
   color: #FFF
 }
 
