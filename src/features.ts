@@ -35,7 +35,7 @@ export const featureMap: { [code: string]: Feature | undefined } = {
   tnum: {
     "code": "tnum",
     "name": "Tabular Figures",
-    "description": "replaces numeral glyphs set on uniform (tabular) widths with corresponding glyphs set on glyph-specific (proportional) widths.",
+    "description": "displays numbers with the same width, like in monospace fonts. Thus, the number 1 would have the same width as every other numbers.\n\nTabular figures are useful in vertically aligned columns, like in tables or price lists, as they allow users to easily compare values.",
     "fonts": ["Inter", "Rasa"],
     "texts": ["11,150,110", "11110000"],
     "related": ["pnum", "onum", "lnum"]
@@ -43,7 +43,7 @@ export const featureMap: { [code: string]: Feature | undefined } = {
   pnum : {
     "code": "pnum",
     "name": "Proportional Figures",
-    "description": "replaces figure glyphs set on uniform (tabular) widths with corresponding glyphs set on glyph-specific (proportional) widths.",
+    "description": "displays numbers with varying widths, similar to letters. For example, the number 1 would have a smaller width than the number 0.\n\nProportional figures look good as part of a text, like in an address, as they maintains the balance of the rest of the alphabet.",
     "fonts": ["Lato", "Source Sans Pro", "Roboto", "Open Sans"],
     "texts": ["11,150,110", "11110000"],
     "related": ["tnum", "onum", "lnum"]
@@ -59,7 +59,7 @@ export const featureMap: { [code: string]: Feature | undefined } = {
   lnum : {
     "code": "lnum",
     "name": "Lining Figures",
-    "description": "changes numeral glyphs from default or oldstyle figures to lining figures.",
+    "description": "displays numbers in a uniform height, which usually aligned with uppercase letters (baseline and cap height).\n\nLining figures is the default style in most fonts. In all-cap settings, they are almost always preferred over oldstyle ones.",
     "fonts": ["Merriweather", "Raleway"],
     "texts": ["10Broad36", "123456789"],
     "related": ["onum", "tnum", "pnum"]
