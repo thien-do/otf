@@ -1,6 +1,5 @@
 import React from "react";
 import { Tw } from "styles";
-import { State, SetState } from "state";
 
 import Header from "../header";
 import FeatureList from "./feature-list";
@@ -9,9 +8,9 @@ const layout = Tw()
   .w640().lt1280W320().lt960WFull()
   .flexNone().$();
 
-interface Props { state: State; }
+const explore$ = Tw().px36().mt36().text24().leading36().text718().$();
 
-const Side: React.FC<Props> = ({ state }) => (
+const Side: React.FC = () => (
   <aside className={`${layout}`}>
     <div className={Tw().px36().$()}>
       <Header links={[{
@@ -19,12 +18,8 @@ const Side: React.FC<Props> = ({ state }) => (
         text: "edit & contribute"
       }]} />
     </div>
-    <p className={Tw().px36().mt36().text24().leading36().text718().$()}>
-      Explore more:
-    </p>
-    <div className={Tw().mt24().$()}>
-      <FeatureList state={state} />
-    </div>
+    <p className={explore$}>Explore more:</p>
+    <div className={Tw().mt24().$()}><FeatureList /></div>
   </aside>
 );
 
