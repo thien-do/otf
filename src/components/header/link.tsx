@@ -26,8 +26,7 @@ const HeaderLink: React.FC<Props> = ({ href, children }) => {
   const props: AnchorProps = { className: "" };
   const isExternal = href.startsWith("https://");
 
-  const color = isActive(router, href)
-    ? Tw().text2D3().$() : Tw().textA0A().hoverText2D3().$();
+  const color = isActive(router, href) ? Tw().text2D3().$() : Tw().textA0A().$();
   props.className += ` ${color}`;
 
   props.children = isExternal ? `${children}\u00a0→` : children;

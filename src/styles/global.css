@@ -28,3 +28,10 @@ input, button, a, select {
 .js-focus-visible .focus-visible {
   box-shadow: 0 0 0 2px #4299E1;
 }
+
+.hanging-quote { position: relative; }
+
+.hanging-quote::before {
+  content: "“"; position: absolute;
+  right: 100%; top: 0;
+}

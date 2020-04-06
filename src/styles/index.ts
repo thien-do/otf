@@ -19,14 +19,11 @@ class Tailwind {
   }
 
   // Styling methods
+  text718(): Tailwind { return this.add("text-718"); }
   textCbd(): Tailwind { return this.add("text-CBD"); }
   textA0A(): Tailwind { return this.add("text-A0A"); }
   text2D3(): Tailwind { return this.add("text-2D3"); }
   textFff(): Tailwind { return this.add("text-FFF"); }
-  hoverTextCbd(): Tailwind { return this.add("hover___text-CBD"); }
-  hoverTextA0A(): Tailwind { return this.add("hover___text-A0A"); }
-  hoverText2D3(): Tailwind { return this.add("hover___text-2D3"); }
-  hoverTextFff(): Tailwind { return this.add("hover___text-FFF"); }
   bg718(): Tailwind { return this.add("bg-718"); }
   bgFff(): Tailwind { return this.add("bg-FFF"); }
   bgF7F(): Tailwind { return this.add("bg-F7F"); }

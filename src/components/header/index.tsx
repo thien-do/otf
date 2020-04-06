@@ -1,6 +1,6 @@
 import React from "react";
 import { Tw } from "styles";
-import HeaderLink from "./header-link";
+import HeaderLink from "./link";
 
 interface Link { href: string; text: string; }
 

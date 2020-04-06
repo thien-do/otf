@@ -34,7 +34,7 @@ const Page: NextPage = () => {
       <CustomHead ft={state.feature} />
       <div className={Tw().flex().flexWrap().$()}>
         <Main state={state} setState={setState} />
-        <Side />
+        <Side state={state} setState={setState} />
       </div>
     </div>
   );
