@@ -14,6 +14,9 @@ The majority of information originally comes from [Figma](https://www.figma.com/
 [Wikipedia](https://en.wikipedia.org/wiki/List_of_typographic_features). Contributions are
 [more than welcome](https://github.com/dvkndn/otf.show/issues/1).
 
+This is a WIP project. We are actively adding new typographic features.
+
 ## Contributing
 
-TBA
+- At the current stage we need to add more data: https://github.com/dvkndn/otf.show/blob/master/src/features.ts
+- TBA
