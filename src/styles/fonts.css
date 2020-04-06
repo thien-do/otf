@@ -1,17 +1,36 @@
 @font-face {
-  font-family: "Inter";
-  font-style:  normal; font-weight: 400; font-display: swap;
+  font-family: "Inter"; font-style: normal; font-weight: 400;
   src: url("/fonts/Inter-Regular.woff2?v=3.12") format("woff2");
 }
-
 @font-face {
-  font-family: "Inter";
-  font-style:  normal; font-weight: 600; font-display: swap;
+  font-family: "Inter"; font-style: normal; font-weight: 600;
   src: url("/fonts/Inter-SemiBold.woff2?v=3.12") format("woff2");
 }
-
 @font-face{
-  font-family: "Source Sans Pro";
-  font-weight: 600; font-style: normal; font-stretch: normal;
+  font-family: "Source Sans Pro"; font-weight: 600; font-style: normal;
   src: url("/fonts/SourceSansPro-Semibold.otf.woff2") format("woff2");
+}
+@font-face{
+  font-family: "Lato"; font-weight: 600; font-style: normal;
+  src: url("/fonts/Lato-Semibold.woff2") format("woff2");
+}
+@font-face{
+  font-family: "Roboto"; font-weight: 700; font-style: normal;
+  src: url("/fonts/Roboto-Bold.ttf") format("truetype");
+}
+@font-face{
+  font-family: "Rasa"; font-weight: 600; font-style: normal;
+  src: url("/fonts/Rasa-SemiBold.otf") format("opentype");
+}
+@font-face{
+  font-family: "Open Sans"; font-weight: 600; font-style: normal;
+  src: url("/fonts/OpenSans-SemiBold.ttf") format("truetype");
+}
+@font-face{
+  font-family: "Raleway"; font-weight: 600; font-style: normal;
+  src: url("/fonts/Raleway-v4020-SemiBold.otf") format("opentype");
+}
+@font-face{
+  font-family: "Merriweather"; font-weight: 700; font-style: normal;
+  src: url("/fonts/Merriweather-Bold.ttf") format("truetype");
 }

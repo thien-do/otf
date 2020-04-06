@@ -24,7 +24,7 @@ const Name: React.FC<NameProps> = ({ feature }) => (
     <span className={Tw().block().text18().$()}>
       {feature.name}
     </span>
-    <span className={Tw().block().text15().textA0A().$()}>
+    <span className={Tw().block().text15().truncate().textA0A().$()}>
       {feature.fonts.join(", ")}
     </span>
   </span>
@@ -46,7 +46,7 @@ const FeatureComponent: React.FC<Props> = ({ feature }) => {
         <span className={Tw().flexNone().$()}>
           <Code code={feature.code} />
         </span>
-        <span className={Tw().ml18().flex1().$()}>
+        <span className={Tw().ml18().flex1().overflowHidden().$()}>
           <Name feature={feature} />
         </span>
       </a>
