@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import Head from "next/head";
 
 import { Tw } from "styles";
 
@@ -26,6 +27,10 @@ const bold = Tw().fontSemibold().$();
 
 const About: NextPage = () => (
   <div className={Tw().text18().leading30().$()}>
+    <Head>
+      <title>otf.show</title>
+      <meta name="description" content="An interactive showcase of OpenType features" />
+    </Head>
     <p className={Tw().text24().leading36().$() + " hanging-quote"}>
       OpenType features are like secret compartments in fonts. Unlock them and
       you’ll find ways to make fonts look and behave differently in subtle and
@@ -33,15 +38,15 @@ const About: NextPage = () => (
       <span> — <Link href={L_ADOBE}>Adobe</Link></span>
     </p>
     <p className={Tw().mt24().$()}>
-      <span className={bold}>otf.show is a showcase of OpenType features.</span>
-      <span> We hope it helps designers and developers to explore and
-      achieve better typography on the web. </span>
+      <span className={bold}>otf.show is an interactive showcase of
+      OpenType features.</span> We hope it helps designers and developers to
+      explore and achieve better typography on the web.
     </p>
     <p className={Tw().mt18().$()}>
       <span className={bold}>otf.show is an Open Source project.</span>
       <span> Contributions are </span>
       <Link href={L_CONTRIBUTE}>more than welcome</Link>
-      <span>. The entire development takes place in </span>
+      <span>. The entire development takes place on </span>
       <Link href={L_OTFSHOW}>GitHub</Link>.
     </p>
     <p className={Tw().mt18().$()}>
