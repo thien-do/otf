@@ -51,7 +51,7 @@ export const featureMap: { [code: string]: Feature | undefined } = {
   onum : {
     "code": "onum",
     "name": "Oldstyle Figures",
-    "description": "changes numeral glyphs from default or lining figures to oldstyle figures.",
+    "description": "displays numbers in varying heights and alignments. These numbers blend in with lowercase leters, as they share the same x-height, and also have ascenders (usually 6 and 8) and descenders (3, 4, 5, 7 and 9).\n\nOldstyle figures are often considered more pleasing and less intrusive than lining figures. They are preferred in running text and also pair nicely with small caps.",
     "fonts": ["Lato", "Source Sans Pro", "Roboto", "Open Sans"],
     "texts": ["10Broad36", "123456789"],
     "related": ["lnum", "tnum", "pnum"]
