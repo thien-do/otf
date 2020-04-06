@@ -660,6 +660,62 @@
   z-index: -1
 }
 
+.cursor-auto {
+  cursor: auto
+}
+
+.cursor-default {
+  cursor: default
+}
+
+.cursor-pointer {
+  cursor: pointer
+}
+
+.cursor-wait {
+  cursor: wait
+}
+
+.cursor-text {
+  cursor: text
+}
+
+.cursor-move {
+  cursor: move
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed
+}
+
+.select-none {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none
+}
+
+.select-text {
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text
+}
+
+.select-all {
+  -webkit-user-select: all;
+     -moz-user-select: all;
+      -ms-user-select: all;
+          user-select: all
+}
+
+.select-auto {
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+      -ms-user-select: auto;
+          user-select: auto
+}
+
 @media (max-width: 1279px) {
   .lt1280___w-320 {
     width: 320px

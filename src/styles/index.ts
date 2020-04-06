@@ -167,6 +167,17 @@ class Tailwind {
   z0(): Tailwind { return this.add("z-0"); }
   z1(): Tailwind { return this.add("z-1"); }
   negZ1(): Tailwind { return this.add("-z-1"); }
+  cursorAuto(): Tailwind { return this.add("cursor-auto"); }
+  cursorDefault(): Tailwind { return this.add("cursor-default"); }
+  cursorPointer(): Tailwind { return this.add("cursor-pointer"); }
+  cursorWait(): Tailwind { return this.add("cursor-wait"); }
+  cursorText(): Tailwind { return this.add("cursor-text"); }
+  cursorMove(): Tailwind { return this.add("cursor-move"); }
+  cursorNotAllowed(): Tailwind { return this.add("cursor-not-allowed"); }
+  selectNone(): Tailwind { return this.add("select-none"); }
+  selectText(): Tailwind { return this.add("select-text"); }
+  selectAll(): Tailwind { return this.add("select-all"); }
+  selectAuto(): Tailwind { return this.add("select-auto"); }
   lt1280W320(): Tailwind { return this.add("lt1280___w-320"); }
   lt1280W640(): Tailwind { return this.add("lt1280___w-640"); }
   lt1280WFull(): Tailwind { return this.add("lt1280___w-full"); }

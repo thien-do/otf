@@ -66,6 +66,7 @@ module.exports = {
     fontSize: [], lineHeight: [], fontWeight: [], whitespace: [],
     textDecoration: [],
     position: [], inset: [], zIndex: [],
+    cursor: [], userSelect: [],
     // transitionProperty: [],
   },
   corePlugins: [
@@ -75,6 +76,7 @@ module.exports = {
     "flex", "flexWrap", "justifyContent", "alignItems",
     "fontSize", "lineHeight", "fontWeight", "whitespace", "textDecoration",
     "position", "inset", "zIndex",
+    "cursor", "userSelect",
     // https://github.com/dvkndn/typed.tw/issues/19
     // "transitionProperty",
   ],

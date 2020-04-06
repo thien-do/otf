@@ -2,6 +2,7 @@ import React from "react";
 import { NextPage } from "next";
 
 import "styles/index.css";
+import "focus-visible";
 
 interface Props { Component: NextPage, pageProps: object };
 

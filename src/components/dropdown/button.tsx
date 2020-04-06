@@ -15,7 +15,10 @@ interface Props {
 }
 
 const Button: React.FC<Props> = ({ s, value, itemToString }) => (
-  <button {...s.getToggleButtonProps()}>
+  <button
+    {...s.getToggleButtonProps()}
+    className={Tw().cursorPointer().$()}
+  >
     {itemToString(value)}
     <Arrow />
   </button>
