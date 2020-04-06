@@ -10,8 +10,12 @@ const Texts: React.FC<Props> = ({ state, setState }) => {
   // our input tags because setState.text is async and would cause the caret
   // jump bug.
   const [text, setText] = useState(state.text);
-  useEffect(() => { setState.text(text); }, [text]);
-  useEffect(() => { setText(state.text); }, [state.text]);
+  useEffect(() => {
+    if (text !== state.text) { setState.text(text); }
+  }, [text]);
+  useEffect(() => {
+    if (text !== state.text) { setText(state.text); }
+  }, [state.text]);
 
   const input = (
     <input

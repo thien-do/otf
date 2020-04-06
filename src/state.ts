@@ -1,5 +1,5 @@
 import { NextRouter } from "next/router";
-import features, { Feature } from "features";
+import { featureMap, Feature } from "features";
 
 export interface State {
   feature: Feature;
@@ -40,7 +40,7 @@ export const getState = (router: NextRouter): State => {
   // feature
   const { code } = router.query;
   if (typeof code != "string") { throw new Error("invalid code from query"); }
-  const feature = features[code];
+  const feature = featureMap[code];
   if (feature === undefined) { throw new Error("not found code"); }
 
   // font

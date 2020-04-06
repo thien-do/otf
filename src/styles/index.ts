@@ -27,6 +27,7 @@ class Tailwind {
   bg718(): Tailwind { return this.add("bg-718"); }
   bgFff(): Tailwind { return this.add("bg-FFF"); }
   bgF7F(): Tailwind { return this.add("bg-F7F"); }
+  bgEdf(): Tailwind { return this.add("bg-EDF"); }
   bg4A5(): Tailwind { return this.add("bg-4A5"); }
   bg2D3(): Tailwind { return this.add("bg-2D3"); }
   shadowE2E(): Tailwind { return this.add("shadow-E2E"); }
@@ -130,17 +131,19 @@ class Tailwind {
   itemsCenter(): Tailwind { return this.add("items-center"); }
   itemsBaseline(): Tailwind { return this.add("items-baseline"); }
   itemsStretch(): Tailwind { return this.add("items-stretch"); }
+  fontMono(): Tailwind { return this.add("font-mono"); }
+  text15(): Tailwind { return this.add("text-15"); }
   text18(): Tailwind { return this.add("text-18"); }
   text24(): Tailwind { return this.add("text-24"); }
   text72(): Tailwind { return this.add("text-72"); }
+  fontSemibold(): Tailwind { return this.add("font-semibold"); }
+  fontNormal(): Tailwind { return this.add("font-normal"); }
   leading18(): Tailwind { return this.add("leading-18"); }
   leading24(): Tailwind { return this.add("leading-24"); }
   leading30(): Tailwind { return this.add("leading-30"); }
   leading36(): Tailwind { return this.add("leading-36"); }
   leading96(): Tailwind { return this.add("leading-96"); }
   leadingNone(): Tailwind { return this.add("leading-none"); }
-  fontSemibold(): Tailwind { return this.add("font-semibold"); }
-  fontNormal(): Tailwind { return this.add("font-normal"); }
   whitespaceNormal(): Tailwind { return this.add("whitespace-normal"); }
   whitespaceNoWrap(): Tailwind { return this.add("whitespace-no-wrap"); }
   whitespacePre(): Tailwind { return this.add("whitespace-pre"); }

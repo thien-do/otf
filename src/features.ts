@@ -11,7 +11,7 @@ export interface Feature {
   related: string[],
 };
 
-const features: { [code: string]: Feature | undefined } = {
+export const featureMap: { [code: string]: Feature | undefined } = {
   ss02: {
     "code": "ss02",
     "name": "Stylistic Set 2",
@@ -40,4 +40,6 @@ const features: { [code: string]: Feature | undefined } = {
   }
 };
 
-export default features;
+// https://codereview.stackexchange.com/a/138289
+export const featureArr: Feature[] = Object.values(featureMap)
+  .filter(a => a !== undefined) as Feature[];
