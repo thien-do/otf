@@ -3,14 +3,15 @@ import { Tw } from "styles";
 import { State, SetState } from "state";
 
 import Header from "../header";
+import FeatureList from "./feature-list";
 
 const layout = Tw()
   .w640().lt1280W320().lt960WFull()
   .flexNone().$();
 
-interface Props { state: State; setState: SetState; }
+interface Props { state: State; }
 
-const Side: React.FC<Props> = () => (
+const Side: React.FC<Props> = ({ state }) => (
   <aside className={`${layout}`}>
     <div className={Tw().px36().$()}>
       <Header links={[{
@@ -22,6 +23,7 @@ const Side: React.FC<Props> = () => (
       Explore more:
     </p>
     <div className={Tw().mt24().$()}>
+      <FeatureList state={state} />
     </div>
   </aside>
 );

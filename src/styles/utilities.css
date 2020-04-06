@@ -30,6 +30,10 @@
   background-color: #F7FAFC
 }
 
+.bg-EDF {
+  background-color: #EDF2F7
+}
+
 .bg-4A5 {
   background-color: #4A5568
 }
@@ -506,6 +510,10 @@
           align-items: stretch
 }
 
+.font-mono {
+  font-family: Roboto Mono, monospace
+}
+
 .text-18 {
   font-size: 18px
 }
@@ -516,6 +524,14 @@
 
 .text-72 {
   font-size: 72px
+}
+
+.font-semibold {
+  font-weight: 600
+}
+
+.font-normal {
+  font-weight: 400
 }
 
 .leading-18 {
@@ -540,14 +556,6 @@
 
 .leading-none {
   line-height: 1
-}
-
-.font-semibold {
-  font-weight: 600
-}
-
-.font-normal {
-  font-weight: 400
 }
 
 .whitespace-normal {

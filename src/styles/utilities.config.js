@@ -26,7 +26,7 @@ module.exports = {
       return {};
     },
     // color
-    backgroundColor: theme => theme.pick("colors", ["FFF", "F7F", "718", "4A5", "2D3"]),
+    backgroundColor: theme => theme.pick("colors", ["FFF", "F7F", "EDF", "718", "4A5", "2D3"]),
     textColor: theme => theme.pick("colors", ["CBD", "A0A", "2D3", "718", "FFF"]),
     boxShadow: theme => ({
       "E2E": `0px 0px 8px ${theme("colors.E2E")}`,
@@ -41,12 +41,13 @@ module.exports = {
     borderColor: theme => theme.pick("colors", ["E2E", "CBD"]),
     borderWidth: { 1: "1px" },
     // typography
-    fontSize: { 18: "18px", 24: "24px", 72: "72px" },
-    lineHeight: {
-      18: "18px", 24: "24px", 30: "30px", 36: "36px", 96: "96px",
-      none: 1,
-    },
+    fontSize: { 15: "15px", 18: "18px", 24: "24px", 72: "72px" },
     fontWeight: { semibold: 600, normal: 400 },
+    fontFamily: { "mono": ["Roboto Mono", "monospace"] },
+    lineHeight: {
+      18: "18px", 24: "24px", 30: "30px",
+      36: "36px", 96: "96px", none: 1,
+    },
     // position
     inset: { 0: "0px" },
     zIndex: { "-1": "-1", "0": "0", "1": "1" },
@@ -63,8 +64,8 @@ module.exports = {
     display: [], width: ["responsive"], maxWidth: ["responsive"],
     padding: ["responsive"], margin: [],
     flex: ["responsive"], flexWrap: [], justifyContent: [], alignItems: [],
-    fontSize: [], lineHeight: [], fontWeight: [], whitespace: [],
-    textDecoration: [],
+    fontFamily: [], fontSize: [], fontWeight: [],
+    lineHeight: [], whitespace: [], textDecoration: [],
     position: [], inset: [], zIndex: [],
     cursor: [], userSelect: [],
     // transitionProperty: [],
@@ -74,7 +75,8 @@ module.exports = {
     "borderStyle", "borderColor", "borderWidth",
     "display", "width", "maxWidth", "padding", "margin",
     "flex", "flexWrap", "justifyContent", "alignItems",
-    "fontSize", "lineHeight", "fontWeight", "whitespace", "textDecoration",
+    "fontFamily", "fontSize", "fontWeight",
+    "lineHeight", "whitespace", "textDecoration",
     "position", "inset", "zIndex",
     "cursor", "userSelect",
     // https://github.com/dvkndn/typed.tw/issues/19
