@@ -14,9 +14,10 @@ const ulStyles = Tw()
   .$();
 
 const getLiStyles = (s: UseSelectReturnValue<string>, option: Option, index: number) => {
+  const base = Tw().px18().selectNone().$();
   const se = s.selectedItem === option.value ? Tw().bg718().$() : "";
   const hi = s.highlightedIndex === index && se === "" ? Tw().bg4A5().$() : "";
-  return `${Tw().px18().$()} ${hi} ${se}`;
+  return `${base} ${hi} ${se}`;
 };
 
 const Menu: React.FC<Props> = ({ s, options }) => (

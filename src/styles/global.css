@@ -14,3 +14,17 @@ input, button {
 }
 
 html { font-family: 'Inter', sans-serif; }
+
+/* https://github.com/WICG/focus-visible#backwards-compatibility */
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+input, button, a, select {
+  transition: box-shadow 0.2s;
+  box-shadow: 0 0 0 12px transparent;
+}
+
+.js-focus-visible .focus-visible {
+  box-shadow: 0 0 0 2px #4299E1;
+}
