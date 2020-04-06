@@ -12,6 +12,7 @@ export interface Feature {
 };
 
 export const featureMap: { [code: string]: Feature | undefined } = {
+  /*
   ss02: {
     "code": "ss02",
     "name": "Stylistic Set 2",
@@ -30,14 +31,39 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     "texts": ["Illustrating", "Illegal"],
     "related": ["ss01", "ss02"]
   },
+  */
   tnum: {
     "code": "tnum",
     "name": "Tabular Figures",
-    "description": "replaces figure glyphs set on proportional widths with corresponding glyphs set on uniform (tabular) widths. Tabular widths will generally be the default, but this cannot be safely assumed. Of course this feature would not be present in monospaced designs.",
-    "fonts": ["Inter"],
-    "texts": ["11110000"],
-    "related": []
-  }
+    "description": "replaces numeral glyphs set on uniform (tabular) widths with corresponding glyphs set on glyph-specific (proportional) widths.",
+    "fonts": ["Inter", "Rasa"],
+    "texts": ["11,150,110", "11110000"],
+    "related": ["pnum", "onum", "lnum"]
+  },
+  pnum : {
+    "code": "pnum",
+    "name": "Proportional Figures",
+    "description": "replaces figure glyphs set on uniform (tabular) widths with corresponding glyphs set on glyph-specific (proportional) widths.",
+    "fonts": ["Lato", "Source Sans Pro", "Roboto", "Open Sans"],
+    "texts": ["11,150,110", "11110000"],
+    "related": ["tnum", "onum", "lnum"]
+  },
+  onum : {
+    "code": "onum",
+    "name": "Oldstyle Figures",
+    "description": "changes numeral glyphs from default or lining figures to oldstyle figures.",
+    "fonts": ["Lato", "Source Sans Pro", "Roboto", "Open Sans"],
+    "texts": ["10Broad36", "123456789"],
+    "related": ["lnum", "tnum", "pnum"]
+  },
+  lnum : {
+    "code": "lnum",
+    "name": "Lining Figures",
+    "description": "changes numeral glyphs from default or oldstyle figures to lining figures.",
+    "fonts": ["Merriweather", "Raleway"],
+    "texts": ["10Broad36", "123456789"],
+    "related": ["onum", "tnum", "pnum"]
+  },
 };
 
 // https://codereview.stackexchange.com/a/138289

@@ -424,6 +424,62 @@
   margin-left: 48px
 }
 
+.overflow-auto {
+  overflow: auto
+}
+
+.overflow-hidden {
+  overflow: hidden
+}
+
+.overflow-visible {
+  overflow: visible
+}
+
+.overflow-scroll {
+  overflow: scroll
+}
+
+.overflow-x-auto {
+  overflow-x: auto
+}
+
+.overflow-y-auto {
+  overflow-y: auto
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden
+}
+
+.overflow-x-visible {
+  overflow-x: visible
+}
+
+.overflow-y-visible {
+  overflow-y: visible
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll
+}
+
+.scrolling-touch {
+  -webkit-overflow-scrolling: touch
+}
+
+.scrolling-auto {
+  -webkit-overflow-scrolling: auto
+}
+
 .flex-1 {
   -webkit-box-flex: 1;
           flex: 1 1 0%
@@ -514,6 +570,10 @@
   font-family: Roboto Mono, monospace
 }
 
+.text-15 {
+  font-size: 15px
+}
+
 .text-18 {
   font-size: 18px
 }
@@ -588,6 +648,25 @@
 
 .no-underline {
   text-decoration: none
+}
+
+.break-normal {
+  overflow-wrap: normal;
+  word-break: normal
+}
+
+.break-words {
+  overflow-wrap: break-word
+}
+
+.break-all {
+  word-break: break-all
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
 }
 
 .static {

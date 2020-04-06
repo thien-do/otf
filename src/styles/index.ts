@@ -114,6 +114,20 @@ class Tailwind {
   mr48(): Tailwind { return this.add("mr-48"); }
   mb48(): Tailwind { return this.add("mb-48"); }
   ml48(): Tailwind { return this.add("ml-48"); }
+  overflowAuto(): Tailwind { return this.add("overflow-auto"); }
+  overflowHidden(): Tailwind { return this.add("overflow-hidden"); }
+  overflowVisible(): Tailwind { return this.add("overflow-visible"); }
+  overflowScroll(): Tailwind { return this.add("overflow-scroll"); }
+  overflowXAuto(): Tailwind { return this.add("overflow-x-auto"); }
+  overflowYAuto(): Tailwind { return this.add("overflow-y-auto"); }
+  overflowXHidden(): Tailwind { return this.add("overflow-x-hidden"); }
+  overflowYHidden(): Tailwind { return this.add("overflow-y-hidden"); }
+  overflowXVisible(): Tailwind { return this.add("overflow-x-visible"); }
+  overflowYVisible(): Tailwind { return this.add("overflow-y-visible"); }
+  overflowXScroll(): Tailwind { return this.add("overflow-x-scroll"); }
+  overflowYScroll(): Tailwind { return this.add("overflow-y-scroll"); }
+  scrollingTouch(): Tailwind { return this.add("scrolling-touch"); }
+  scrollingAuto(): Tailwind { return this.add("scrolling-auto"); }
   flex1(): Tailwind { return this.add("flex-1"); }
   flexAuto(): Tailwind { return this.add("flex-auto"); }
   flexInitial(): Tailwind { return this.add("flex-initial"); }
@@ -152,6 +166,10 @@ class Tailwind {
   underline(): Tailwind { return this.add("underline"); }
   lineThrough(): Tailwind { return this.add("line-through"); }
   noUnderline(): Tailwind { return this.add("no-underline"); }
+  breakNormal(): Tailwind { return this.add("break-normal"); }
+  breakWords(): Tailwind { return this.add("break-words"); }
+  breakAll(): Tailwind { return this.add("break-all"); }
+  truncate(): Tailwind { return this.add("truncate"); }
   static(): Tailwind { return this.add("static"); }
   fixed(): Tailwind { return this.add("fixed"); }
   absolute(): Tailwind { return this.add("absolute"); }
