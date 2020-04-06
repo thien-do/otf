@@ -16,7 +16,7 @@ interface Props { state: State; }
 
 const Description: React.FC<Props> = ({ state }) => (
   <div className={Tw().text18().leading30().$()}>
-    <p>
+    <p className={Tw().whitespacePreLine().$()}>
       <span className={Tw().fontSemibold().$()}>{getName(state.feature)}</span>
       <span> {state.feature.description}</span>
     </p>
