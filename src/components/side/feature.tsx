@@ -1,8 +1,9 @@
 import React from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+
 import { Tw } from "styles";
 import { Feature } from "features";
-import { State } from "state";
-import Link from "next/link";
 
 interface CodeProps { code: string; }
 
@@ -29,18 +30,19 @@ const Name: React.FC<NameProps> = ({ feature }) => (
   </span>
 );
 
-interface Props { feature: Feature; state: State; }
+interface Props { feature: Feature; }
 
-const getAStyles = (feature: Feature, state: State) => {
+const getAStyles = (feature: Feature, code?: string | string[]) => {
   const base = Tw().flex().px36().py18().w320().leading24().$();
-  const bg = feature.code === state.feature.code ? Tw().bgEdf().$() : "";
+  const bg = feature.code === code ? Tw().bgEdf().$() : "";
   return `${base} ${bg}`;
 };
 
-const FeatureComponent: React.FC<Props> = ({ feature, state }) => {
+const FeatureComponent: React.FC<Props> = ({ feature }) => {
+  const { code } = useRouter().query;
   return (
     <Link href="/[code]" as={`/${feature.code}`}>
-      <a className={getAStyles(feature, state)}>
+      <a className={getAStyles(feature, code)}>
         <span className={Tw().flexNone().$()}>
           <Code code={feature.code} />
         </span>
