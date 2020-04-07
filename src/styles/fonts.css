@@ -45,3 +45,11 @@
   font-family: "Space Mono"; font-weight: 700; font-style: normal;
   src: url("/fonts/SpaceMono-Bold.ttf") format("truetype");
 }
+@font-face{
+  font-family: "Fira Code"; font-weight: 700; font-style: normal;
+  src: url("/fonts/FiraCode-Bold.woff2") format("woff2");
+}
+@font-face{
+  font-family: "EB Garamond"; font-weight: 600; font-style: normal;
+  src: url("/fonts/EBGaramond-SemiBold.ttf") format("truetype");
+}

@@ -5,8 +5,16 @@ import { State, SetState } from "state";
 
 import Input from "./input";
 import Label from "./label";
+import { Feature } from "features";
 
 interface Props { state: State; setState: SetState; }
+
+const getFFS = (f: Feature) => {
+  const arr = [`"${f.code}"`];
+  arr.push(f.default ? "0" : "1"); // enabled or disabled
+  if (f.required) { arr.push(`, ${f.required}`); }
+  return arr.join(" ");
+};
 
 const Texts: React.FC<Props> = ({ state, setState }) => {
   // Unlike "font" and "code", we can't use state.text as the source for
@@ -18,17 +26,19 @@ const Texts: React.FC<Props> = ({ state, setState }) => {
 
   const f = state.feature;
   return (
-    <div className={Tw().fontSemibold().$()}>
-      <div className={Tw().textCbd().$()}>
-        <Label id="text-off">👎{"\u2000"}typeface default:</Label>
-        <Input id="text-off" state={state} text={text} setText={setText} />
+    <div className={Tw().fontSemibold().text2D3().$()}>
+      <div className={f.default ? "" : Tw().textCbd().$()}>
+        <Label id="text-off">typeface default:</Label>
+        <div style={{ fontFeatureSettings: f.required }}>
+          <Input id="text-off" state={state} text={text} setText={setText} />
+        </div>
       </div>
-      <div className={Tw().text2D3().mt36().$()}>
+      <div className={(f.default ? Tw().textCbd().$() : "") + " " + Tw().mt36().$()}>
         <Label id="text-on">
-          <span>👍{"\u2000"}with “{f.name}” </span>
+          <span>with “{f.name}” </span>
           <span>{f.default ? "disabled" : "enabled"}:</span>
         </Label>
-        <div style={{ fontFeatureSettings: `"${f.code}" ${f.default ? "0" : "1"}` }}>
+        <div style={{ fontFeatureSettings: getFFS(f) }}>
           <Input id="text-on" state={state} text={text} setText={setText} />
         </div>
       </div>
