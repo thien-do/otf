@@ -159,6 +159,21 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     ],
     type: "ligature",
   },
+  salt: {
+    code: "salt",
+    name: "Stylistic Alternates",
+    description: "replaces some characters with their stylistic alternates. For example, the single-story  “g” and “a” could be replaced with their double-story forms, and vice versa.\n\nStylistic Alternates are used mostly for their aesthetic effect. However, sometimes they can also help improve readability as in the case of the finial of lowercase “l” and the serif of uppercase “I”.",
+    fonts: ["Inter", "Source Sans Pro", "Open Sans"],
+    texts: ["Illustrating", "Illegal"],
+    related: ["swsh", "hist"],
+    references: [
+      "https://en.wikipedia.org/wiki/G#Typographic_variants",
+      "https://en.wikipedia.org/wiki/A#Typographic_variants",
+      "https://en.wikipedia.org/wiki/A#Typographic_variants",
+      "https://en.wikipedia.org/wiki/I#Forms_and_variants",
+    ],
+    type: "letter",
+  },
   /* TODO
     Small caps (smcp)
     Swashes (swsh)
@@ -173,16 +188,10 @@ export const featureMap: { [code: string]: Feature | undefined } = {
 };
 
 export const featureArr: Feature[] = [
-  // ligatures
-  "liga", "hlig", "dlig", "calt",
-  // digits
-  "onum", "lnum", "tnum", "pnum",
-  "ordn", "frac", "zero",
-  // letters
-  "hist", "salt", "swsh", "smcp",
-  "cswh", "titl", "rand",
-  // position
-  "kern", "sups", "subs",
+  "liga", "hlig", "dlig", "calt", // ligatures
+  "onum", "lnum", "tnum", "pnum", "ordn", "frac", "zero", // digits
+  "hist", "salt", "swsh", "smcp", "cswh", "rand", // letters
+  "kern", "sups", "subs", // position
 ]
   .map(key => featureMap[key])
   // https://codereview.stackexchange.com/a/138289
