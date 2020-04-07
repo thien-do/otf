@@ -36,4 +36,4 @@ input, button, a, select {
   right: 100%; top: 0;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+.uppercase { font-feature-settings: "cpsp" }

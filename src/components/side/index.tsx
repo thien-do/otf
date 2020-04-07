@@ -18,7 +18,7 @@ const Side: React.FC = () => (
         text: "edit & contribute"
       }]} />
     </div>
-    <p className={explore$}>All typographic features:</p>
+    <p className={explore$}>Explore all features:</p>
     <div className={Tw().mt24().$()}><FeatureList /></div>
   </aside>
 );
