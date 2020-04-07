@@ -34,25 +34,23 @@ export const featureMap: { [code: string]: Feature | undefined } = {
   tnum: {
     "code": "tnum",
     "name": "Tabular Figures",
-    "description": "displays numbers with the same width, like in monospace fonts. Thus, the number 1 would have the same width as every other numbers.\n\nTabular figures are useful in vertically aligned columns, like in tables or price lists, as they allow users to easily compare values.",
+    "description": "displays numerical digits (0–9) in the same width, like in monospace typefaces. For example, the digit 1 would take the same space as 2, 3, 4 or 0, so the number 1111 would take the same space as 2340.\n\nTabular figures are useful in aligned columns, like in tables or price lists, as they allow users to easily compare values vertically.",
     "fonts": ["Inter", "Rasa"],
     "texts": ["11,150,110", "11110000"],
     "related": ["pnum", "onum", "lnum"],
     "references": [
       "https://www.fonts.com/content/learning/fontology/level-3/numbers/proportional-vs-tabular-figures",
-      "https://practicaltypography.com/alternate-figures.html#tabular-and-proportional-figures"
     ],
   },
   pnum: {
     "code": "pnum",
     "name": "Proportional Figures",
-    "description": "displays numbers with varying widths, similar to letters. For example, the number 1 would have a smaller width than the number 0.\n\nProportional figures look good as part of a text, like in an address, as they maintains the balance of the rest of the alphabet.",
+    "description": "displays numerical digits (0–9) in varying widths, similar to letters. For example, the digit 1 would likely take less space than others, so the number 1111 would take a smaller space than 2340.\n\nProportional figures look good in horizontal text, like in an address, as they maintain the balance and produce a consistent appearance with the rest of the alphabet.",
     "fonts": ["Lato", "Source Sans Pro", "Roboto", "Open Sans"],
     "texts": ["11,150,110", "11110000"],
     "related": ["tnum", "onum", "lnum"],
     "references": [
       "https://www.fonts.com/content/learning/fontology/level-3/numbers/proportional-vs-tabular-figures",
-      "https://practicaltypography.com/alternate-figures.html#tabular-and-proportional-figures"
     ],
   },
   onum: {
@@ -77,7 +75,6 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     "related": ["onum", "tnum", "pnum"],
     "references": [
       "https://www.fonts.com/content/learning/fontology/level-3/numbers/lining-figures",
-      "https://practicaltypography.com/alternate-figures.html#lining-figures"
     ],
   },
   ordn: {

@@ -13,7 +13,7 @@ const Overview: React.FC<Props> = ({ state, setState }) => (
   }>
     <span>This is how </span>
     <span><Code state={state} setState={setState} /> </span>
-    <span>make a difference in </span>
+    <span>looks in typeface </span>
     <span><Font state={state} setState={setState} /> </span>
   </div>
 );

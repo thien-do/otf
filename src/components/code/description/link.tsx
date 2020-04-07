@@ -4,13 +4,14 @@ import { Query } from "state";
 import { useRouter } from "next/router";
 import { Tw } from "styles";
 
-interface Props {
-  type: string;
+interface QueryProps {
+  type: "font" | "text";
   value: string;
   label: string;
 }
 
-const Link: React.FC<Props> = ({ type, value, label }) => {
+// For fonts and texts
+export const QueryLink: React.FC<QueryProps> = ({ type, value, label }) => {
   const router = useRouter();
   const query: Query = { ...router.query, [type]: value };
   delete query.code;
@@ -24,4 +25,13 @@ const Link: React.FC<Props> = ({ type, value, label }) => {
   );
 };
 
-export default Link;
+interface CodeProps {
+  value: string;
+  label: string;
+}
+
+export const CodeLink: React.FC<CodeProps> = ({ value, label }) => (
+  <NextLink href="/[code]" as={`/${value}`} scroll={false} shallow>
+    <a className={Tw().underline().$()}>{label}</a>
+  </NextLink>
+);

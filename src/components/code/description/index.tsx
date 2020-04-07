@@ -5,6 +5,7 @@ import { Feature } from "features";
 
 import Fonts from "./fonts";
 import Texts from "./texts";
+import Related from "./related";
 
 const getName = (ft: Feature) => {
   return ft.family_code && ft.family_name
@@ -20,8 +21,12 @@ const Description: React.FC<Props> = ({ state }) => (
       <span className={Tw().fontSemibold().$()}>{getName(state.feature)}</span>
       <span> {state.feature.description}</span>
     </p>
-    <p className={Tw().mt18().$()}><Fonts fonts={state.feature.fonts} /></p>
-    <p className={Tw().mt18().$()}><Texts texts={state.feature.texts} /></p>
+    <p className={Tw().mt18().$()}>
+      <Fonts fonts={state.feature.fonts} /><span> </span>
+      <Texts texts={state.feature.texts} />
+    </p>
+    {state.feature.related.length > 0 &&
+      <p className={Tw().mt18().$()}><Related codes={state.feature.related} /></p>}
   </div >
 );
 
