@@ -3,7 +3,7 @@ import { Tw } from "styles";
 
 import Header from "../header";
 import FeatureList from "./feature-list";
-import { featureArr } from "features";
+import { featureArr, featureGroups } from "features";
 
 const layout = Tw()
   .w640().lt1280W320().lt960WFull()
@@ -19,14 +19,14 @@ const Side: React.FC = () => (
         text: "edit & contribute"
       }]} />
     </div>
-    <p className={titleTw}>Digits & Numbers</p>
-    <div className={Tw().mt24().$()}>
-      <FeatureList features={featureArr.filter(f => f.type === "digit")} />
-    </div>
-    <p className={titleTw}>Letters & Ligatures</p>
-    <div className={Tw().mt24().$()}>
-      <FeatureList features={featureArr.filter(f => f.type === "letter")} />
-    </div>
+    {featureGroups.map(({ type, label }) => (
+      <div key={type}>
+        <p className={titleTw}>{label}</p>
+        <div className={Tw().mt24().$()}>
+          <FeatureList features={featureArr.filter(f => f.type === type)} />
+        </div>
+      </div>
+    ))}
   </aside>
 );
 

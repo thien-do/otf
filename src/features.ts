@@ -8,32 +8,12 @@ export interface Feature {
   texts: string[],
   related: string[],
   references: string[],
-  type: "digit" | "letter" | "position",
+  type: "digit" | "letter" | "ligature" | "position",
   default?: boolean,
   required?: string,
 };
 
 export const featureMap: { [code: string]: Feature | undefined } = {
-  /*
-  ss02: {
-    code: "ss02",
-    name: "Stylistic Set 2",
-    family_code: "ss01 - ss20",
-    family_name: "Stylistic Set 1 – 20",
-    description: "replaces character with one from a font-specific set of stylistic alternatives.",
-    fonts: ["Inter", "Source Sans Pro"],
-    texts: ["Illustration", "Ellipsis"],
-    related: ["salt", "cv01"]
-  },
-  salt: {
-    code: "salt",
-    name: "Stylistic Alternative",
-    description: "replaces the default forms with the stylistic alternates.",
-    fonts: ["Inter", "Source Sans Pro"],
-    texts: ["Illustrating", "Illegal"],
-    related: ["ss01", "ss02"]
-  },
-  */
   tnum: {
     code: "tnum",
     name: "Tabular Figures",
@@ -62,7 +42,7 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     code: "onum",
     name: "Oldstyle Figures",
     description: "displays numbers in varying heights and alignments. These numbers blend in with lowercase leters, as they share the same x-height, and also have ascenders (usually 6 and 8) and descenders (3, 4, 5, 7 and 9).\n\nOldstyle figures are often considered more pleasing and less intrusive than lining figures. They are preferred in running text and also pair nicely with small caps.",
-    fonts: ["Lato", "Source Sans Pro", "Roboto", "Open Sans"],
+    fonts: ["EB Garamond", "Lato", "Source Sans Pro", "Roboto", "Open Sans"],
     texts: ["10Broad36", "123456789"],
     related: ["lnum", "tnum", "pnum"],
     references: [
@@ -125,12 +105,12 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     description: "combines two (or sometimes three) characters into a single character to prevent character collision, like the one between the hook of “f” and the dot of “i”.\n\nStandard Ligatures is enabled by default. It usually has ligatures for “f-” pairs, such as “fi”, “fl”, “ff” or “ffi”. Others ligatures might be found via “dlig”.",
     fonts: ["Lato", "EB Garamond", "Roboto"],
     texts: ["clifftop", "flying fish"],
-    related: ["calt", "clig", "dlig", "hlig"],
+    related: ["calt", "dlig", "hlig"],
     references: [
       "https://en.wikipedia.org/wiki/Orthographic_ligature",
       "https://www.fonts.com/content/learning/fontology/level-3/signs-and-symbols/ligatures-1",
     ],
-    type: "letter",
+    type: "ligature",
     default: true,
   },
   calt: {
@@ -141,7 +121,7 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     texts: ["<- -> <->", "1*2  3×4"],
     related: ["cwsh", "liga"],
     references: [],
-    type: "letter",
+    type: "ligature",
     default: true,
   },
   hist: {
@@ -162,9 +142,9 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     description: "also combines characters like Standard Ligatures but work on historical ones, like a pair of 2 long form “s”. It requires Historical Forms to be enabled.",
     fonts: ["EB Garamond"],
     texts: ["sinfulness", "blissful"],
-    related: ["liga, hist"],
+    related: ["liga", "hist"],
     references: [],
-    type: "letter",
+    type: "ligature",
     required: '"hist"'
   },
   dlig: {
@@ -173,11 +153,11 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     description: "– sometimes called Rare Ligatures – also combines characters like Standard Ligatures but work on not-so-common ones, like “ct”, “st” or “Th”.\n\nDiscretionary Ligatures are usually more decorative in nature than Standard Ligatures, and should be used at one's discretion, thus the name.",
     fonts: ["EB Garamond"],
     texts: ["extract", "chest", "Thedore"],
-    related: ["liga, hist"],
+    related: ["liga", "hlig"],
     references: [
       "https://www.fonts.com/content/learning/fontology/level-3/signs-and-symbols/ligatures-2"
     ],
-    type: "letter",
+    type: "ligature",
   },
   /* TODO
     Small caps (smcp)
@@ -192,6 +172,25 @@ export const featureMap: { [code: string]: Feature | undefined } = {
   */
 };
 
-// https://codereview.stackexchange.com/a/138289
-export const featureArr: Feature[] = Object.values(featureMap)
+export const featureArr: Feature[] = [
+  // ligatures
+  "liga", "hlig", "dlig", "calt",
+  // digits
+  "onum", "lnum", "tnum", "pnum",
+  "ordn", "frac", "zero",
+  // letters
+  "hist", "salt", "swsh", "smcp",
+  "cswh", "titl", "rand",
+  // position
+  "kern", "sups", "subs",
+]
+  .map(key => featureMap[key])
+  // https://codereview.stackexchange.com/a/138289
   .filter(a => a !== undefined) as Feature[];
+
+export const featureGroups = [
+  { label: "Numbers", type: "digit" },
+  { label: "Letters", type: "letter" },
+  { label: "Ligatures", type: "ligature" },
+  { label: "Position", type: "position" },
+];
