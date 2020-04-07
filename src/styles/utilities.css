@@ -638,18 +638,6 @@
   white-space: pre-wrap
 }
 
-.underline {
-  text-decoration: underline
-}
-
-.line-through {
-  text-decoration: line-through
-}
-
-.no-underline {
-  text-decoration: none
-}
-
 .break-normal {
   overflow-wrap: normal;
   word-break: normal
@@ -667,6 +655,34 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap
+}
+
+.underline {
+  text-decoration: underline
+}
+
+.line-through {
+  text-decoration: line-through
+}
+
+.no-underline {
+  text-decoration: none
+}
+
+.uppercase {
+  text-transform: uppercase
+}
+
+.lowercase {
+  text-transform: lowercase
+}
+
+.capitalize {
+  text-transform: capitalize
+}
+
+.normal-case {
+  text-transform: none
 }
 
 .static {

@@ -8,13 +8,13 @@ interface Props { state: State; setState: SetState; }
 
 const Overview: React.FC<Props> = ({ state, setState }) => (
   <div className={Tw()
-    .flex().flexWrap()
     .whitespacePreWrap().text24().leading36().$()
   }>
     <span>This is how </span>
     <span><Code state={state} setState={setState} /> </span>
-    <span>looks in typeface </span>
+    <span>in </span>
     <span><Font state={state} setState={setState} /> </span>
+    <span>brings better typography:</span>
   </div>
 );
 

@@ -14,7 +14,7 @@ const color = Tw()
 
 const links = [
   { href: "/", text: "otf.show" },
-  { href: "/about", text: "about" },
+  { href: "/about", text: "what's this" },
   { href: "https://github.com/dvkndn/otf.show", text: "github" },
 ];
 

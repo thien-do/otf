@@ -14,7 +14,7 @@ const Code: React.FC<Props> = ({ state, setState }) => (
     <div>
       <Overview state={state} setState={setState} />
     </div>
-    <div className={Tw().mt24().$()}>
+    <div className={Tw().mt36().$()}>
       <Texts state={state} setState={setState} />
     </div>
     <div className={Tw().mt36().$()}>
