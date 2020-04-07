@@ -10,7 +10,6 @@ const fonts = [
   "Rasa",
   "Roboto",
   "Source Sans Pro",
-  "Space Mono",
 ];
 
 export default fonts;
