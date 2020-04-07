@@ -10,6 +10,7 @@ export interface Feature {
   references: string[],
   type: "digit" | "letter" | "position",
   default?: boolean,
+  required?: string,
 };
 
 export const featureMap: { [code: string]: Feature | undefined } = {
@@ -88,7 +89,7 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     name: "Ordinals",
     description: "set the letters following a number superscripted, to denote that number is an ordinal one (represent position in a sequential order), like 1st or 2nd.",
     fonts: ["Source Sans Pro", "Lato"],
-    texts: ["1st 2nd 3rd", "1o 1a", "Nº No"],
+    texts: ["1st  2nd  3rd", "1o  1a", "Nº  No"],
     related: ["subs", "sups"],
     references: [
       "https://en.wikipedia.org/wiki/Ordinal_indicator",
@@ -121,17 +122,51 @@ export const featureMap: { [code: string]: Feature | undefined } = {
   liga: {
     code: "liga",
     name: "Standard Ligatures",
-    description: "combines two (or sometimes three) characters into a single character to prevent unattractive collision that occurs in some pair of characters, like the hook of \"f\" and the dot of \"i\" in \"fi\".\n\nStandard Ligatures is enabled by default. However, sometimes it might be in the way and can be disabled, like when you need true monospace.",
-    fonts: ["Space Mono"],
-    texts: ["fly", "fish"],
-    related: ["calt", "dlig", "hlig"],
+    description: "combines two (or sometimes three) characters into a single character to prevent character collision, like the one between the hook of “f” and the dot of “i”.\n\nStandard Ligatures is enabled by default. It usually has ligatures for “f-” pairs, such as “fi”, “fl”, “ff” or “ffi”. Others ligatures might be found via “dlig”.",
+    fonts: ["Lato", "EB Garamond", "Roboto"],
+    texts: ["clifftop", "flying fish"],
+    related: ["calt", "clig", "dlig", "hlig"],
     references: [
       "https://en.wikipedia.org/wiki/Orthographic_ligature",
       "https://www.fonts.com/content/learning/fontology/level-3/signs-and-symbols/ligatures-1",
     ],
     type: "letter",
     default: true,
-  }
+  },
+  calt: {
+    code: "calt",
+    name: "Contextual Alternates",
+    description: "uses alternate forms when some specific characters are used together. This usually improves the spacing and/or connection between these characters.\n\nContextual Alternates is enabled by default. It can be disabled if separated, distinct characters is preferred. In some typefaces designed for code, this is also referred as \"programming ligatures\".",
+    fonts: ["Fira Code", "Inter"],
+    texts: ["<- -> <->", "1*2  3×4"],
+    related: ["cwsh", "liga"],
+    references: [],
+    type: "letter",
+    default: true,
+  },
+  hist: {
+    code: "hist",
+    name: "Historical Forms",
+    description: "replaces some letters with their archaic alternatives, such as the long form “s”. This is meant to create a historical effect.\n\nHistorical Forms only deals with single characters. For completeness, consider applying the historical ligatures via “hlig”.",
+    fonts: ["EB Garamond"],
+    texts: ["sinfulness", "blissful"],
+    related: ["hlig"],
+    references: [
+      "https://en.wikipedia.org/wiki/Long_s",
+    ],
+    type: "letter",
+  },
+  hlig: {
+    code: "hlig",
+    name: "Historical Ligatures",
+    description: "also combines characters like Standard Ligatures but work on historical ones, like a pair of 2 long form “s”. It requires Historical Forms to be enabled.",
+    fonts: ["EB Garamond"],
+    texts: ["sinfulness", "blissful"],
+    related: ["liga, hist"],
+    references: [],
+    type: "letter",
+    required: '"hist"'
+  },
 };
 
 // https://codereview.stackexchange.com/a/138289

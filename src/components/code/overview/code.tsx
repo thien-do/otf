@@ -10,9 +10,9 @@ interface Props { state: State; setState: SetState; }
 
 const Code: React.FC<Props> = ({ state, setState }) => {
   const options: Option[] = [
-    { label: "Letters", value: "0", isHeading: true },
+    { label: "Letters & Ligatures", value: "0", isHeading: true },
     ...featureArr.filter(f => f.type === "letter").map(toOption),
-    { label: "Digits", value: "1", isHeading: true },
+    { label: "Digits & Numbers", value: "1", isHeading: true },
     ...featureArr.filter(f => f.type === "digit").map(toOption),
   ];
   return (

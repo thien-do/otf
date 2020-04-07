@@ -1,14 +1,16 @@
 import React from "react";
 
 import { Tw } from "styles";
-import { featureArr } from "features";
+import { Feature } from "features";
 
-import Feature from "./feature";
+import FeatureComponent from "./feature";
 
-const FeatureList: React.FC = () => (
+interface Props { features: Feature[]; }
+
+const FeatureList: React.FC<Props> = ({ features }) => (
   <div className={Tw().flex().flexWrap().$()}>
-    {featureArr.map(feature => (
-      <Feature key={feature.code} feature={feature} />
+    {features.map(feature => (
+      <FeatureComponent key={feature.code} feature={feature} />
     ))}
   </div>
 );
