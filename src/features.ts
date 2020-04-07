@@ -89,6 +89,18 @@ export const featureMap: { [code: string]: Feature | undefined } = {
       "https://practicaltypography.com/ordinals.html",
     ],
   },
+  frac: {
+    "code": "frac",
+    "name": "Fractions",
+    "description": "applies the diagonal (slashed) fraction style to numbers separated by a slash, as in 1/2 or 3/4. These are called fractions and are usually used in dimensions, recipes and mathematics.\n\nThe diagonal style is not the only way to represent fractions, but usually considered the most common one. They look natural, use space effectively and are easier to read.",
+    "fonts": ["Roboto", "Inter", "Rasa", "Source Sans Pro", "Lato"],
+    "texts": ["1/2  1/4  3/4", "123/45678"],
+    "related": ["subs", "sups"],
+    "references": [
+      "https://en.wikipedia.org/wiki/Ordinal_indicator",
+      "https://practicaltypography.com/ordinals.html",
+    ],
+  },
 };
 
 // https://codereview.stackexchange.com/a/138289
