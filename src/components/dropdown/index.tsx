@@ -4,7 +4,11 @@ import { useSelect, UseSelectState } from "downshift";
 import Button from "./button";
 import Menu from "./menu";
 
-export interface Option { value: string; label: string; }
+export interface Option {
+  value: string;
+  label: string;
+  isHeading?: boolean;
+}
 
 type SetValue = (value: string) => void;
 
