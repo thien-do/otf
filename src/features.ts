@@ -104,7 +104,7 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     name: "Standard Ligatures",
     description: "combines two (or sometimes three) characters into a single character to prevent character collision, like the one between the hook of “f” and the dot of “i”.\n\nStandard Ligatures is enabled by default. It usually has ligatures for “f-” pairs, such as “fi”, “fl”, “ff” or “ffi”. Others ligatures might be found via “dlig”.",
     fonts: ["Lato", "EB Garamond", "Roboto"],
-    texts: ["clifftop", "flying fish"],
+    texts: ["Clifftop", "flying fish"],
     related: ["calt", "dlig", "hlig"],
     references: [
       "https://en.wikipedia.org/wiki/Orthographic_ligature",
@@ -152,7 +152,7 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     name: "Discretionary Ligatures",
     description: "– sometimes called Rare Ligatures – also combines characters like Standard Ligatures but work on not-so-common ones, like “ct”, “st” or “Th”.\n\nDiscretionary Ligatures are usually more decorative in nature than Standard Ligatures, and should be used at one's discretion, thus the name.",
     fonts: ["EB Garamond"],
-    texts: ["extract", "chest", "Thedore"],
+    texts: ["Extract", "Chest", "Thedore"],
     related: ["liga", "hlig"],
     references: [
       "https://www.fonts.com/content/learning/fontology/level-3/signs-and-symbols/ligatures-2"
@@ -178,7 +178,6 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     Small caps (smcp)
     Swashes (swsh)
     Contextual Swash
-    Stylistic alternates (salt)
     Kerning (kern)
     Titling Alternates (titl)
     Randomize (rand)
