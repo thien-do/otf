@@ -167,6 +167,29 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     type: "letter",
     required: '"hist"'
   },
+  dlig: {
+    code: "dlig",
+    name: "Discretionary Ligatures",
+    description: "– sometimes called Rare Ligatures – also combines characters like Standard Ligatures but work on not-so-common ones, like “ct”, “st” or “Th”.\n\nDiscretionary Ligatures are usually more decorative in nature than Standard Ligatures, and should be used at one's discretion, thus the name.",
+    fonts: ["EB Garamond"],
+    texts: ["extract", "chest", "Thedore"],
+    related: ["liga, hist"],
+    references: [
+      "https://www.fonts.com/content/learning/fontology/level-3/signs-and-symbols/ligatures-2"
+    ],
+    type: "letter",
+  },
+  /* TODO
+    Small caps (smcp)
+    Swashes (swsh)
+    Contextual Swash
+    Stylistic alternates (salt)
+    Kerning (kern)
+    Titling Alternates (titl)
+    Randomize (rand)
+    Superscript (sups)
+    Subscript (subs)
+  */
 };
 
 // https://codereview.stackexchange.com/a/138289
