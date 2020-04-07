@@ -1,5 +1,5 @@
 import React from "react";
-import { featureArr, Feature } from "features";
+import { featureArr, Feature, featureGroups } from "features";
 import Dropdown, { Option } from "components/dropdown";
 import { State, SetState } from "state";
 
@@ -9,12 +9,11 @@ const toOption = (ft: Feature): Option =>
 interface Props { state: State; setState: SetState; }
 
 const Code: React.FC<Props> = ({ state, setState }) => {
-  const options: Option[] = [
-    { label: "Letters & Ligatures", value: "0", isHeading: true },
-    ...featureArr.filter(f => f.type === "letter").map(toOption),
-    { label: "Digits & Numbers", value: "1", isHeading: true },
-    ...featureArr.filter(f => f.type === "digit").map(toOption),
-  ];
+  const options: Option[] = [];
+  featureGroups.forEach(({ label, type }) => {
+    options.push({ label, value: label, isHeading: true });
+    options.push(...featureArr.filter(f => f.type === type).map(toOption));
+  });
   return (
     <Dropdown
       value={state.feature.code} setValue={setState.feature}
