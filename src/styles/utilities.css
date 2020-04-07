@@ -176,12 +176,16 @@
   width: 100%
 }
 
-.max-w-800 {
-  max-width: 800px
+.max-w-640 {
+  max-width: 640px
 }
 
 .max-w-none {
   max-width: none
+}
+
+.p-0 {
+  padding: 0px
 }
 
 .p-9 {
@@ -198,6 +202,16 @@
 
 .p-72 {
   padding: 72px
+}
+
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px
+}
+
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px
 }
 
 .py-9 {
@@ -238,6 +252,22 @@
 .px-72 {
   padding-left: 72px;
   padding-right: 72px
+}
+
+.pt-0 {
+  padding-top: 0px
+}
+
+.pr-0 {
+  padding-right: 0px
+}
+
+.pb-0 {
+  padding-bottom: 0px
+}
+
+.pl-0 {
+  padding-left: 0px
 }
 
 .pt-9 {
@@ -820,12 +850,16 @@
     width: 100%
   }
 
-  .lt1280___max-w-800 {
-    max-width: 800px
+  .lt1280___max-w-640 {
+    max-width: 640px
   }
 
   .lt1280___max-w-none {
     max-width: none
+  }
+
+  .lt1280___p-0 {
+    padding: 0px
   }
 
   .lt1280___p-9 {
@@ -842,6 +876,16 @@
 
   .lt1280___p-72 {
     padding: 72px
+  }
+
+  .lt1280___py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px
+  }
+
+  .lt1280___px-0 {
+    padding-left: 0px;
+    padding-right: 0px
   }
 
   .lt1280___py-9 {
@@ -882,6 +926,22 @@
   .lt1280___px-72 {
     padding-left: 72px;
     padding-right: 72px
+  }
+
+  .lt1280___pt-0 {
+    padding-top: 0px
+  }
+
+  .lt1280___pr-0 {
+    padding-right: 0px
+  }
+
+  .lt1280___pb-0 {
+    padding-bottom: 0px
+  }
+
+  .lt1280___pl-0 {
+    padding-left: 0px
   }
 
   .lt1280___pt-9 {
@@ -982,12 +1042,16 @@
     width: 100%
   }
 
-  .lt960___max-w-800 {
-    max-width: 800px
+  .lt960___max-w-640 {
+    max-width: 640px
   }
 
   .lt960___max-w-none {
     max-width: none
+  }
+
+  .lt960___p-0 {
+    padding: 0px
   }
 
   .lt960___p-9 {
@@ -1004,6 +1068,16 @@
 
   .lt960___p-72 {
     padding: 72px
+  }
+
+  .lt960___py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px
+  }
+
+  .lt960___px-0 {
+    padding-left: 0px;
+    padding-right: 0px
   }
 
   .lt960___py-9 {
@@ -1044,6 +1118,22 @@
   .lt960___px-72 {
     padding-left: 72px;
     padding-right: 72px
+  }
+
+  .lt960___pt-0 {
+    padding-top: 0px
+  }
+
+  .lt960___pr-0 {
+    padding-right: 0px
+  }
+
+  .lt960___pb-0 {
+    padding-bottom: 0px
+  }
+
+  .lt960___pl-0 {
+    padding-left: 0px
   }
 
   .lt960___pt-9 {

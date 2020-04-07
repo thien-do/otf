@@ -9,15 +9,16 @@ import Description from "./description";
 
 interface Props { state: State; setState: SetState; }
 
+const column = Tw().flex1().lt960FlexNone().lt960WFull().$();
+
 const Code: React.FC<Props> = ({ state, setState }) => (
-  <div>
-    <div>
+  <div className={Tw().flex().flexWrap().$()}>
+    <div className={column}>
       <Overview state={state} setState={setState} />
-    </div>
-    <div className={Tw().mt36().$()} style={{ paddingTop: 6 }}>
+      <div className={Tw().mt36().$()} />
       <Texts state={state} setState={setState} />
     </div>
-    <div className={Tw().mt36().$()}>
+    <div className={column + " " + Tw().pl72().lt1280Pl36().lt960Pl0().$()}>
       <Description state={state} />
     </div>
   </div>

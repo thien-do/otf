@@ -4,9 +4,9 @@ module.exports = {
   theme: {
     sizes: {
       "full": "100%", "none": "none",
-      "9": "9px", "18": "18px", "24": "24px",
+      "0": "0px", "9": "9px", "18": "18px", "24": "24px",
       "36": "36px", "48": "48px", "72": "72px",
-      "320": "320px", "640": "640px", "800": "800px",
+      "320": "320px", "640": "640px",
     },
     screens: {
       "lt1280": { "max": "1279px" },
@@ -34,8 +34,8 @@ module.exports = {
     }),
     // layout
     width: theme => theme.pick("sizes", ["full", "320", "640"]),
-    maxWidth: theme => theme.pick("sizes", ["none", "800"]),
-    padding: theme => theme.pick("sizes", ["9", "18", "36", "72"]),
+    maxWidth: theme => theme.pick("sizes", ["none", "640"]),
+    padding: theme => theme.pick("sizes", ["0", "9", "18", "36", "72"]),
     margin: theme => theme.pick("sizes", ["18", "24", "36", "48"]),
     // border
     borderColor: theme => theme.pick("colors", ["E2E", "CBD"]),

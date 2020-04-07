@@ -27,19 +27,19 @@ const Texts: React.FC<Props> = ({ state, setState }) => {
   const f = state.feature;
   return (
     <div className={Tw().fontSemibold().text2D3().$()}>
-      <div className={f.default ? "" : Tw().textCbd().$()}>
-        <Label id="text-off">typeface default:</Label>
-        <div style={{ fontFeatureSettings: f.required }}>
-          <Input id="text-off" state={state} text={text} setText={setText} />
-        </div>
-      </div>
-      <div className={(f.default ? Tw().textCbd().$() : "") + " " + Tw().mt36().$()}>
+      <div className={`${f.default ? Tw().textCbd().$() : ""}  ${""}`}>
         <Label id="text-on">
           <span>with “{f.name}” </span>
           <span>{f.default ? "disabled" : "enabled"}:</span>
         </Label>
         <div style={{ fontFeatureSettings: getFFS(f) }}>
           <Input id="text-on" state={state} text={text} setText={setText} />
+        </div>
+      </div>
+      <div className={`${f.default ? "" : Tw().textCbd().$()}  ${Tw().mt36().$()}`}>
+        <Label id="text-off">typeface default:</Label>
+        <div style={{ fontFeatureSettings: f.required }}>
+          <Input id="text-off" state={state} text={text} setText={setText} />
         </div>
       </div>
     </div>

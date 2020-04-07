@@ -11,7 +11,7 @@ import "focus-visible";
 interface Props { Component: NextPage, pageProps: object };
 
 const CustomApp: React.FC<Props> = ({ Component, pageProps }) => (
-  <div className={Tw().flex().flexWrap().$()}>
+  <div className={Tw().flexWrap().$()}>
     <Main><Component {...pageProps} /></Main>
     <Side />
   </div >

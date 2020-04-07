@@ -2,12 +2,16 @@ import React from "react";
 import { Tw } from "styles";
 import HeaderLink from "./link";
 
-interface Link { href: string; text: string; }
+const tw = Tw().py36().borderB1().borderSolid().borderCbd().$();
 
-interface Props { links: Link[]; }
+const links = [
+  { href: "/", text: "otf.show" },
+  { href: "/about", text: "about" },
+  { href: "https://github.com/dvkndn/otf.show", text: "github" },
+];
 
-const Header: React.FC<Props> = ({ links }) => (
-  <header className={Tw().py36().borderB1().borderSolid().borderCbd().$()}>
+const Header: React.FC = () => (
+  <header className={tw}>
     <ul className={Tw().flex().text18().leading24().fontSemibold().$()}>
       {links.map((link, index) => (
         <li key={link.text} className={index !== 0 ? Tw().ml36().$() : ""}>
