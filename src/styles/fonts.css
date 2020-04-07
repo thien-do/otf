@@ -41,3 +41,7 @@
   font-family: "IBM Plex Sans"; font-weight: 600; font-style: normal;
   src: url("/fonts/IBMPlexSans-SemiBold.woff2") format("woff2");
 }
+@font-face{
+  font-family: "Space Mono"; font-weight: 700; font-style: normal;
+  src: url("/fonts/SpaceMono-Bold.ttf") format("truetype");
+}

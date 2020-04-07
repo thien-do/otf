@@ -1,26 +1,10 @@
 import React, { useState, useEffect } from "react";
+
 import { Tw } from "styles";
 import { State, SetState } from "state";
 
-interface InputProps {
-  id: string; state: State,
-  text: string; setText: (text: string) => void;
-}
-
-const Input: React.FC<InputProps> = ({ state, text, setText, id }) => (
-  <input
-    type="text" style={{ fontFamily: state.font }}
-    className={Tw().text72().leading96().wFull().$()}
-    value={text} onChange={e => setText(e.target.value)} id={id}
-  />
-);
-
-interface LabelProps { id: string; children: string | string[]; }
-
-const Label: React.FC<LabelProps> = ({ id, children }) => {
-  const tw = Tw().text15().leading24().uppercase().block().$();
-  return <label htmlFor={id} className={tw}>{children}</label>;
-};
+import Input from "./input";
+import Label from "./label";
 
 interface Props { state: State; setState: SetState; }
 
@@ -32,6 +16,7 @@ const Texts: React.FC<Props> = ({ state, setState }) => {
   useEffect(() => { if (text !== state.text) { setState.text(text); } }, [text]);
   useEffect(() => { if (text !== state.text) { setText(state.text); } }, [state.text]);
 
+  const f = state.feature;
   return (
     <div className={Tw().fontSemibold().$()}>
       <div className={Tw().textCbd().$()}>
@@ -39,8 +24,11 @@ const Texts: React.FC<Props> = ({ state, setState }) => {
         <Input id="text-off" state={state} text={text} setText={setText} />
       </div>
       <div className={Tw().text2D3().mt36().$()}>
-        <Label id="text-on">👍{"\u2000"}with “{state.feature.name}” applied:</Label>
-        <div style={{ fontFeatureSettings: `'${state.feature.code}'` }}>
+        <Label id="text-on">
+          <span>👍{"\u2000"}with “{f.name}” </span>
+          <span>{f.default ? "disabled" : "enabled"}:</span>
+        </Label>
+        <div style={{ fontFeatureSettings: `"${f.code}" ${f.default ? "0" : "1"}` }}>
           <Input id="text-on" state={state} text={text} setText={setText} />
         </div>
       </div>
