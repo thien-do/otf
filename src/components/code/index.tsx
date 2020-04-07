@@ -14,7 +14,7 @@ const Code: React.FC<Props> = ({ state, setState }) => (
     <div>
       <Overview state={state} setState={setState} />
     </div>
-    <div className={Tw().mt36().$()}>
+    <div className={Tw().mt36().$()} style={{ paddingTop: 6 }}>
       <Texts state={state} setState={setState} />
     </div>
     <div className={Tw().mt36().$()}>

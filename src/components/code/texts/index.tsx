@@ -17,12 +17,10 @@ const Input: React.FC<InputProps> = ({ state, text, setText, id }) => (
 
 interface LabelProps { id: string; children: string | string[]; }
 
-const Label: React.FC<LabelProps> = ({ id, children }) => (
-  <label
-    className={Tw().text15().leadingNone().uppercase().block().$()}
-    style={{ fontFeatureSettings: "'cpsp'" }} htmlFor={id}
-  >{children}</label>
-);
+const Label: React.FC<LabelProps> = ({ id, children }) => {
+  const tw = Tw().text15().leading24().uppercase().block().$();
+  return <label htmlFor={id} className={tw}>{children}</label>;
+};
 
 interface Props { state: State; setState: SetState; }
 
@@ -40,7 +38,7 @@ const Texts: React.FC<Props> = ({ state, setState }) => {
         <Label id="text-off">👎{"\u2000"}typeface default:</Label>
         <Input id="text-off" state={state} text={text} setText={setText} />
       </div>
-      <div className={Tw().text2D3().mt24().$()}>
+      <div className={Tw().text2D3().mt36().$()}>
         <Label id="text-on">👍{"\u2000"}with “{state.feature.name}” applied:</Label>
         <div style={{ fontFeatureSettings: `'${state.feature.code}'` }}>
           <Input id="text-on" state={state} text={text} setText={setText} />
