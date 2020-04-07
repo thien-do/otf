@@ -97,9 +97,17 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     "texts": ["1/2  1/4  3/4", "123/45678"],
     "related": ["subs", "sups"],
     "references": [
-      "https://en.wikipedia.org/wiki/Ordinal_indicator",
-      "https://practicaltypography.com/ordinals.html",
+      "https://www.fonts.com/content/learning/fontology/level-3/numbers/fractions",
     ],
+  },
+  zero: {
+    "code": "zero",
+    "name": "Slashed Zero",
+    "description": "adds a diagonal slash to the zero digit to make it more distinguishable from the capital O.",
+    "fonts": ["IBM Plex Sans", "Inter", "Source Sans Pro"],
+    "texts": ["0O", "ZERO0"],
+    "related": [],
+    "references": [],
   },
 };
 
