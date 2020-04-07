@@ -82,7 +82,7 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     "name": "Ordinals",
     "description": "set the letters following a number superscripted, to denote that number is an ordinal one (represent position in a sequential order), like 1st or 2nd.",
     "fonts": ["Source Sans Pro", "Lato"],
-    "texts": ["1st  2nd  3rd", "1o 1a"],
+    "texts": ["1st 2nd 3rd", "1o 1a", "Nº No"],
     "related": ["subs", "sups"],
     "references": [
       "https://en.wikipedia.org/wiki/Ordinal_indicator",

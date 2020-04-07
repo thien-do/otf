@@ -163,13 +163,17 @@ class Tailwind {
   whitespacePre(): Tailwind { return this.add("whitespace-pre"); }
   whitespacePreLine(): Tailwind { return this.add("whitespace-pre-line"); }
   whitespacePreWrap(): Tailwind { return this.add("whitespace-pre-wrap"); }
-  underline(): Tailwind { return this.add("underline"); }
-  lineThrough(): Tailwind { return this.add("line-through"); }
-  noUnderline(): Tailwind { return this.add("no-underline"); }
   breakNormal(): Tailwind { return this.add("break-normal"); }
   breakWords(): Tailwind { return this.add("break-words"); }
   breakAll(): Tailwind { return this.add("break-all"); }
   truncate(): Tailwind { return this.add("truncate"); }
+  underline(): Tailwind { return this.add("underline"); }
+  lineThrough(): Tailwind { return this.add("line-through"); }
+  noUnderline(): Tailwind { return this.add("no-underline"); }
+  uppercase(): Tailwind { return this.add("uppercase"); }
+  lowercase(): Tailwind { return this.add("lowercase"); }
+  capitalize(): Tailwind { return this.add("capitalize"); }
+  normalCase(): Tailwind { return this.add("normal-case"); }
   static(): Tailwind { return this.add("static"); }
   fixed(): Tailwind { return this.add("fixed"); }
   absolute(): Tailwind { return this.add("absolute"); }
