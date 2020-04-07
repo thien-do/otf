@@ -34,3 +34,7 @@
   font-family: "Merriweather"; font-weight: 700; font-style: normal;
   src: url("/fonts/Merriweather-Bold.ttf") format("truetype");
 }
+@font-face{
+  font-family: "IBM Plex Sans"; font-weight: 600; font-style: normal;
+  src: url("/fonts/IBMPlexSans-SemiBold.woff2") format("woff2");
+}
