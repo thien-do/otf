@@ -70,7 +70,7 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     description: "set the letters following a number superscripted, to denote that number is an ordinal one (represent position in a sequential order), like 1st or 2nd.",
     fonts: ["Source Sans Pro", "Lato"],
     texts: ["1st  2nd  3rd", "1o  1a", "Nº  No"],
-    related: ["subs", "sups"],
+    related: [],
     references: [
       "https://en.wikipedia.org/wiki/Ordinal_indicator",
       "https://practicaltypography.com/ordinals.html",
@@ -83,7 +83,7 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     description: "applies the diagonal (slashed) fraction style to numbers separated by a slash, as in 1/2 or 3/4. These are called fractions and are usually used in dimensions, recipes and mathematics.\n\nThe diagonal style is not the only way to represent fractions, but usually considered the most common one. They look natural, use space effectively and are easier to read.",
     fonts: ["Roboto", "Inter", "Rasa", "Source Sans Pro", "Lato"],
     texts: ["1/2  1/4  3/4", "123/45678"],
-    related: ["subs", "sups"],
+    related: [],
     references: [
       "https://www.fonts.com/content/learning/fontology/level-3/numbers/fractions",
     ],
@@ -119,7 +119,7 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     description: "uses alternate forms when some specific characters are used together. This usually improves the spacing and/or connection between these characters.\n\nContextual Alternates is enabled by default. It can be disabled if separated, distinct characters is preferred. In some typefaces designed for code, this is also referred as \"programming ligatures\".",
     fonts: ["Fira Code", "Inter"],
     texts: ["<- -> <->", "1*2  3×4"],
-    related: ["cwsh", "liga"],
+    related: ["liga"],
     references: [],
     type: "letter",
     default: true,
@@ -188,20 +188,25 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     ],
     type: "letter",
   },
-  /* TODO
-    Small caps (smcp)
-    Kerning (kern)
-    Titling Alternates (titl)
-    Randomize (rand)
-    Superscript (sups)
-    Subscript (subs)
-  */
+  smcp: {
+    code: "smcp",
+    name: "Small Capitals",
+    description: "turns lowercase letters into glyphs that resemble uppercase letterforms but reduced in size, close to the surrounding lowercase letters.\n\nSmall Capitals are not simply scaled-down versions of normal capitals. They normally retain the same stroke weight and have a wider aspect ratio to harmonize with surrounding letters, both uppercase and lowercase ones.\n\nSmall Capitals are used in running text as a form of emphasis alongside italic and bold, for example to draw attention to the openning phrase of an article. They are also used where uppercase letters would appear jarring, like in long acronyms.",
+    fonts: ["Roboto", "EB Garamond", "Source Sans Pro"],
+    texts: ["Signal & Noise", "Time Roman"],
+    related: [],
+    references: [
+      "https://en.wikipedia.org/wiki/Small_caps",
+      "https://www.fonts.com/content/learning/fontology/level-1/type-anatomy/small-caps",
+    ],
+    type: "letter",
+  },
 };
 
 export const featureArr: Feature[] = [
-  "liga", "hlig", "dlig", "calt", // ligatures
-  "onum", "lnum", "tnum", "pnum", "ordn", "frac", "zero", // digits
-  "hist", "salt", "swsh", "smcp", "cswh", "rand", // letters
+  "onum", "lnum", "tnum", "pnum", "ordn", "frac", "zero", // digit
+  "salt", "swsh", "hist", "smcp", "cswh", "rand", // letter
+  "liga", "hlig", "dlig", "calt", // ligature
   "kern", "sups", "subs", // position
 ]
   .map(key => featureMap[key])
