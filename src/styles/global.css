@@ -6,6 +6,7 @@
 
 ul { list-style: none; }
 a { text-decoration: none; color: inherit; }
+strong { font: inherit; }
 
 input, button {
   appearance: none; font: inherit;
@@ -37,3 +38,8 @@ input, button, a, select {
 }
 
 .uppercase { font-feature-settings: "cpsp" }
+
+/* for marked.js. this is simpler than rewrite the renderers */
+.marked strong { font-weight: 600; }
+.marked p + p { margin-top: 24px; }
+.marked a { text-decoration: underline; }

@@ -8,12 +8,6 @@ import Texts from "./texts";
 import Related from "./related";
 import Usage from "./usage";
 
-const getName = (ft: Feature) => {
-  return ft.family_code && ft.family_name
-    ? `${ft.family_name} (${ft.family_code})`
-    : `${ft.name} (${ft.code})`;
-};
-
 interface Props { state: State; }
 
 const Description: React.FC<Props> = ({ state }) => (
