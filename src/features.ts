@@ -163,7 +163,7 @@ export const featureMap: { [code: string]: Feature | undefined } = {
   salt: {
     code: "salt",
     name: "Stylistic Alternates",
-    description: "replaces some characters with their stylistic alternates. For example, the single-story  “g” and “a” could be replaced with their double-story forms, and vice versa.\n\nStylistic Alternates are used mostly for their aesthetic effect. However, sometimes they can also help improve readability as in the case of the final of lowercase “l” and the serif of uppercase “I”.",
+    description: "replaces some characters with their stylistic alternates. For example, the single-story  “g” and “a” could be replaced with their double-story forms, and vice versa.\n\nStylistic Alternates are used mostly for their aesthetic effect. However, sometimes they can also help improve readability as in the case of the finial of lowercase “l” and the serif of uppercase “I”.",
     fonts: ["Inter", "Source Sans Pro", "Open Sans"],
     texts: ["Illustrating", "Illegal"],
     related: ["swsh", "hist"],
