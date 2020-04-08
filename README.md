@@ -1,22 +1,13 @@
-# [otf.show](https://otf.show)
+# OpenType Feature Showcase — [otf.show](https://otf.show)
 
-> “OpenType features are like secret compartments in fonts. Unlock them and you’ll
-> find ways to make fonts look and behave differently in subtle and dramatic ways.” — 
+> _“OpenType features are like secret compartments in fonts. Unlock them and you’ll
+> find ways to make fonts look and behave differently in subtle and dramatic ways.”_ — 
 > [Adobe](https://helpx.adobe.com/fonts/using/use-open-type-features.html)
 
-**[otf.show](https://otf.show) is an interactive showcase of OpenType features.** We hope it helps designers and developers to explore and achieve better typography on the web.
+![Screenshot of otf.show](https://user-images.githubusercontent.com/5953369/78774132-6dbbe900-79be-11ea-8236-4afc798ac424.png)
 
-This project is built with [React](https://reactjs.org/), [Next.js](https://nextjs.org/),
-[Typed Tailwind](https://github.com/dvkndn/typed.tw) and [Downshift](https://github.com/downshift-js/downshift/).
-The majority of information originally comes from [Figma](https://www.figma.com/blog/opentype-font-features/),
-[Adobe](https://helpx.adobe.com/fonts/using/use-open-type-features.html),
-[Microsoft](https://docs.microsoft.com/en-us/typography/opentype/spec/featuretags) and
-[Wikipedia](https://en.wikipedia.org/wiki/List_of_typographic_features). Contributions are
-[more than welcome](https://github.com/dvkndn/otf.show/issues/1).
+I recently discovered [OpenType Features](https://en.wikipedia.org/wiki/OpenType#Advanced_typography) and quickly impressed by the enormous potential they could bring to web typography. However, the current state of their usage on the web is still quite limited. Many don't know about them, even those who would have benefit from.
 
-This is a WIP project. We are actively adding new typographic features.
+Therefore, I decided to build **[otf.show](https://otf.show)** as an interactive showcase of these typographic features. I hope it could help others explore OpenType Features easily so we can achieve better typography on the web.
 
-## Contributing
-
-- At the current stage we need to add more data: https://github.com/dvkndn/otf.show/blob/master/src/features.ts
-- TBA
+Thank you
