@@ -6,7 +6,7 @@ const tw = Tw().py36().borderB1().borderSolid().borderCbd().$();
 
 const links = [
   { href: "/", text: "otf.show" },
-  { href: "/what's this", text: "about" },
+  { href: "/about", text: "what's this" },
   { href: "https://github.com/dvkndn/otf.show", text: "github" },
 ];
 
