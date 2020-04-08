@@ -8,7 +8,7 @@ export interface Feature {
   texts: string[],
   related: string[],
   references: string[],
-  type: "digit" | "letter" | "ligature" | "position",
+  type: "digit" | "letter",
   default?: boolean,
   required?: string,
 };
@@ -110,7 +110,7 @@ export const featureMap: { [code: string]: Feature | undefined } = {
       "https://en.wikipedia.org/wiki/Orthographic_ligature",
       "https://www.fonts.com/content/learning/fontology/level-3/signs-and-symbols/ligatures-1",
     ],
-    type: "ligature",
+    type: "letter",
     default: true,
   },
   calt: {
@@ -121,7 +121,7 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     texts: ["<- -> <->", "1*2  3×4"],
     related: ["cwsh", "liga"],
     references: [],
-    type: "ligature",
+    type: "letter",
     default: true,
   },
   hist: {
@@ -129,9 +129,10 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     name: "Historical Forms",
     description: "replaces some letters with their archaic alternatives, such as the long form “s”. This is meant to create a historical effect.\n\nHistorical Forms only deals with single characters. For completeness, consider applying the historical ligatures via “hlig”.",
     fonts: ["EB Garamond"],
-    texts: ["sinfulness", "blissful"],
+    texts: ["sinfulness", "blissful", "Joiner"],
     related: ["hlig"],
     references: [
+      "https://en.wikipedia.org/wiki/J#History",
       "https://en.wikipedia.org/wiki/Long_s",
     ],
     type: "letter",
@@ -144,7 +145,7 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     texts: ["sinfulness", "blissful"],
     related: ["liga", "hist"],
     references: [],
-    type: "ligature",
+    type: "letter",
     required: '"hist"'
   },
   dlig: {
@@ -157,7 +158,7 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     references: [
       "https://www.fonts.com/content/learning/fontology/level-3/signs-and-symbols/ligatures-2"
     ],
-    type: "ligature",
+    type: "letter",
   },
   salt: {
     code: "salt",
@@ -197,8 +198,6 @@ export const featureArr: Feature[] = [
   .filter(a => a !== undefined) as Feature[];
 
 export const featureGroups = [
-  { label: "Numbers", type: "digit" },
-  { label: "Letters", type: "letter" },
-  { label: "Ligatures", type: "ligature" },
-  { label: "Position", type: "position" },
+  { label: "Digits, Numbers & Math", type: "digit" },
+  { label: "Letters & Ligatures", type: "letter" },
 ];
