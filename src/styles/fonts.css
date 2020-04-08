@@ -49,3 +49,7 @@
   font-family: "EB Garamond"; font-weight: 600; font-style: normal;
   src: url("/fonts/EBGaramond-SemiBold.ttf") format("truetype");
 }
+@font-face{
+  font-family: "BioRhyme"; font-weight: 700; font-style: normal;
+  src: url("/fonts/BioRhyme-Bold.ttf") format("truetype");
+}

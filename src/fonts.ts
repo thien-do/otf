@@ -1,4 +1,5 @@
 const fonts = [
+  "BioRhyme",
   "EB Garamond",
   "Fira Code",
   "IBM Plex Sans",

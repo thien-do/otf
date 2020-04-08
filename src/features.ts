@@ -175,10 +175,21 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     ],
     type: "letter",
   },
+  swsh: {
+    code: "swsh",
+    name: "Swashes",
+    description: "decorates some letters with typographical flourish, such as an extended serif or terminal. They add an elegant touch to an otherwise straightforward letterform.\n\nSwashes should be used judiciously. A single swash character can make an eye-catching initial letter to start an article, but many of them can quickly reduce readability.",
+    fonts: ["BioRhyme", "EB Garamond"],
+    texts: ["Rose", "Quality"],
+    related: ["salt", "hist"],
+    references: [
+      "https://www.fonts.com/content/learning/fontology/level-4/fine-typography/using-swash-characters",
+      "https://en.wikipedia.org/wiki/Swash_(typography)",
+    ],
+    type: "letter",
+  },
   /* TODO
     Small caps (smcp)
-    Swashes (swsh)
-    Contextual Swash
     Kerning (kern)
     Titling Alternates (titl)
     Randomize (rand)
