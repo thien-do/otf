@@ -196,6 +196,10 @@
   padding: 18px
 }
 
+.p-24 {
+  padding: 24px
+}
+
 .p-36 {
   padding: 36px
 }
@@ -232,6 +236,16 @@
 .px-18 {
   padding-left: 18px;
   padding-right: 18px
+}
+
+.py-24 {
+  padding-top: 24px;
+  padding-bottom: 24px
+}
+
+.px-24 {
+  padding-left: 24px;
+  padding-right: 24px
 }
 
 .py-36 {
@@ -300,6 +314,22 @@
 
 .pl-18 {
   padding-left: 18px
+}
+
+.pt-24 {
+  padding-top: 24px
+}
+
+.pr-24 {
+  padding-right: 24px
+}
+
+.pb-24 {
+  padding-bottom: 24px
+}
+
+.pl-24 {
+  padding-left: 24px
 }
 
 .pt-36 {
@@ -870,6 +900,10 @@
     padding: 18px
   }
 
+  .lt1280___p-24 {
+    padding: 24px
+  }
+
   .lt1280___p-36 {
     padding: 36px
   }
@@ -906,6 +940,16 @@
   .lt1280___px-18 {
     padding-left: 18px;
     padding-right: 18px
+  }
+
+  .lt1280___py-24 {
+    padding-top: 24px;
+    padding-bottom: 24px
+  }
+
+  .lt1280___px-24 {
+    padding-left: 24px;
+    padding-right: 24px
   }
 
   .lt1280___py-36 {
@@ -974,6 +1018,22 @@
 
   .lt1280___pl-18 {
     padding-left: 18px
+  }
+
+  .lt1280___pt-24 {
+    padding-top: 24px
+  }
+
+  .lt1280___pr-24 {
+    padding-right: 24px
+  }
+
+  .lt1280___pb-24 {
+    padding-bottom: 24px
+  }
+
+  .lt1280___pl-24 {
+    padding-left: 24px
   }
 
   .lt1280___pt-36 {
@@ -1062,6 +1122,10 @@
     padding: 18px
   }
 
+  .lt960___p-24 {
+    padding: 24px
+  }
+
   .lt960___p-36 {
     padding: 36px
   }
@@ -1098,6 +1162,16 @@
   .lt960___px-18 {
     padding-left: 18px;
     padding-right: 18px
+  }
+
+  .lt960___py-24 {
+    padding-top: 24px;
+    padding-bottom: 24px
+  }
+
+  .lt960___px-24 {
+    padding-left: 24px;
+    padding-right: 24px
   }
 
   .lt960___py-36 {
@@ -1166,6 +1240,22 @@
 
   .lt960___pl-18 {
     padding-left: 18px
+  }
+
+  .lt960___pt-24 {
+    padding-top: 24px
+  }
+
+  .lt960___pr-24 {
+    padding-right: 24px
+  }
+
+  .lt960___pb-24 {
+    padding-bottom: 24px
+  }
+
+  .lt960___pl-24 {
+    padding-left: 24px
   }
 
   .lt960___pt-36 {
