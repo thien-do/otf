@@ -11,10 +11,11 @@ interface CustomHeadProps { ft: Feature; }
 
 const CustomHead: React.FC<CustomHeadProps> = ({ ft }) => {
   const fullName = `${ft.name} (${ft.code})`;
+  const description = ft.description.split("\n\n")[0];
   return (
     <Head>
       <title>{fullName} - otf.show</title>
-      <meta name="description" content={`${fullName} ${ft.description} - otf.show`} />
+      <meta name="description" content={`${fullName} ${description} - otf.show`} />
     </Head>
   );
 };
