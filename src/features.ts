@@ -127,9 +127,9 @@ export const featureMap: { [code: string]: Feature | undefined } = {
   hist: {
     code: "hist",
     name: "Historical Forms",
-    description: "replaces some letters with their archaic alternatives, such as the long form “s”. This is meant to create a historical effect.\n\nHistorical Forms only deals with single characters. For completeness, consider applying the historical ligatures via “hlig”.",
+    description: "brings your text back to the distant past, like in 1800s. It replaces some letters with their archaic alternatives, such as the long form “s”.\n\nIt's worth to note that some historical characters have quite complex rules that may not be implemented completely. For example, EB Garamond doesn't reserve the round “s” at the end of a word (try “sinfulness”).\n\nTechnical-wise, Historical Forms only deals with single characters. For completeness, consider applying the historical ligatures via “hlig”.",
     fonts: ["EB Garamond"],
-    texts: ["sinfulness", "blissful", "Joiner"],
+    texts: ["substitute", "Joiner"],
     related: ["hlig"],
     references: [
       "https://en.wikipedia.org/wiki/J#History",
@@ -140,10 +140,10 @@ export const featureMap: { [code: string]: Feature | undefined } = {
   hlig: {
     code: "hlig",
     name: "Historical Ligatures",
-    description: "also combines characters like Standard Ligatures but work on historical ones, like a pair of 2 long form “s”. It requires Historical Forms to be enabled.",
+    description: "also connects characters like Standard Ligatures but work on historical ones, like “ſt” (instead of “st”).\n\nHistorical Ligatures may require [Historical Forms](hist) to be enabled or not depend on the font. When the latter is not enabled, one should you the historical alternates manually (e.g. “ſ” instead of “s”).\n\nIt may be useful to also enable [Discretionary Ligatures](dlig) as some of them (like “ct” and “st”) are often common in the past as well.",
     fonts: ["EB Garamond"],
-    texts: ["sinfulness", "blissful"],
-    related: ["liga", "hist"],
+    texts: ["lost", "short"],
+    related: ["liga", "dlig", "hist"],
     references: [],
     type: "letter",
     required: '"hist"'
