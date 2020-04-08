@@ -41,7 +41,7 @@ export const featureMap: { [code: string]: Feature | undefined } = {
   onum: {
     code: "onum",
     name: "Oldstyle Figures",
-    description: "displays numbers in varying heights and alignments. These numbers blend in with lowercase leters, as they share the same x-height, and also have ascenders (usually 6 and 8) and descenders (3, 4, 5, 7 and 9).\n\nOldstyle figures are often considered more pleasing and less intrusive than lining figures. They are preferred in running text and also pair nicely with small caps.",
+    description: "displays numbers in varying heights and alignments. These numbers blend in with lowercase letters, as they share the same x-height, and also have ascenders (usually 6 and 8) and descenders (3, 4, 5, 7 and 9).\n\nOldstyle figures are often considered more pleasing and less intrusive than lining figures. They are preferred in running text and also pair nicely with small caps.",
     fonts: ["EB Garamond", "Lato", "Source Sans Pro", "Roboto", "Open Sans"],
     texts: ["10Broad36", "123456789"],
     related: ["lnum", "tnum", "pnum"],
@@ -163,7 +163,7 @@ export const featureMap: { [code: string]: Feature | undefined } = {
   salt: {
     code: "salt",
     name: "Stylistic Alternates",
-    description: "replaces some characters with their stylistic alternates. For example, the single-story  “g” and “a” could be replaced with their double-story forms, and vice versa.\n\nStylistic Alternates are used mostly for their aesthetic effect. However, sometimes they can also help improve readability as in the case of the finial of lowercase “l” and the serif of uppercase “I”.",
+    description: "replaces some characters with their stylistic alternates. For example, the single-story  “g” and “a” could be replaced with their double-story forms, and vice versa.\n\nStylistic Alternates are used mostly for their aesthetic effect. However, sometimes they can also help improve readability as in the case of the final of lowercase “l” and the serif of uppercase “I”.",
     fonts: ["Inter", "Source Sans Pro", "Open Sans"],
     texts: ["Illustrating", "Illegal"],
     related: ["swsh", "hist"],
