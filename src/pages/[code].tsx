@@ -1,9 +1,9 @@
 import React from "react";
-import { NextPage } from "next";
+import { NextPage, GetStaticProps } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-import { Feature } from "features";
+import { Feature, featureArr } from "features";
 import { getState, getSetState } from "state";
 import Code from "components/code";
 
@@ -32,5 +32,16 @@ const Page: NextPage = () => {
     </div>
   );
 };
+
+export const getStaticPaths = async () => ({
+  paths: featureArr.map(feature => ({
+    params: { code: feature.code },
+  })),
+  fallback: false,
+});
+
+// we don't need to fetch external data, just trick Next JS to get
+// getStaticPaths working
+export const getStaticProps: GetStaticProps<{}> = async () => ({ props: {}})
 
 export default Page;
