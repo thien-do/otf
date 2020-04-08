@@ -127,10 +127,10 @@ export const featureMap: { [code: string]: Feature | undefined } = {
   hist: {
     code: "hist",
     name: "Historical Forms",
-    description: "brings your text back to the distant past, like in 1800s. It replaces some letters with their archaic alternatives, such as the long form “s”.\n\nIt's worth to note that some historical characters have quite complex rules that may not be implemented completely. For example, EB Garamond doesn't reserve the round “s” at the end of a word (try “sinfulness”).\n\nTechnical-wise, Historical Forms only deals with single characters. For completeness, consider applying the historical ligatures via “hlig”.",
+    description: "brings your text back to the distant past, like in 1800s. It replaces some letters with their archaic alternatives, such as the long form “s”.\n\nIt's worth to note that some historical characters have quite complex rules that may not be implemented completely. For example, EB Garamond doesn't reserve the round “s” at the end of a word (try “sinfulness”).\n\nTechnical-wise, Historical Forms only deals with single characters. For completeness, consider applying the [Historical Ligatures](hlig) and [Discretionary Ligatures](dlig).",
     fonts: ["EB Garamond"],
     texts: ["substitute", "Joiner"],
-    related: ["hlig"],
+    related: ["hlig", "dlig"],
     references: [
       "https://en.wikipedia.org/wiki/J#History",
       "https://en.wikipedia.org/wiki/Long_s",
@@ -151,10 +151,10 @@ export const featureMap: { [code: string]: Feature | undefined } = {
   dlig: {
     code: "dlig",
     name: "Discretionary Ligatures",
-    description: "– sometimes called Rare Ligatures – also combines characters like Standard Ligatures but work on not-so-common ones, like “ct”, “st” or “Th”.\n\nDiscretionary Ligatures are usually more decorative in nature than Standard Ligatures, and should be used at one's discretion, thus the name.",
+    description: "– sometimes called Rare Ligatures – also connects characters like [Standard Ligatures](liga) but work on not-so-common ones, like “ct”, “st” or “Th”.\n\nDiscretionary Ligatures are usually more decorative in nature, and should be used at one's discretion, thus the name. Some of these ligatures may also be common in the distant past, and could be used together with [Historical Forms](hist).",
     fonts: ["EB Garamond"],
     texts: ["Extract", "Chest", "Thedore"],
-    related: ["liga", "hlig"],
+    related: ["liga", "hlig", "hist"],
     references: [
       "https://www.fonts.com/content/learning/fontology/level-3/signs-and-symbols/ligatures-2"
     ],
