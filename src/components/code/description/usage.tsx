@@ -1,6 +1,6 @@
 import React from "react";
+import marked from "marked";
 
-import { Tw } from "styles";
 import { Feature } from "features";
 
 const getName = (ft: Feature) => {
@@ -11,18 +11,10 @@ const getName = (ft: Feature) => {
 
 interface Props { feature: Feature; }
 
-const bold = Tw().fontSemibold().$();
-
 const Usage: React.FC<Props> = ({ feature }) => {
-  const texts = feature.description.split("\n\n");
-  return (
-    <div>
-      <p><span className={bold}>{getName(feature)}</span> {texts[0]}</p>
-      {texts.slice(1).map((text, index) => (
-        <p className={Tw().mt24().$()} key={index}>{text}</p>
-      ))}
-    </div>
-  );
+  const raw = `**${getName(feature)}** ${feature.description}`;
+  const html = { __html: marked(raw) };
+  return <div className="marked" dangerouslySetInnerHTML={html} />;
 };
 
 export default Usage;
