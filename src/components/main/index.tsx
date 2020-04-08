@@ -13,7 +13,9 @@ const tw = Tw()
 const Main: React.FC<Props> = ({ children }) => (
   <main className={tw}>
     <Header />
-    <div className={Tw().pt36().pb72().$()}>{children}</div>
+    <div className={Tw().mt36().$()} />
+    {children}
+    <div className={Tw().mt48().$()} />
   </main>
 );
 
