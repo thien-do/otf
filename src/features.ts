@@ -1,5 +1,6 @@
 export interface Feature {
   code: string,
+  patchedCode?: string, // the real code that get applied, like "clig" for "rand"
   name: string,
   family_code?: string,
   family_name?: string,
@@ -81,7 +82,7 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     code: "frac",
     name: "Fractions",
     description: "applies the diagonal (slashed) fraction style to numbers separated by a slash, as in 1/2 or 3/4. These are called fractions and are usually used in dimensions, recipes and mathematics.\n\nThe diagonal style is not the only way to represent fractions, but usually considered the most common one. They look natural, use space effectively and are easier to read.",
-    fonts: ["Roboto", "Inter", "Rasa", "Source Sans Pro", "Lato"],
+    fonts: ["Roboto", "Inter", "Source Sans Pro", "Lato"],
     texts: ["1/2  1/4  3/4", "123/45678"],
     related: [],
     references: [
@@ -200,6 +201,18 @@ export const featureMap: { [code: string]: Feature | undefined } = {
       "https://www.fonts.com/content/learning/fontology/level-1/type-anatomy/small-caps",
     ],
     type: "letter",
+  },
+  rand: {
+    code: "rand",
+    patchedCode: "calt",
+    name: "Randomize",
+    description: "makes your text looks like handwritten by randomly rendering different forms of the same letter. This is easy to observe in words that have consecutive repeated letters, like  “Raccoon” or “Bookkeeper”.\n\nHowever, true support for Randomize in today client applications is somewhat limited, so many fonts (including Caveat in this demo) implement them via [Contextual Alternates](/calt) instead.",
+    fonts: ["Caveat"],
+    texts: ["Red Racoon", "Bookkeeper"],
+    related: [],
+    references: [],
+    type: "letter",
+    default: true,
   },
 };
 
