@@ -10,7 +10,8 @@ import { Feature } from "features";
 interface Props { state: State; setState: SetState; }
 
 const getFFS = (f: Feature) => {
-  const arr = [`"${f.code}"`];
+  const arr = [];
+  arr.push(`"${f.patchedCode ?? f.code}"`);
   arr.push(f.default ? "0" : "1"); // enabled or disabled
   if (f.required) { arr.push(`, ${f.required}`); }
   return arr.join(" ");

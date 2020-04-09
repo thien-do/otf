@@ -53,3 +53,7 @@
   font-family: "BioRhyme"; font-weight: 700; font-style: normal;
   src: url("/fonts/BioRhyme-Bold.ttf") format("truetype");
 }
+@font-face{
+  font-family: "Caveat"; font-weight: 700; font-style: normal;
+  src: url("/fonts/Caveat-Bold.ttf") format("truetype");
+}
