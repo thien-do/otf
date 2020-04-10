@@ -4,14 +4,6 @@ import { Tw } from "styles";
 
 const CustomHead: React.FC = () => (
   <Head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-54314352-3" />
-    <script dangerouslySetInnerHTML={{ __html: `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-54314352-3');
-    ` }} />
     <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml" />
   </Head>
 );
