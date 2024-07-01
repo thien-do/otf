@@ -13,6 +13,8 @@ const ulStyles = Tw()
   .absolute().left0().top0().z1().w320().py9()
   .$();
 
+const hidden = Tw().hidden();
+
 const getLiStyles = (s: UseSelectReturnValue<string>, o: Option, index: number) => {
   const base = Tw().px18().selectNone().$();
   const fs = o.isHeading ? Tw().text15().textA0A().uppercase().$() : "";
@@ -23,17 +25,20 @@ const getLiStyles = (s: UseSelectReturnValue<string>, o: Option, index: number) 
 };
 
 const Menu: React.FC<Props> = ({ s, options }) => (
-  <ul {...s.getMenuProps()} className={ulStyles}>
+  <ul
+    {...s.getMenuProps()}
+    className={[ulStyles, !s.isOpen ? hidden : ""].join(" ")}
+  >
     {options.map((o, index) => (
       <li
         key={`${o.value}${index}`}
         className={getLiStyles(s, o, index)}
-        {...s.getItemProps({ item: o.value, index, disabled: o.isHeading })}
+        {...s.getItemProps({ item: o.value, index })}
       >
         {o.label}
       </li>
     ))}
-  </ul >
+  </ul>
 );
 
 export default Menu;

@@ -31,20 +31,28 @@ const makeOnSelectedItemChange = (setValue: SetValue) => (changes: Changes) => {
   if (changes.selectedItem === undefined) {
     throw new Error("dropdown: selected item must be defined");
   }
-  setValue(changes.selectedItem);
+  setValue(changes.selectedItem ?? "");
+};
+
+const makeIsItemDisable = (options: Option[]) => (_item: string, index: number) => {
+  return options[index].isHeading ?? false;
 };
 
 const Dropdown: React.FC<Props> = ({ value, setValue, options }) => {
   const itemToString = makeItemToString(options);
   const onSelectedItemChange = makeOnSelectedItemChange(setValue);
+  const isItemDisabled = makeIsItemDisable(options);
   const s = useSelect({
-    items: options.map(o => o.value), selectedItem: value,
-    itemToString, onSelectedItemChange,
+    items: options.map((o) => o.value),
+    selectedItem: value,
+    itemToString,
+    onSelectedItemChange,
+    isItemDisabled,
   });
   return (
     <span className={Tw().relative().fontSemibold().$()}>
       <Button s={s} value={value} itemToString={itemToString} />
-      {s.isOpen && <Menu s={s} options={options} />}
+      <Menu s={s} options={options} />
     </span>
   );
 };
