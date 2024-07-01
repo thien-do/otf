@@ -34,11 +34,10 @@ const HeaderLink: React.FC<Props> = ({ href, children }) => {
   if (isExternal) {
     props.href = href;
     props.target = "_blank";
-    props.rel = "noopener"
+    props.rel = "noopener";
   }
 
-  const anchor = <a {...props} />;
-  return isExternal ? anchor : <Link href={href}>{anchor}</Link>;
+  return isExternal ? <a {...props} /> : <Link href={href} {...props} />;
 };
 
 export default HeaderLink;

@@ -41,15 +41,17 @@ const getAStyles = (feature: Feature, code?: string | string[]) => {
 const FeatureComponent: React.FC<Props> = ({ feature }) => {
   const { code } = useRouter().query;
   return (
-    <Link href="/[code]" as={`/${feature.code}`}>
-      <a className={getAStyles(feature, code)}>
-        <span className={Tw().flexNone().$()}>
-          <Code code={feature.code} />
-        </span>
-        <span className={Tw().ml18().flex1().overflowHidden().$()}>
-          <Name feature={feature} />
-        </span>
-      </a>
+    <Link
+      href="/[code]"
+      as={`/${feature.code}`}
+      className={getAStyles(feature, code)}
+    >
+      <span className={Tw().flexNone().$()}>
+        <Code code={feature.code} />
+      </span>
+      <span className={Tw().ml18().flex1().overflowHidden().$()}>
+        <Name feature={feature} />
+      </span>
     </Link>
   );
 };

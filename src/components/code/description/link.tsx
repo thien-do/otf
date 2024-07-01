@@ -19,8 +19,14 @@ export const QueryLink: React.FC<QueryProps> = ({ type, value, label }) => {
   const href = { pathname: "/[code]", query };
   const as = { pathname: `/${router.query.code}`, query };
   return (
-    <NextLink href={href} as={as} scroll={false} shallow>
-      <a className={Tw().underline().$()}>{label}</a>
+    <NextLink
+      href={href}
+      as={as}
+      scroll={false}
+      shallow
+      className={Tw().underline().$()}
+    >
+      {label}
     </NextLink>
   );
 };
@@ -31,7 +37,13 @@ interface CodeProps {
 }
 
 export const CodeLink: React.FC<CodeProps> = ({ value, label }) => (
-  <NextLink href="/[code]" as={`/${value}`} scroll={false} shallow>
-    <a className={Tw().underline().$()}>{label}</a>
+  <NextLink
+    href="/[code]"
+    as={`/${value}`}
+    scroll={false}
+    shallow
+    className={Tw().underline().$()}
+  >
+    {label}
   </NextLink>
 );
