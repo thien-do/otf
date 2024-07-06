@@ -2,13 +2,12 @@
   "name": "otf.show",
   "version": "1.0.0",
   "description": "An interactive showcase of OpenType's typographic features",
-  "repository": "http://github.com/dvkndn/otf.show",
+  "repository": "http://github.com/thien-do/otf",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "build-css": "cd src/styles && npx tailwind build utilities.src.css --config utilities.config.js --output utilities.css"
+    "lint": "next lint"
   },
   "keywords": [
     "OTF",
@@ -19,19 +18,17 @@
   "license": "ISC",
   "dependencies": {
     "downshift": "^9.0.6",
-    "focus-visible": "^5.2.0",
-    "marked": "^13.0.1",
+    "marked": "^13.0.2",
     "next": "14.2.4",
-    "react": "^18",
-    "react-dom": "^18"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@types/marked": "^6.0.0",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "@types/node": "^20.14.10",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.5.3"
   }
 }
