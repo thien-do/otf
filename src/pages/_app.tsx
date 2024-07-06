@@ -1,12 +1,11 @@
-import React from "react";
 import { NextPage } from "next";
+import React from "react";
 
-import { Tw } from "styles";
 import Main from "components/main";
 import Side from "components/side";
+import { Tw } from "styles";
 
 import "styles/index.css";
-import "focus-visible";
 
 interface Props { Component: NextPage, pageProps: object };
 
