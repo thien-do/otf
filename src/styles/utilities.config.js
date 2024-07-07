@@ -20,7 +20,7 @@ module.exports = {
       "CBD": "#CBD5E0", "A0A": "#A0AEC0", "718": "#718096",
       "4A5": "#4A5568", "2D3": "#2D3748", "1A2": "#1A202C"
     },
-    // hack for https://github.com/dvkndn/typed.tw/issues/17
+    // hack for https://github.com/thien-do/typed-tailwind/issues/17
     hack: theme => {
       theme.pick = (x, ks) => ks.reduce((o, k) => (o[k] = theme(x)[k], o), {});
       return {};
@@ -81,7 +81,7 @@ module.exports = {
     "textDecoration", "textTransform",
     "position", "inset", "zIndex",
     "cursor", "userSelect",
-    // https://github.com/dvkndn/typed.tw/issues/19
+    // https://github.com/thien-do/typed-tailwind/issues/19
     // "transitionProperty",
   ],
   plugins: [],

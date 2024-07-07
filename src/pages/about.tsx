@@ -15,12 +15,12 @@ const Link: React.FC<LinkProps> = ({ href, children }) => (
 const L_REACT = "https://reactjs.org/";
 const L_NEXT = "https://nextjs.org/";
 const L_DOWNSHIFT = "https://github.com/downshift-js/downshift/";
-const L_TYPEDTW = "https://github.com/dvkndn/typed.tw";
-const L_OTFSHOW = "https://github.com/dvkndn/otf.show/";
+const L_TYPEDTW = "https://github.com/thien-do/typed-tailwind";
+const L_OTFSHOW = "https://github.com/thien-do/otf/";
 const L_FIGMA = "https://www.figma.com/blog/opentype-font-features/";
 const L_ADOBE = "https://helpx.adobe.com/fonts/using/use-open-type-features.html";
 const L_MICROSOFT = "https://docs.microsoft.com/en-us/typography/opentype/spec/featuretags";
-const L_CONTRIBUTE = "https://github.com/dvkndn/otf.show/issues/1";
+const L_CONTRIBUTE = "https://github.com/thien-do/otf/issues/1";
 const L_WIKIPEDIA = "https://en.wikipedia.org/wiki/List_of_typographic_features";
 
 const bold = Tw().fontSemibold().$();

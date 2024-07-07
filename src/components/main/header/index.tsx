@@ -7,7 +7,7 @@ const tw = Tw().py36().borderB1().borderSolid().borderCbd().$();
 const links = [
   { href: "/", text: "otf.show" },
   { href: "/about", text: "what's this" },
-  { href: "https://github.com/dvkndn/otf.show", text: "github" },
+  { href: "https://github.com/thien-do/otf", text: "github" },
 ];
 
 const Header: React.FC = () => (

@@ -1,4 +1,4 @@
-// http://github.com/dvkndn/typed-tailwind
+// http://github.com/thien-do/typed-tailwind
 export const Tw = (): Tailwind => new Tailwind();
 
 class Tailwind {
