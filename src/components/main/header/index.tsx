@@ -1,8 +1,5 @@
 import React from "react";
-import { Tw } from "styles";
 import HeaderLink from "./link";
-
-const tw = Tw().py36().borderB1().borderSolid().borderCbd().$();
 
 const links = [
   { href: "/", text: "otf.show" },
@@ -11,10 +8,10 @@ const links = [
 ];
 
 const Header: React.FC = () => (
-  <header className={tw}>
-    <ul className={Tw().flex().text18().leading24().fontSemibold().$()}>
+  <header className="py-36 border-b border-solid border-CBD">
+    <ul className="flex text-18 leading-24 font-semibold">
       {links.map((link, index) => (
-        <li key={link.text} className={index !== 0 ? Tw().ml36().$() : ""}>
+        <li key={link.text} className={index !== 0 ? "ml-36" : ""}>
           <HeaderLink href={link.href}>{link.text}</HeaderLink>
         </li>
       ))}

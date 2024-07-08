@@ -2,7 +2,6 @@ import React from "react";
 import NextLink from "next/link";
 import { Query } from "state";
 import { useRouter } from "next/router";
-import { Tw } from "styles";
 
 interface QueryProps {
   type: "font" | "text";
@@ -24,7 +23,7 @@ export const QueryLink: React.FC<QueryProps> = ({ type, value, label }) => {
       as={as}
       scroll={false}
       shallow
-      className={Tw().underline().$()}
+      className="underline"
     >
       {label}
     </NextLink>
@@ -42,7 +41,7 @@ export const CodeLink: React.FC<CodeProps> = ({ value, label }) => (
     as={`/${value}`}
     scroll={false}
     shallow
-    className={Tw().underline().$()}
+    className="underline"
   >
     {label}
   </NextLink>

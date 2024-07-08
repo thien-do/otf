@@ -1,21 +1,17 @@
 import React from "react";
-import { Tw } from "styles";
-
 import Header from "./header";
 
 interface Props { children: React.ReactChild; }
 
-const tw = Tw()
-  .px72().lt1280Px36()
-  .bgFff().shadowE2E().border1().borderSolid().borderE2E()
-  .$();
-
 const Main: React.FC<Props> = ({ children }) => (
-  <main className={tw}>
+  <main className={[
+    "px-36 lt960:px-72",
+    "bg-FFF shadow-E2E border border-solid border-E2E"
+  ].join(" ")}>
     <Header />
-    <div className={Tw().mt36().$()} />
+    <div className="mt-36" />
     {children}
-    <div className={Tw().mt48().$()} />
+    <div className="mt-48" />
   </main>
 );
 

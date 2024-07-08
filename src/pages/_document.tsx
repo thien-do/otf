@@ -1,6 +1,5 @@
 import React from "react";
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import { Tw } from "styles";
 
 const CustomHead: React.FC = () => (
   <Head>
@@ -9,7 +8,7 @@ const CustomHead: React.FC = () => (
 );
 
 const CustomBody: React.FC = () => (
-  <body className={Tw().bgF7F().text2D3().$()}>
+  <body className="bg-F7F text-2D3">
     <Main />
     <NextScript />
   </body>

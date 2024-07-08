@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-
-import { Tw } from "styles";
 import { State, SetState } from "state";
 
 import Input from "./input";
@@ -27,8 +25,8 @@ const Texts: React.FC<Props> = ({ state, setState }) => {
 
   const f = state.feature;
   return (
-    <div className={Tw().fontSemibold().text2D3().$()}>
-      <div className={`${f.default ? Tw().textCbd().$() : ""}  ${""}`}>
+    <div className="font-semibold text-2D3">
+      <div className={`${f.default ? "text-CBD" : ""}  ${""}`}>
         <Label id="text-on">
           <span>with “{f.name}” </span>
           <span>{f.default ? "disabled" : "enabled"}:</span>
@@ -37,7 +35,7 @@ const Texts: React.FC<Props> = ({ state, setState }) => {
           <Input id="text-on" state={state} text={text} setText={setText} />
         </div>
       </div>
-      <div className={`${f.default ? "" : Tw().textCbd().$()}  ${Tw().mt36().$()}`}>
+      <div className={`${f.default ? "" : "text-CBD"} mt-36`}>
         <Label id="text-off">typeface default:</Label>
         <div style={{ fontFeatureSettings: f.required }}>
           <Input id="text-off" state={state} text={text} setText={setText} />

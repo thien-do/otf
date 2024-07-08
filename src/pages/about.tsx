@@ -1,13 +1,11 @@
 import { NextPage } from "next";
 import Head from "next/head";
 
-import { Tw } from "styles";
-
 interface LinkProps { href: string; children: string; }
 
 const Link: React.FC<LinkProps> = ({ href, children }) => (
   <a
-    className={Tw().underline().$()}
+    className="underline"
     href={href} target="_blank" rel="noopener"
   >{children}</a>
 );
@@ -23,32 +21,30 @@ const L_MICROSOFT = "https://docs.microsoft.com/en-us/typography/opentype/spec/f
 const L_CONTRIBUTE = "https://github.com/thien-do/otf/issues/1";
 const L_WIKIPEDIA = "https://en.wikipedia.org/wiki/List_of_typographic_features";
 
-const bold = Tw().fontSemibold().$();
-
 const About: NextPage = () => (
-  <div className={Tw().maxW640().text18().leading30().$()}>
+  <div className="max-w-640 text-18 leading-30">
     <Head>
       <title>otf.show</title>
       <meta name="description" content="An interactive showcase of OpenType features" />
     </Head>
-    <p className={Tw().text24().leading36().$() + " hanging-quote"}>
+    <p className="text-24 leading-36 hanging-quote">
       OpenType features are like secret compartments in fonts. Unlock them and
       you’ll find ways to make fonts look and behave differently in subtle and
       dramatic ways.”
       <span> — <Link href={L_ADOBE}>Adobe</Link></span>
     </p>
-    <p className={Tw().mt36().$()}>
-      <span className={bold}>otf.show is an interactive showcase of
+    <p className="mt-36">
+      <span className="font-semibold">otf.show is an interactive showcase of
       OpenType features.</span> We hope it helps designers and developers to
       explore and achieve better typography on the web.
     </p>
-    <p className={Tw().mt24().$()}>
+    <p className="mt-24">
       <span>This is an Open Source project. Contributions are </span>
       <Link href={L_CONTRIBUTE}>more than welcome</Link>
       <span>. The entire development takes place on </span>
       <Link href={L_OTFSHOW}>GitHub</Link>.
     </p>
-    <p className={Tw().mt24().$()}>
+    <p className="mt-24">
       <span>The project is built with </span>
       <span><Link href={L_REACT}>React</Link>, </span>
       <span><Link href={L_NEXT}>Next.js</Link>, </span>

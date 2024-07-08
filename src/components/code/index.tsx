@@ -1,6 +1,4 @@
 import React from "react";
-
-import { Tw } from "styles";
 import { State, SetState } from "state";
 
 import Overview from "./overview";
@@ -9,14 +7,14 @@ import Description from "./description";
 
 interface Props { state: State; setState: SetState; }
 
-const column = Tw().flex1().lt960FlexNone().lt960WFull().$();
-const desc = Tw().pl72().lt1280Pl36().lt960Pl0().lt960Pt36().$();
+const column = "flex-none w-full lt960:flex-1";
+const desc = "pl-0 pt-36 lt960:pl-36 lt960:pt-0 ";
 
 const Code: React.FC<Props> = ({ state, setState }) => (
-  <div className={Tw().flex().flexWrap().$()}>
+  <div className="flex flex-wrap">
     <div className={column}>
       <Overview state={state} setState={setState} />
-      <div className={Tw().mt36().$()} />
+      <div className="mt-36" />
       <Texts state={state} setState={setState} />
     </div>
     <div className={`${column} ${desc}`}>
