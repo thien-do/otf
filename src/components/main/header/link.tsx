@@ -1,11 +1,7 @@
-import React from "react";
+"use client"
+import { ReactElement } from "react";
 import Link from "next/link";
-import { useRouter, NextRouter } from "next/router";
-
-interface Props {
-  href: string;
-  children: string;
-}
+import { usePathname } from "next/navigation";
 
 interface AnchorProps {
   href?: string;
@@ -15,17 +11,22 @@ interface AnchorProps {
   children?: string;
 }
 
-const isActive = (router: NextRouter, href: string) => {
-  if (router.pathname === "/[code]" && href === "/") return true;
-  return router.pathname === href;
+const isActive = (pathname: string, href: string) => {
+  if (pathname === "/[code]" && href === "/") return true;
+  return pathname === href;
 };
 
-const HeaderLink: React.FC<Props> = ({ href, children }) => {
-  const router = useRouter();
+interface Props {
+  href: string;
+  children: string;
+}
+
+export default function HeaderLink({ href, children }: Props): ReactElement {
+  const pathname = usePathname();
   const props: AnchorProps = { className: "" };
   const isExternal = href.startsWith("https://");
 
-  const color = isActive(router, href) ? "text-2D3" : "text-A0A";
+  const color = pathname && isActive(pathname, href) ? "text-2D3" : "text-A0A";
   props.className += ` ${color}`;
 
   props.children = isExternal ? `${children}\u00a0→` : children;
@@ -37,6 +38,4 @@ const HeaderLink: React.FC<Props> = ({ href, children }) => {
   }
 
   return isExternal ? <a {...props} /> : <Link href={href} {...props} />;
-};
-
-export default HeaderLink;
+}

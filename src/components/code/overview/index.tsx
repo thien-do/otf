@@ -1,18 +1,18 @@
-import React from "react";
-import { State, SetState } from "state";
+import { ReactElement } from "react";
+import { Feature } from "features";
+
 import Code from "./code";
 import Font from "./font";
 
-interface Props { state: State; setState: SetState; }
-
-const Overview: React.FC<Props> = ({ state, setState }) => (
-  <div className="whitespace-pre-wrap text-24 leading-36">
-    <span>This is how </span>
-    <span><Code state={state} setState={setState} /> </span>
-    <span>in </span>
-    <span><Font state={state} setState={setState} /> </span>
-    <span>brings better typography:</span>
-  </div>
-);
-
-export default Overview;
+export default function Overview(props: { feature: Feature }): ReactElement {
+  const { feature } = props
+  return (
+    <div className="whitespace-pre-wrap text-24 leading-36">
+      <span>This is how </span>
+      <span><Code feature={feature} /> </span>
+      <span>in </span>
+      <span><Font feature={feature} /> </span>
+      <span>brings better typography:</span>
+    </div>
+  )
+}

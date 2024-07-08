@@ -1,17 +1,34 @@
-import React from "react";
-import { State } from "state";
+"use client"
+import { Feature } from "features";
+import { useRouter, useSearchParams } from "next/navigation";
+import { ReactElement } from "react";
 
 interface Props {
-  id: string; state: State,
-  text: string; setText: (text: string) => void;
+  id: string
+  feature: Feature
 }
 
-const Input: React.FC<Props> = ({ state, text, setText, id }) => (
-  <input
-    type="text" style={{ fontFamily: state.font }}
-    className="text-72 leading-96 w-full overflow-hidden"
-    value={text} onChange={e => setText(e.target.value)} id={id}
-  />
-);
+export default function Input(props: Props): ReactElement {
+  const { id, feature } = props
 
-export default Input;
+  const router = useRouter()
+  const searchParams = useSearchParams()
+
+  const font = searchParams.get('font') ?? feature.fonts[0]
+  const text = searchParams.get('text') ?? feature.texts[0]
+
+  return (
+    <input
+      id={id}
+      type="text"
+      style={{ fontFamily: font }}
+      className="text-72 leading-96 w-full overflow-hidden"
+      defaultValue={text}
+      onChange={e => {
+        const params = new URLSearchParams(searchParams)
+        params.set('text', e.target.value)
+        router.push(`/${feature.code}?${params.toString()}`)
+      }}
+    />
+  )
+}

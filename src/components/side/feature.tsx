@@ -1,12 +1,12 @@
-import React from "react";
+"use client"
+import { ReactElement } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
-
+import { usePathname } from "next/navigation";
 import { Feature } from "features";
 
 interface CodeProps { code: string; }
 
-const Code: React.FC<CodeProps> = ({ code }) => {
+function Code({ code }: CodeProps): ReactElement {
   if (code.length !== 4) { throw new Error("code length must be 4"); }
   return (
     <span className="block font-mono">
@@ -18,21 +18,23 @@ const Code: React.FC<CodeProps> = ({ code }) => {
 
 interface NameProps { feature: Feature; }
 
-const Name: React.FC<NameProps> = ({ feature }) => (
-  <span className="block">
-    <span className="block text-18">
-      {feature.name}
+function Name({ feature }: NameProps): ReactElement {
+  return (
+    <span className="block">
+      <span className="block text-18">
+        {feature.name}
+      </span>
+      <span className="block text-15 truncate text-A0A">
+        {feature.fonts.join(", ")}
+      </span>
     </span>
-    <span className="block text-15 truncate text-A0A">
-      {feature.fonts.join(", ")}
-    </span>
-  </span>
-);
+  )
+}
 
 interface Props { feature: Feature; }
 
-const FeatureComponent: React.FC<Props> = ({ feature }) => {
-  const { code } = useRouter().query;
+export default function FeatureComponent({ feature }: Props) {
+  const code = usePathname();
   return (
     <Link
       href="/[code]"
@@ -50,6 +52,4 @@ const FeatureComponent: React.FC<Props> = ({ feature }) => {
       </span>
     </Link>
   );
-};
-
-export default FeatureComponent;
+}

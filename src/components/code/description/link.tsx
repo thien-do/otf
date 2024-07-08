@@ -1,7 +1,7 @@
-import React from "react";
-import NextLink from "next/link";
-import { Query } from "state";
-import { useRouter } from "next/router";
+"use client"
+import { ReactElement } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 interface QueryProps {
   type: "font" | "text";
@@ -10,23 +10,14 @@ interface QueryProps {
 }
 
 // For fonts and texts
-export const QueryLink: React.FC<QueryProps> = ({ type, value, label }) => {
-  const router = useRouter();
-  const query: Query = { ...router.query, [type]: value };
-  delete query.code;
+export function QueryLink({ type, value, label }: QueryProps): ReactElement {
+  const code = usePathname()
+  const params = new URLSearchParams({ [type]: value })
 
-  const href = { pathname: "/[code]", query };
-  const as = { pathname: `/${router.query.code}`, query };
   return (
-    <NextLink
-      href={href}
-      as={as}
-      scroll={false}
-      shallow
-      className="underline"
-    >
+    <Link href={`${code}?${params.toString()}`} className="underline">
       {label}
-    </NextLink>
+    </Link>
   );
 };
 
@@ -35,14 +26,16 @@ interface CodeProps {
   label: string;
 }
 
-export const CodeLink: React.FC<CodeProps> = ({ value, label }) => (
-  <NextLink
-    href="/[code]"
-    as={`/${value}`}
-    scroll={false}
-    shallow
-    className="underline"
-  >
-    {label}
-  </NextLink>
-);
+export function CodeLink({ value, label }: CodeProps): ReactElement {
+  return (
+    <Link
+      href="/[code]"
+      as={`/${value}`}
+      scroll={false}
+      shallow
+      className="underline"
+    >
+      {label}
+    </Link>
+  )
+};

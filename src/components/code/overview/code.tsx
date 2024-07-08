@@ -1,25 +1,27 @@
-import React from "react";
+"use client"
+import { ReactElement } from "react";
 import { featureArr, Feature, featureGroups } from "features";
 import Dropdown, { Option } from "components/dropdown";
-import { State, SetState } from "state";
+import { useRouter } from "next/navigation";
 
 const toOption = (ft: Feature): Option =>
   ({ value: ft.code, label: `${ft.name} (${ft.code})` });
 
-interface Props { state: State; setState: SetState; }
+export default function Code(props: { feature: Feature }): ReactElement {
+  const { feature } = props
+  const router = useRouter()
 
-const Code: React.FC<Props> = ({ state, setState }) => {
   const options: Option[] = [];
   featureGroups.forEach(({ label, type }) => {
     options.push({ label, value: label, isHeading: true });
     options.push(...featureArr.filter(f => f.type === type).map(toOption));
   });
+
   return (
     <Dropdown
-      value={state.feature.code} setValue={setState.feature}
+      value={feature.code}
+      setValue={(value) => router.push(`/${value}`)}
       options={options}
     />
   );
 };
-
-export default Code;
