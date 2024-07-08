@@ -1,7 +1,7 @@
 import { featureArr, getFeature } from "features";
 import Code from "components/code";
 import { Metadata } from "next";
-import { ReactElement } from "react";
+import { ReactElement, Suspense } from "react";
 
 type Props = {
   params: { code: string }
@@ -23,5 +23,9 @@ export async function generateStaticParams() {
 }
 
 export default function Page(): ReactElement {
-  return <Code />;
+  return (
+    <Suspense>
+      <Code />
+    </Suspense>
+  );
 };
