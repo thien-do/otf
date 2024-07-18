@@ -1,5 +1,4 @@
 import React from "react";
-import { Tw } from "styles";
 import { UseSelectReturnValue } from "downshift";
 import { Option } from "./index";
 
@@ -8,36 +7,34 @@ interface Props {
   options: Option[];
 }
 
-const ulStyles = Tw()
-  .bg2D3().textFff().shadowA0A().text18().leading36()
-  .absolute().left0().top0().z1().w320().py9()
-  .$();
-
-const hidden = Tw().hidden();
-
-const getLiStyles = (s: UseSelectReturnValue<string>, o: Option, index: number) => {
-  const base = Tw().px18().selectNone().$();
-  const fs = o.isHeading ? Tw().text15().textA0A().uppercase().$() : "";
-  const mr = o.isHeading && index !== 0 ? Tw().mt18().$() : "";
-  const se = s.selectedItem === o.value ? Tw().bg718().$() : "";
-  const hi = s.highlightedIndex === index && se === "" ? Tw().bg4A5().$() : "";
-  return `${base} ${mr} ${fs} ${hi} ${se}`;
-};
-
 const Menu: React.FC<Props> = ({ s, options }) => (
   <ul
     {...s.getMenuProps()}
-    className={[ulStyles, !s.isOpen ? hidden : ""].join(" ")}
+    className={[
+      "bg-2D3 text-FFF shadow-A0A text-18 leading-36",
+      "absolute left-0 top-0 z-1 w-320 py-9",
+      !s.isOpen ? "hidden" : ""
+    ].join(" ")}
   >
-    {options.map((o, index) => (
-      <li
-        key={`${o.value}${index}`}
-        className={getLiStyles(s, o, index)}
-        {...s.getItemProps({ item: o.value, index })}
-      >
-        {o.label}
-      </li>
-    ))}
+    {options.map((o, index) => {
+      const isSelected = s.selectedItem === o.value
+      const isHighlighted = s.highlightedIndex === index
+      return (
+        <li
+          key={`${o.value}${index}`}
+          className={[
+            "px-18 select-none",
+            o.isHeading ? "text-15 text-A0A uppercase" : "",
+            o.isHeading && index !== 0 ? "mt-18" : "",
+            isSelected ? "bg-718" : "",
+            isHighlighted && !isSelected ? "bg-4A5" : ""
+          ].join(" ")}
+          {...s.getItemProps({ item: o.value, index })}
+        >
+          {o.label}
+        </li>
+      )
+    })}
   </ul>
 );
 

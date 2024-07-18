@@ -1,5 +1,4 @@
 import React from "react";
-import { Tw } from "styles";
 import { useSelect, UseSelectState } from "downshift";
 import Button from "./button";
 import Menu from "./menu";
@@ -50,7 +49,7 @@ const Dropdown: React.FC<Props> = ({ value, setValue, options }) => {
     isItemDisabled,
   });
   return (
-    <span className={Tw().relative().fontSemibold().$()}>
+    <span className="relative font-semibold">
       <Button s={s} value={value} itemToString={itemToString} />
       <Menu s={s} options={options} />
     </span>

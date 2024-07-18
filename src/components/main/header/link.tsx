@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import { Tw } from "styles";
 import { useRouter, NextRouter } from "next/router";
 
 interface Props {
@@ -26,7 +25,7 @@ const HeaderLink: React.FC<Props> = ({ href, children }) => {
   const props: AnchorProps = { className: "" };
   const isExternal = href.startsWith("https://");
 
-  const color = isActive(router, href) ? Tw().text2D3().$() : Tw().textA0A().$();
+  const color = isActive(router, href) ? "text-2D3" : "text-A0A";
   props.className += ` ${color}`;
 
   props.children = isExternal ? `${children}\u00a0→` : children;

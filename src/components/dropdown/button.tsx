@@ -1,10 +1,9 @@
 import React from "react";
-import { Tw } from "styles";
 import { UseSelectReturnValue } from "downshift";
 
 const Arrow = () => (
-  <span className={Tw().whitespaceNoWrap().$()}>
-    <span className={Tw().inlineBlock().$()} style={{ transform: "scale(0.5)" }}>▼</span>
+  <span className="whitespace-nowrap">
+    <span className="inline-block" style={{ transform: "scale(0.5)" }}>▼</span>
   </span>
 );
 
@@ -17,7 +16,7 @@ interface Props {
 const Button: React.FC<Props> = ({ s, value, itemToString }) => (
   <button
     {...s.getToggleButtonProps()}
-    className={Tw().cursorPointer().$()}
+    className="cursor-pointer"
   >
     {itemToString(value)}
     <Arrow />
