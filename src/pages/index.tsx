@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import Head from "next/head";
-import { useEffect } from "react";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 import { featureArr } from "features";
 
@@ -15,7 +15,7 @@ const Index: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>otf.show</title>
+        <title>otf</title>
         <meta name="description" content="An interactive showcase of OpenType features" />
       </Head>
     </div>

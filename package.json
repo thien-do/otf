@@ -1,5 +1,5 @@
 {
-  "name": "otf.show",
+  "name": "otf",
   "version": "1.0.0",
   "description": "An interactive showcase of OpenType's typographic features",
   "repository": "http://github.com/thien-do/otf",

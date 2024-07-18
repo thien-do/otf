@@ -2,7 +2,7 @@ import React from "react";
 import HeaderLink from "./link";
 
 const links = [
-  { href: "/", text: "otf.show" },
+  { href: "/", text: "otf" },
   { href: "/about", text: "what's this" },
   { href: "https://github.com/thien-do/otf", text: "github" },
 ];

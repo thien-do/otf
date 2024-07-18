@@ -1,11 +1,11 @@
-import React from "react";
-import { NextPage, GetStaticProps } from "next";
+import { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import React from "react";
 
-import { Feature, featureArr } from "features";
-import { getState, getSetState } from "state";
 import Code from "components/code";
+import { Feature, featureArr } from "features";
+import { getSetState, getState } from "state";
 
 interface CustomHeadProps { ft: Feature; }
 
@@ -14,8 +14,8 @@ const CustomHead: React.FC<CustomHeadProps> = ({ ft }) => {
   const description = ft.description.split("\n\n")[0];
   return (
     <Head>
-      <title>{fullName} - otf.show</title>
-      <meta name="description" content={`${fullName} ${description} - otf.show`} />
+      <title>{fullName} - otf</title>
+      <meta name="description" content={`${fullName} ${description} - otf`} />
     </Head>
   );
 };
@@ -43,6 +43,6 @@ export const getStaticPaths = async () => ({
 
 // we don't need to fetch external data, just trick Next JS to get
 // getStaticPaths working
-export const getStaticProps: GetStaticProps<{}> = async () => ({ props: {}})
+export const getStaticProps: GetStaticProps<{}> = async () => ({ props: {} })
 
 export default Page;

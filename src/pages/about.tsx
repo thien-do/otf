@@ -24,7 +24,7 @@ const L_WIKIPEDIA = "https://en.wikipedia.org/wiki/List_of_typographic_features"
 const About: NextPage = () => (
   <div className="max-w-640 text-18 leading-30">
     <Head>
-      <title>otf.show</title>
+      <title>otf</title>
       <meta name="description" content="An interactive showcase of OpenType features" />
     </Head>
     <p className="text-24 leading-36 hanging-quote">
@@ -34,8 +34,8 @@ const About: NextPage = () => (
       <span> — <Link href={L_ADOBE}>Adobe</Link></span>
     </p>
     <p className="mt-36">
-      <span className="font-semibold">otf.show is an interactive showcase of
-      OpenType features.</span> We hope it helps designers and developers to
+      <span className="font-semibold">"otf" is an interactive showcase of
+        OpenType features.</span> We hope it helps designers and developers to
       explore and achieve better typography on the web.
     </p>
     <p className="mt-24">
