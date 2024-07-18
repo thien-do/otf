@@ -9,7 +9,7 @@ interface Props {
 const Input: React.FC<Props> = ({ state, text, setText, id }) => (
   <input
     type="text" style={{ fontFamily: state.font }}
-    className="text-72 leading-96 w-full overflow-hidden"
+    className="text-72 leading-96 w-full"
     value={text} onChange={e => setText(e.target.value)} id={id}
   />
 );

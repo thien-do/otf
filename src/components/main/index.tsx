@@ -5,7 +5,7 @@ interface Props { children: React.ReactChild; }
 
 const Main: React.FC<Props> = ({ children }) => (
   <main className={[
-    "px-36 lt960:px-72",
+    "px-72 lt1280:px-36",
     "bg-FFF shadow-E2E border border-solid border-E2E"
   ].join(" ")}>
     <Header />

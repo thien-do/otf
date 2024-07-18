@@ -75,7 +75,8 @@ const config: Config = {
       1: "1",
     },
     screens: {
-      lt960: "960px",
+      "lt1280": { "max": "1279px" },
+      "lt960": { "max": "959px" },
     },
   },
 };
