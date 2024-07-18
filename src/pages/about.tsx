@@ -13,7 +13,6 @@ const Link: React.FC<LinkProps> = ({ href, children }) => (
 const L_REACT = "https://reactjs.org/";
 const L_NEXT = "https://nextjs.org/";
 const L_DOWNSHIFT = "https://github.com/downshift-js/downshift/";
-const L_TYPEDTW = "https://github.com/thien-do/typed-tailwind";
 const L_OTFSHOW = "https://github.com/thien-do/otf/";
 const L_FIGMA = "https://www.figma.com/blog/opentype-font-features/";
 const L_ADOBE = "https://helpx.adobe.com/fonts/using/use-open-type-features.html";
@@ -31,7 +30,7 @@ const About: NextPage = () => (
       OpenType features are like secret compartments in fonts. Unlock them and
       you’ll find ways to make fonts look and behave differently in subtle and
       dramatic ways.”
-      <span> — <Link href={L_ADOBE}>Adobe</Link></span>
+      <span> — <Link href={L_ADOBE}>Tim Brown</Link>, Head of Typography at Adobe</span>
     </p>
     <p className="mt-36">
       <span className="font-semibold">"otf" is an interactive showcase of
@@ -47,8 +46,7 @@ const About: NextPage = () => (
     <p className="mt-24">
       <span>The project is built with </span>
       <span><Link href={L_REACT}>React</Link>, </span>
-      <span><Link href={L_NEXT}>Next.js</Link>, </span>
-      <span><Link href={L_TYPEDTW}>Typed Tailwind</Link> and </span>
+      <span><Link href={L_NEXT}>Next.js</Link>, and </span>
       <span><Link href={L_DOWNSHIFT}>Downshift</Link>. </span>
       The majority of information originally comes from
       <span> <Link href={L_FIGMA}>Figma</Link>, </span>
