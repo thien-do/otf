@@ -1,26 +1,18 @@
-import React from "react";
 import { UseSelectReturnValue } from "downshift";
+import { ReactElement } from "react";
+import { DropdownArrow } from "./arrow";
 
-const Arrow = () => (
-  <span className="whitespace-nowrap">
-    <span className="inline-block" style={{ transform: "scale(0.5)" }}>▼</span>
-  </span>
-);
-
-interface Props {
-  s: UseSelectReturnValue<string>;
+export const DropdownButton = (props: {
+  select: UseSelectReturnValue<string>;
   value: string;
   itemToString: (item: string) => string;
-}
+}): ReactElement => {
+  const { select, value, itemToString } = props;
 
-const Button: React.FC<Props> = ({ s, value, itemToString }) => (
-  <button
-    {...s.getToggleButtonProps()}
-    className="cursor-pointer"
-  >
-    {itemToString(value)}
-    <Arrow />
-  </button>
-);
-
-export default Button;
+  return (
+    <button {...select.getToggleButtonProps()} className="cursor-pointer">
+      {itemToString(value)}
+      <DropdownArrow />
+    </button>
+  );
+};

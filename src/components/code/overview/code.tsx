@@ -1,25 +1,31 @@
-import React from "react";
-import { featureArr, Feature, featureGroups } from "features";
-import Dropdown, { Option } from "components/dropdown";
-import { State, SetState } from "state";
+"use client";
 
-const toOption = (ft: Feature): Option =>
-  ({ value: ft.code, label: `${ft.name} (${ft.code})` });
+import { DropdownBox, DropdownOption } from "components/dropdown/box";
+import { Feature, featureArr, featureGroups } from "features";
+import { useRouter } from "next/navigation";
+import { ReactElement } from "react";
 
-interface Props { state: State; setState: SetState; }
+const toOption = (ft: Feature): DropdownOption => ({
+  value: ft.code,
+  label: `${ft.name} (${ft.code})`,
+});
 
-const Code: React.FC<Props> = ({ state, setState }) => {
-  const options: Option[] = [];
+export function CodeOverviewCode(props: { feature: Feature }): ReactElement {
+  const { feature } = props;
+
+  const router = useRouter();
+
+  const options: DropdownOption[] = [];
   featureGroups.forEach(({ label, type }) => {
     options.push({ label, value: label, isHeading: true });
-    options.push(...featureArr.filter(f => f.type === type).map(toOption));
+    options.push(...featureArr.filter((f) => f.type === type).map(toOption));
   });
+
   return (
-    <Dropdown
-      value={state.feature.code} setValue={setState.feature}
+    <DropdownBox
+      value={feature.code}
+      setValue={(value) => void router.push(`/${value}`)}
       options={options}
     />
   );
-};
-
-export default Code;
+}
