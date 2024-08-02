@@ -1,3 +1,4 @@
+
 export interface Feature {
   code: string,
   patchedCode?: string, // the real code that get applied, like "clig" for "rand"
@@ -230,3 +231,10 @@ export const featureGroups = [
   { label: "Digits, Numbers & Math", type: "digit" },
   { label: "Letters & Ligatures", type: "letter" },
 ];
+
+export function getFeature(code: string): Feature {
+  if (typeof code != "string") { throw new Error("invalid code from query"); }
+  const feature = featureMap[code];
+  if (feature === undefined) { throw new Error("not found code"); }
+  return feature
+}
