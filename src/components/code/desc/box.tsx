@@ -6,6 +6,7 @@ import { CodeDescRelated } from "./related";
 import { CodeDescTextsClient } from "./texts/client";
 import { CodeDescTextsServer } from "./texts/server";
 import { CodeDescUsage } from "./usage";
+import { References } from "./ref";
 
 export function CodeDescBox(props: { feature: Feature }): ReactElement {
   const { feature } = props;
@@ -26,6 +27,11 @@ export function CodeDescBox(props: { feature: Feature }): ReactElement {
         <p className="mt-24">
           <CodeDescRelated codes={feature.related} />
         </p>
+      )}
+      {feature.references.length > 0 && (
+        <div className="mt-24">
+          <References references={feature.references} />
+        </div>
       )}
     </div>
   );
