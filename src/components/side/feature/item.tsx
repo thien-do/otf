@@ -23,7 +23,7 @@ function Name(props: { feature: Feature }): ReactElement {
   return (
     <span className="block">
       <span className="block text-18">{feature.name}</span>
-      <span className="block text-15 truncate text-A0A">
+      <span className="block text-15 truncate text-718">
         {feature.fonts.join(", ")}
       </span>
     </span>

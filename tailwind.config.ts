@@ -4,19 +4,19 @@ const config: Config = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     textColor: {
+      "2D3": "#2D3748",
       "718": "#718096",
       CBD: "#CBD5E0",
       A0A: "#A0AEC0",
-      "2D3": "#2D3748",
       FFF: "#FFF",
     },
     backgroundColor: {
       "718": "#718096",
-      FFF: "#FFF",
-      F7F: "#F7FAFC",
-      EDF: "#EDF2F7",
       "4A5": "#4A5568",
       "2D3": "#2D3748",
+      EDF: "#EDF2F7",
+      F7F: "#F7FAFC",
+      FFF: "#FFF",
     },
     boxShadow: {
       E2E: "0px 0px 8px #E2E8F0",
@@ -83,8 +83,8 @@ const config: Config = {
       1: "1",
     },
     screens: {
-      "lt1280": { "max": "1279px" },
-      "lt960": { "max": "959px" },
+      lt1280: { max: "1279px" },
+      lt960: { max: "959px" },
     },
   },
 };
