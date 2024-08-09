@@ -1,28 +1,22 @@
 import { Feature } from "features";
+import { ReactElement } from "react";
 
-interface Props {
-  feature: Feature;
-}
+export function CodeSource(props: { feature: Feature }): ReactElement {
+  const { feature } = props;
 
-export function CodeSource({ feature }: Props) {
-  const [attribute, value] = feature.css.split(": ");
-
-  if (!attribute || !value)
-    throw new Error(`unexpected syntax: ${feature.css}`);
-
-  const label = `${feature.name} (${feature.code})`;
+  const { property, value } = feature.css;
 
   return (
-    <>
-      <div className="mb-18">
-        To use <strong className="font-semibold">{label}</strong> in CSS:
+    <div>
+      <div className="text-15 leading-24 uppercase font-semibold text-718">
+        To enable in css:
       </div>
-      <div className="p-24 lt960:p-18 bg-EDF relative shadow-E2E rounded">
+      <div className="p-24 mt-18 bg-F7F">
         <code>
-          <span className="text-718">{attribute}: </span>
-          <span className="text-2D3">{value}</span>
+          <span className="text-718">{property}: </span>
+          <span className="text-2D3">{value};</span>
         </code>
       </div>
-    </>
+    </div>
   );
 }

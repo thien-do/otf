@@ -1,6 +1,20 @@
 export interface Feature {
+  /**
+   * The standard code, i.e., in communication
+   */
   code: string;
-  patchedCode?: string; // the real code that get applied, like "clig" for "rand"
+  /**
+   * The real code that get applied, like "calt" for "rand"
+   */
+  patchedCode?: string;
+  /**
+   * The recommended CSS usage,
+   * e.g., with dedicated properties like "font-variant-numeric"
+   */
+  css: {
+    property: string;
+    value: string;
+  };
   name: string;
   family_code?: string;
   family_name?: string;
@@ -12,7 +26,6 @@ export interface Feature {
   type: "digit" | "letter";
   default?: boolean;
   required?: string;
-  css: string;
 }
 
 export const featureMap: { [code: string]: Feature | undefined } = {
@@ -28,7 +41,10 @@ export const featureMap: { [code: string]: Feature | undefined } = {
       "https://www.fonts.com/content/learning/fontology/level-3/numbers/proportional-vs-tabular-figures",
     ],
     type: "digit",
-    css: "font-variant-numeric: tabular-nums;",
+    css: {
+      property: "font-variant-numeric",
+      value: "tabular-nums",
+    },
   },
   pnum: {
     code: "pnum",
@@ -42,7 +58,10 @@ export const featureMap: { [code: string]: Feature | undefined } = {
       "https://www.fonts.com/content/learning/fontology/level-3/numbers/proportional-vs-tabular-figures",
     ],
     type: "digit",
-    css: "font-variant-numeric: proportional-nums;",
+    css: {
+      property: "font-variant-numeric",
+      value: "proportional-nums",
+    },
   },
   onum: {
     code: "onum",
@@ -58,7 +77,10 @@ export const featureMap: { [code: string]: Feature | undefined } = {
       "https://practicaltypography.com/alternate-figures.html#oldstyle-figures",
     ],
     type: "digit",
-    css: "font-variant-numeric: oldstyle-nums;",
+    css: {
+      property: "font-variant-numeric",
+      value: "oldstyle-nums",
+    },
   },
   lnum: {
     code: "lnum",
@@ -72,7 +94,10 @@ export const featureMap: { [code: string]: Feature | undefined } = {
       "https://www.fonts.com/content/learning/fontology/level-3/numbers/lining-figures",
     ],
     type: "digit",
-    css: "font-variant-numeric: lining-nums;",
+    css: {
+      property: "font-variant-numeric",
+      value: "lining-nums",
+    },
   },
   ordn: {
     code: "ordn",
@@ -87,7 +112,10 @@ export const featureMap: { [code: string]: Feature | undefined } = {
       "https://practicaltypography.com/ordinals.html",
     ],
     type: "digit",
-    css: "font-variant-numeric: ordinal;",
+    css: {
+      property: "font-variant-numeric",
+      value: "ordinal",
+    },
   },
   frac: {
     code: "frac",
@@ -101,7 +129,10 @@ export const featureMap: { [code: string]: Feature | undefined } = {
       "https://www.fonts.com/content/learning/fontology/level-3/numbers/fractions",
     ],
     type: "digit",
-    css: "font-variant-numeric: diagonal-fractions;",
+    css: {
+      property: "font-variant-numeric",
+      value: "diagonal-fractions",
+    },
   },
   zero: {
     code: "zero",
@@ -113,7 +144,10 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     related: [],
     references: [],
     type: "digit",
-    css: "font-variant-numeric: slashed-zero;",
+    css: {
+      property: "font-variant-numeric",
+      value: "slashed-zero",
+    },
   },
   liga: {
     code: "liga",
@@ -129,7 +163,10 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     ],
     type: "letter",
     default: true,
-    css: "font-variant-ligatures: common-ligatures;",
+    css: {
+      property: "font-variant-ligatures",
+      value: "common-ligatures",
+    },
   },
   calt: {
     code: "calt",
@@ -142,7 +179,10 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     references: [],
     type: "letter",
     default: true,
-    css: "font-variant-ligatures: contextual;",
+    css: {
+      property: "font-variant-ligatures",
+      value: "contextual",
+    },
   },
   hist: {
     code: "hist",
@@ -157,7 +197,10 @@ export const featureMap: { [code: string]: Feature | undefined } = {
       "https://en.wikipedia.org/wiki/Long_s",
     ],
     type: "letter",
-    css: 'font-feature-settings: "hist";',
+    css: {
+      property: "font-feature-settings",
+      value: "hist",
+    },
   },
   hlig: {
     code: "hlig",
@@ -170,7 +213,10 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     references: [],
     type: "letter",
     required: '"hist"',
-    css: "font-variant-ligatures: historical-ligatures;",
+    css: {
+      property: "font-variant-ligatures",
+      value: "historical-ligatures",
+    },
   },
   dlig: {
     code: "dlig",
@@ -184,7 +230,10 @@ export const featureMap: { [code: string]: Feature | undefined } = {
       "https://www.fonts.com/content/learning/fontology/level-3/signs-and-symbols/ligatures-2",
     ],
     type: "letter",
-    css: "font-variant-ligatures: discretionary-ligatures;",
+    css: {
+      property: "font-variant-ligatures",
+      value: "discretionary-ligatures",
+    },
   },
   salt: {
     code: "salt",
@@ -200,7 +249,10 @@ export const featureMap: { [code: string]: Feature | undefined } = {
       "https://en.wikipedia.org/wiki/I#Forms_and_variants",
     ],
     type: "letter",
-    css: 'font-feature-settings: "salt";',
+    css: {
+      property: "font-feature-settings",
+      value: "salt",
+    },
   },
   swsh: {
     code: "swsh",
@@ -215,7 +267,10 @@ export const featureMap: { [code: string]: Feature | undefined } = {
       "https://en.wikipedia.org/wiki/Swash_(typography)",
     ],
     type: "letter",
-    css: 'font-feature-settings: "swsh";',
+    css: {
+      property: "font-feature-settings",
+      value: "swsh",
+    },
   },
   smcp: {
     code: "smcp",
@@ -230,7 +285,10 @@ export const featureMap: { [code: string]: Feature | undefined } = {
       "https://www.fonts.com/content/learning/fontology/level-1/type-anatomy/small-caps",
     ],
     type: "letter",
-    css: "font-variant-caps: small-caps;",
+    css: {
+      property: "font-variant-caps",
+      value: "small-caps",
+    },
   },
   rand: {
     code: "rand",
@@ -244,7 +302,10 @@ export const featureMap: { [code: string]: Feature | undefined } = {
     references: [],
     type: "letter",
     default: true,
-    css: 'font-feature-settings: "calt"',
+    css: {
+      property: "font-feature-settings",
+      value: "calt",
+    },
   },
 };
 

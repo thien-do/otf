@@ -26,7 +26,7 @@ export function CodeTextBoxBase(props: {
 
   return (
     <div className="font-semibold text-2D3">
-      <div className={`${feature.default ? "text-CBD" : ""}  ${""}`}>
+      <div className={`${feature.default ? "text-718" : ""}  ${""}`}>
         <CodeTextLabel id="text-on">
           <span>with “{feature.name}” </span>
           <span>{feature.default ? "disabled" : "enabled"}:</span>
@@ -35,7 +35,7 @@ export function CodeTextBoxBase(props: {
           <CodeTextInput id="text-on" {...input} />
         </div>
       </div>
-      <div className={`${feature.default ? "" : "text-CBD"} mt-36`}>
+      <div className={`${feature.default ? "" : "text-718"} mt-36`}>
         <CodeTextLabel id="text-off">typeface default:</CodeTextLabel>
         <div style={{ fontFeatureSettings: feature.required }}>
           <CodeTextInput id="text-off" {...input} />
