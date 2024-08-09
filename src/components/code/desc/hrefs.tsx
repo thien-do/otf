@@ -35,7 +35,7 @@ export function CodeDescHrefs(props: { hrefs: string[] }): ReactElement {
       </p>
       <ul className="list-disc ml-24">
         {hrefs.map((href) => (
-          <Item href={href} />
+          <Item key={href} href={href} />
         ))}
       </ul>
     </>
