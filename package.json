@@ -19,7 +19,7 @@
   "dependencies": {
     "downshift": "^9.0.6",
     "marked": "^13.0.2",
-    "next": "14.2.4",
+    "next": "16.1.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
